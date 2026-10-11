@@ -1,0 +1,26 @@
+{
+  "name": "Cop filterfrequencies",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/filterfrequencies.html",
+  "status": "ok",
+  "summary_en": "Filter Frequencies strengthens, weakens, or removes fine or broad detail in an image at a chosen spatial scale. It works by converting the image into frequency space, applying a mask, and converting it back.",
+  "inputs": [
+    "source: image to filter",
+    "filter (optional): image used directly as the frequency-domain mask; when connected, the Frequency and Anisotropy controls are disabled"
+  ],
+  "key_parameters": [
+    "Scale: multiplies the filtered result; above 1 boosts the kept band, below 1 attenuates it",
+    "Frequency: center of the kept band, from 0 (lowest, broad content) to 1 (finest detail)",
+    "Width (under Frequency): full width of the kept band around Frequency",
+    "Smooth (under Frequency): softens the band edges instead of using a hard cutoff",
+    "Angle (under Anisotropy): center direction of an angular wedge, from 0 to 360 degrees",
+    "Width (under Anisotropy): angular extent of the wedge; default 360 keeps all directions",
+    "Smooth (under Anisotropy): softens the angular edges of the wedge",
+    "Reflect: mirrors the wedge to the opposite direction (Angle plus 180)"
+  ],
+  "caveats": [
+    "A hard cutoff in frequency space can cause ringing artifacts; smoothing the band usually gives a cleaner image",
+    "The Frequency and Anisotropy controls are disabled whenever the filter input is wired",
+    "The page describes the node as available since Houdini 22.0"
+  ],
+  "resume_fr": "Le nœud Filter Frequencies renforce, atténue ou supprime les détails fins ou larges d'une image à une échelle spatiale choisie."
+}

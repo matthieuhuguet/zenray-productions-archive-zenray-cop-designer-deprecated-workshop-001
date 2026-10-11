@@ -1,0 +1,20 @@
+{
+  "name": "Cop geotolayer",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/geotolayer.html",
+  "status": "ok",
+  "summary_en": "The Geometry to Layer node converts a 2D volume stored inside a geometry into a Copernicus layer. Its Signature parameter sets the output layer type, which must match the volume's type.",
+  "inputs": [
+    "geometry: geometry containing the volume to convert; the volume must be the first primitive"
+  ],
+  "key_parameters": [
+    "Signature: layer type to output; must match the volume type or the conversion fails",
+    "Precision: overrides the output precision, which usually matches the input volume; 8 (integer volumes and ID layers only), 16 or 32"
+  ],
+  "caveats": [
+    "The 2D volume must be the first primitive in the geometry",
+    "The Signature must match the volume type or the conversion fails",
+    "Volume triples such as Cd.r, Cd.g and Cd.b are not combined by this node; use a Volume Vector Join SOP before collating them",
+    "The page covers the Geometry to Layer node; a separate Geometry to Layer 2.0 version exists in the index and is not covered here"
+  ],
+  "resume_fr": "Le nœud Geometry to Layer convertit un volume 2D contenu dans une géométrie en couche Copernicus, de même type que ce volume."
+}

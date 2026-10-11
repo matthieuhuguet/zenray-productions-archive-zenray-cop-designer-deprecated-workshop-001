@@ -1,0 +1,19 @@
+{
+  "name": "Cop attribfromlayer",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/attribfromlayer.html",
+  "status": "ok",
+  "summary_en": "Converts an input layer into a detached attribute by flattening its pixels into a 1D array whose length equals the pixel count. The page names Layer from Attribute as the related reverse operation.",
+  "inputs": [
+    "layer: layer whose pixels are flattened into the attribute"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted",
+    "Data Ordering: default starts bottom left and reads left to right, bottom to top; alternative starts top left and reads left to right, top to bottom"
+  ],
+  "caveats": [
+    "Output length always equals the layer pixel count, so attribute size depends on layer resolution",
+    "Data Ordering determines how pixels map into the 1D array, which matters to nodes that interpret it",
+    "Added in Houdini 22.0"
+  ],
+  "resume_fr": "Aplatit les pixels d'une couche en attribut détaché de longueur égale au nombre de pixels, avec un ordre de lecture réglable."
+}

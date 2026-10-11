@@ -1,0 +1,28 @@
+{
+  "name": "Cop fractalnoise3d",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/fractalnoise3d.html",
+  "status": "ok",
+  "summary_en": "Fractal Noise 3D generates fractal noise by sampling the same underlying noise at increasing frequencies and blending the results. Unlike the 2D Fractal Noise COP, it uses each pixel's world coordinates instead of its image coordinates.",
+  "inputs": [
+    "size_ref: sets the output size and metadata",
+    "pos (optional): layer or VDB giving the position at which each pixel is evaluated",
+    "octaves (optional): amount multiplied by Max Octaves",
+    "roughness (optional): amount multiplied by Roughness"
+  ],
+  "key_parameters": [
+    "Range: Amplitude scales the noise, Center offsets it, and Noise Contrast adjusts contrast before Amplitude and Center are applied",
+    "Pattern, Noise Type: Simplex, Perlin, Worley F1 or F2-F1, White, Alligator or Sparse Convolution",
+    "Pattern, Element Size and Offset: scale and position in world space",
+    "Pattern, Metric and Worley Jitter: apply to the Worley types",
+    "Fractal Type: None, Sharp, Dampened, Terrain or Hybrid Terrain",
+    "Max Octaves: number of layers; Lacunarity: frequency scale per layer; Roughness: amplitude falloff per layer",
+    "Post Processing: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum, applied in the order listed"
+  ],
+  "caveats": [
+    "Layers can store negative values and values above 1, so the output can go out of range; a Clamp COP can enforce the range afterward",
+    "Complement assumes values between 0 and 1, so other ranges give unexpected results",
+    "Worley Jitter values above 1 can produce artifacts",
+    "Noise Contrast inside the noise function is separate from the Contrast post-processing parameter"
+  ],
+  "resume_fr": "Le nœud Fractal Noise 3D génère un bruit fractal à partir des coordonnées monde de chaque pixel, et non de ses coordonnées image."
+}

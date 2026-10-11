@@ -1,0 +1,48 @@
+{
+  "name": "hextile",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/hextile.html",
+  "status": "ok",
+  "summary_en": "Randomly tiles a texture across large areas using hexagonal cells with random offsets. Each cell is randomly scaled and rotated, which avoids visible seams and obvious repetition.",
+  "inputs": [
+    "direction: orients tiles, for example along curve tangents",
+    "texcoord: custom texture coordinates for mapping",
+    "textotile: the texture to tile",
+    "size, scale, rot: per-tile size, scale and rotation multipliers",
+    "contrast, contrast_falloff, weightexp: blend contrast, falloff and weight multipliers"
+  ],
+  "key_parameters": [
+    {
+      "name": "Size",
+      "meaning": "tile size in canvas XY coordinates"
+    },
+    {
+      "name": "Scale / Rotate",
+      "meaning": "global scale and rotation of the tiles"
+    },
+    {
+      "name": "Scale Random / Rotate Random",
+      "meaning": "random per-cell variation"
+    },
+    {
+      "name": "Random Seed",
+      "meaning": "changes the random arrangement"
+    },
+    {
+      "name": "Contrast",
+      "meaning": "contrast between blended cells"
+    },
+    {
+      "name": "Falloff",
+      "meaning": "contrast falloff between cells; 0 gives a hard transition"
+    },
+    {
+      "name": "Weight Exp",
+      "meaning": "exponential weighting of transition areas"
+    }
+  ],
+  "caveats": [
+    "By default the node uses canvas XY coordinates; supplying texcoord changes the mapping.",
+    "Where a direction vector has zero length, the default orientation set by Rotate and Rotate Random is used."
+  ],
+  "resume_fr": "Pave une texture de façon aléatoire sur de grandes surfaces grâce à des cellules hexagonales décalées, pivotées et mises à l'échelle au hasard."
+}

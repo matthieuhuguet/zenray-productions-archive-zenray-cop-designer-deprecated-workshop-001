@@ -1,0 +1,33 @@
+{
+  "name": "maskcombine",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/maskcombine.html",
+  "status": "ok",
+  "summary_en": "The Mask Combine node builds a single mask by blending several mono or colour layers from an input cable onto a running result, in order. A final post-processing stage can then remap the combined mask.",
+  "inputs": [
+    "layers: the cable carrying the layers to combine; the Mask Layers list picks named wires from it"
+  ],
+  "key_parameters": [
+    "Starting Value: initial mask value that the first layer blends onto",
+    "Mask Layers: ordered list of wires to combine, processed top to bottom",
+    "Wire Name: name of the cable wire used; it must be Mono, UV, RGB or RGBA",
+    "Blend Mode: how a layer combines with the running result (Blend, Add, Multiply, Screen, Overlay, and others)",
+    "Mask: amount of a layer mixed into the running result; 1 applies the blend fully",
+    "Conversion: reduces multi-channel wires to mono (Channel Extract, Channel Mix or Light Direction)",
+    "Blur: softens a layer edges before blending",
+    "Layer Remap: remaps a layer values through a ramp before blending",
+    "Combined Mask Remap: remaps the final combined mask through a ramp",
+    "Amplitude, Center, Mask Contrast: range adjustments applied to the combined mask in post processing",
+    "Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum: post-processing operations applied in the listed order"
+  ],
+  "caveats": [
+    "Layers are processed top to bottom, so their order changes the result",
+    "Disabled layers are skipped and do not contribute",
+    "Post-processing operations run in the order listed",
+    "Fold has no visible effect when all values are positive",
+    "Complement is designed for 0 to 1 values; out-of-range inputs can give negative or out-of-range results",
+    "Normalize Weights, when on, divides the channel mix by the sum of the weights to keep the range",
+    "Mask Contrast differs from Noise Contrast in noise nodes, though the page does not fully explain how",
+    "Available since Houdini 22.0"
+  ],
+  "resume_fr": "Combine plusieurs couches mono ou couleur en un masque unique, par modes de fusion successifs, puis le remappe en post-traitement."
+}

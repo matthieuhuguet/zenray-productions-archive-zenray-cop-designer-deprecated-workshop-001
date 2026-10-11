@@ -1,0 +1,47 @@
+{
+  "name": "heightfield_visualize",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_visualize.html",
+  "status": "ok",
+  "summary_en": "Turns COP layers into geometry and produces a colored heightfield visualization that works like terrain; also converts heightfield layers into geometry usable with SOP heightfield tools.",
+  "inputs": [
+    "height: the layer used as the heightfield",
+    "color: optional layer tinting the surface",
+    "mask: optional layer tinting the surface",
+    "layers: optional cable of extra layers to convert"
+  ],
+  "key_parameters": [
+    {
+      "name": "Height Scale",
+      "meaning": "scales height values into world space, which visualization requires"
+    },
+    {
+      "name": "Height Offset",
+      "meaning": "shifts the height values"
+    },
+    {
+      "name": "Split Channels",
+      "meaning": "splits vector volumes into separate float volumes"
+    },
+    {
+      "name": "Tint by",
+      "meaning": "chooses which layer (Height, Color or Mask) tints the surface"
+    },
+    {
+      "name": "Input Range / Compute Range",
+      "meaning": "values mapped to the ramp start and end"
+    },
+    {
+      "name": "Mode",
+      "meaning": "No Ramp, Clamped Ramp or Periodic Ramp, controlling value transform before the ramp"
+    },
+    {
+      "name": "Diffuse Ramp",
+      "meaning": "color ramp used for the tint"
+    }
+  ],
+  "caveats": [
+    "Visualization needs world space, so set Height Scale correctly.",
+    "To convert a Mono layer into a heightfield use the Mono to HeightField COP instead."
+  ],
+  "resume_fr": "Convertit les couches COP en géométrie et produit une visualisation colorée de champ de hauteur, utilisable avec les outils heightfield de SOP."
+}

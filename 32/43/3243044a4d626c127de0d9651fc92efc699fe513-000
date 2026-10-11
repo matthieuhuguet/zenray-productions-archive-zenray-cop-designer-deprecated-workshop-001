@@ -1,0 +1,43 @@
+{
+  "name": "hyperbolictile",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/hyperbolictile.html",
+  "status": "ok",
+  "summary_en": "Generates tiles of hyperbolic regular polygons built in the Poincaré disk model, repeating the base polygon by reflection and inversion. Suits patterns such as ceramics or floor tiles.",
+  "inputs": [
+    "size_ref: reference layer that sets the output image size and metadata"
+  ],
+  "key_parameters": [
+    {
+      "name": "Iterations",
+      "meaning": "how many times the base polygon pattern repeats inside the disk"
+    },
+    {
+      "name": "Polygons",
+      "meaning": "number of sides on the base polygon"
+    },
+    {
+      "name": "Rectanglize",
+      "meaning": "replaces the circular boundary with a square, using a chosen mapping type"
+    },
+    {
+      "name": "Flattening",
+      "meaning": "pushes circular arcs toward the border; at 0 the polygon stays inside the disk"
+    },
+    {
+      "name": "Size",
+      "meaning": "length of the base polygon straight lines; sets the disk radius when Flattening is 0"
+    },
+    {
+      "name": "Tile Fitting",
+      "meaning": "how much the image fills each tile in the uv output"
+    },
+    {
+      "name": "Poincaré Disk Mask",
+      "meaning": "shows only the pattern inside the disk; no effect when Rectanglize is on"
+    }
+  ],
+  "caveats": [
+    "Each square mapping distorts differently: Conformal shows artifacts near corners, Elliptic Grid stretches near corners, Squircle distorts diagonals more."
+  ],
+  "resume_fr": "Génère des pavages de polygones hyperboliques réguliers dans le disque de Poincaré, utiles pour des motifs de carrelage."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "camera",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/camera.html",
+  "status": "ok",
+  "summary_en": "Creates a default perspective camera offset back from the layer centre according to Focal Length and Aperture. Its settings override the default_camera context option set by the Default Canvas. Available since version 22.0.",
+  "inputs": [
+    "camera_ref (optional): camera layer; Set Parameters from Input populates the parameters from it"
+  ],
+  "key_parameters": [
+    {
+      "name": "Set Parameters from Input",
+      "meaning": "Autofills the parameters from the connected camera_ref"
+    },
+    {
+      "name": "Transform",
+      "meaning": "Translate, Rotate, Transform Order, Pivot Translate, Pivot Rotate"
+    },
+    {
+      "name": "Look At",
+      "meaning": "Look At Position, Up Vector Method (Y Axis, X Axis, Custom), Twist"
+    },
+    {
+      "name": "View",
+      "meaning": "Resolution, Projection, Focal Length, Aperture, Ortho Width, Near and Far Clipping, Screen Window, Crop, Imaging Distance, Guide Scale"
+    },
+    {
+      "name": "Sampling",
+      "meaning": "Shutter Open and Close, Focus Distance, F-Stop"
+    },
+    {
+      "name": "Metadata",
+      "meaning": "Key/value entries of the metadata dictionary"
+    }
+  ],
+  "caveats": [
+    "Only the ratio of Focal Length to Aperture sets the camera offset",
+    "Imaging Distance is measured in Houdini units",
+    "Guide Scale applies only when the layer is shown as metadata"
+  ],
+  "resume_fr": "Le nœud camera crée une caméra perspective par défaut, reculée du centre de la couche selon la focale et l'ouverture, et ses réglages remplacent la caméra par défaut du Default Canvas."
+}

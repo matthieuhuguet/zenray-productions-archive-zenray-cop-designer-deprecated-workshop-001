@@ -1,0 +1,27 @@
+{
+  "name": "clamp",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/clamp.html",
+  "status": "ok",
+  "summary_en": "The Clamp node restricts the values of a layer, VDB or attribute to an optional lower and upper range. Values outside the range are replaced by the exceeded limit or by zero, or softly transitioned with Soft Clip.",
+  "inputs": [
+    "source: the layer, VDB or attribute to clamp",
+    "lower (optional): per-pixel scale for the lower limit",
+    "upper (optional): per-pixel scale for the upper limit (the page text says lower limit, which looks like a typo)",
+    "mask (optional): per-pixel mask scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Mask: how much of the clamped result is mixed in, default 1",
+    "Toggle RGB, Red, Green, Blue, Alpha: channels affected",
+    "Compute Range: sets Lower and Upper Limit to the source min and max",
+    "Lower Limit / Upper Limit: thresholds, with a dropper to pick values from the layer",
+    "Clamped Values: Replace with Limit Value, or Replace with Black (0)",
+    "Soft Clip: smooth transition instead of a hard cutoff",
+    "Soft Clip Direction: transition inside or outside the range",
+    "Soft Clip Range: width of the transition"
+  ],
+  "caveats": [
+    "The Upper input description says lower limit; treated here as upper-limit scaling",
+    "Soft Clip changes values near the limits, so a hard clamp and a soft clip give different results"
+  ],
+  "resume_fr": "Le nœud Clamp borne les valeurs d'une couche entre une limite basse et une limite haute, avec remplacement par la limite ou par zéro, ou transition douce par Soft Clip."
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Cop denoiseai",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/denoiseai.html",
+  "status": "ok",
+  "summary_en": "Applies a denoising library to an input layer. Supports Intel Open Image Denoise, shipped with Houdini, and NVIDIA OptiX, installed separately. Distinct from the Denoise TVD node.",
+  "inputs": [
+    "source: image to denoise",
+    "normal: normal AOV guiding noise reduction",
+    "albedo: albedo AOV guiding noise reduction",
+    "motionvec: motion vectors, required by OptiX for temporal noise removal",
+    "prevframe: previous denoised frame, required by OptiX for temporal noise removal"
+  ],
+  "key_parameters": [
+    "Denoiser: Intel or OptiX",
+    "Auxiliary Planes Are Clean: sets the cleanAux filter when normal and albedo are already noise-free",
+    "Prefilter Auxiliary Planes: cleans normal and albedo before denoising; better for final frames, slower",
+    "Use CPU Only: forces the CPU device and reduces GPU memory use"
+  ],
+  "caveats": [
+    "Requires a supported platform and the chosen library installed.",
+    "OptiX works only on NVIDIA cards and needs driver 435 or later.",
+    "Prefiltering the auxiliary planes reduces performance; turn it off for previews."
+  ],
+  "resume_fr": "Débruite une couche avec les bibliothèques Intel ou OptiX, guidées par les AOV de normales et d'albédo."
+}

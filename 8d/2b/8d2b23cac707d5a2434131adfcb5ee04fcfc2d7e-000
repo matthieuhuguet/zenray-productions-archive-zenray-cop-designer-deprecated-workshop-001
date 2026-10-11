@@ -1,0 +1,32 @@
+{
+  "name": "illpixel",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/illpixel.html",
+  "status": "ok",
+  "summary_en": "Detects illegal floating-point pixels (NaN and infinite values) in a layer, then fixes them by blending neighbors or zeroing, or flags them with a highlight for shader debugging.",
+  "inputs": [
+    "source: the original layer that may contain bad values"
+  ],
+  "key_parameters": [
+    {
+      "name": "Illegal Pixels",
+      "meaning": "method: blend surrounding pixels, zero the pixel, show with highlight, or show by isolating"
+    },
+    {
+      "name": "Highlight Color",
+      "meaning": "color for flagged pixels in highlight mode"
+    },
+    {
+      "name": "Detect",
+      "meaning": "NaN values, infinite values, both, or a custom rule"
+    },
+    {
+      "name": "Rule",
+      "meaning": "custom detection comparing pixels with Less Than, Greater Than, Equal and similar operators"
+    }
+  ],
+  "caveats": [
+    "Detection works only on 16 and 32 bit float data; integer formats cannot reveal bad pixels.",
+    "Zeroing clears the whole pixel to avoid color shifts; repairing large blocks can produce blurry spots."
+  ],
+  "resume_fr": "Détecte les pixels flottants illégaux (NaN et infinis) et les répare ou les signale pour le débogage des shaders."
+}

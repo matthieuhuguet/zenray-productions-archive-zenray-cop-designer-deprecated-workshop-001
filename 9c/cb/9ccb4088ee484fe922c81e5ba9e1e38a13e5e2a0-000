@@ -1,0 +1,32 @@
+{
+  "name": "labs::uv_grid_texture::1.0",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/labs--uv_grid_texture-1.0.html",
+  "status": "ok",
+  "summary_en": "The Labs UV Grid Texture 1.0 node procedurally generates UV grid textures for checking UV layouts, texture orientation, texel density and distortion. The image can be customised with tile colours, outlines, markers and labels, then written to disk.",
+  "inputs": [],
+  "key_parameters": [
+    "Resolution: resolution of the generated texture",
+    "Grid Divisions: number of subdivisions within each UV tile",
+    "Background Color: background colour, shown only when Add Rounded Corners is enabled",
+    "Coloring Mode: Uniform, Checker or Gradient tile colouring",
+    "Uniform Color: single tile colour used in Uniform mode",
+    "Checker Color 1 / Checker Color 2: the two alternating tile colours used in Checker mode",
+    "Color Gradient: colour ramp used in Gradient mode",
+    "Add Tile Outlines: toggles outlines around UV tiles; Outline Width and Outline Color control them",
+    "Add Rounded Corners / Corner Radius: toggles and sets rounded tile corners",
+    "Marker Type: Text, Cross or Arrow markers within each tile; Text Mode chooses Letters and Numbers or Coordinates",
+    "Font / Marker Size: font and size of the markers",
+    "Marker colouring parameters: same colouring modes as the tiles",
+    "Output File: file path where the texture is written",
+    "Render: generates the texture and saves it to the Output File"
+  ],
+  "caveats": [
+    "Background Color only takes effect when Add Rounded Corners is enabled",
+    "Text Mode only applies when Marker Type is Text",
+    "Color Gradient is used only when the relevant Coloring Mode is Gradient",
+    "The page documents no node inputs",
+    "A newer Labs UV Grid Texture 1.1 exists in the node index, so this page may not reflect the latest version",
+    "The node is also used internally by the Labs UV Visualize SOP, a related but separate workflow"
+  ],
+  "resume_fr": "Génère une texture de grille UV procédurale pour contrôler la disposition, l'orientation et la densité de texels des UV, puis l'écrit sur disque."
+}

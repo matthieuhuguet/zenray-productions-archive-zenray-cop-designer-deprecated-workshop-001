@@ -1,0 +1,36 @@
+{
+  "name": "julia",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/julia.html",
+  "status": "ok",
+  "summary_en": "Computes the Julia set to produce fractal, chaotic imagery for use in composites. The output is a mono layer.",
+  "inputs": [
+    "size_ref: reference layer that sets the output image size and metadata"
+  ],
+  "key_parameters": [
+    {
+      "name": "Signature",
+      "meaning": "Float mono gives normalized time-to-escape; Integer ID gives the exact escape iteration count"
+    },
+    {
+      "name": "Scale",
+      "meaning": "scales the incoming x and y image coordinates"
+    },
+    {
+      "name": "Real Coefficient / Imaginary Coefficient",
+      "meaning": "the complex constant defining the Julia set"
+    },
+    {
+      "name": "Escape Radius",
+      "meaning": "threshold at which a point counts as escaped"
+    },
+    {
+      "name": "Maximum Iterations",
+      "meaning": "iteration limit after which a point is treated as not escaped"
+    }
+  ],
+  "caveats": [
+    "The output is a mono layer, not a colored image; pass it through Mono to RGB to add color.",
+    "If the coefficients are connected, they act as a point in the Mandelbrot set."
+  ],
+  "resume_fr": "Calcule l'ensemble de Julia pour produire une image fractale en niveaux de gris, à coloriser ensuite avec Mono to RGB."
+}

@@ -1,0 +1,28 @@
+{
+  "name": "grunge_wipetrails",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_wipetrails.html",
+  "status": "ok",
+  "summary_en": "Grunge Wipe Trails generates layered noise that imitates the trails left by circular wipes. Its output can serve as a mask or as a base for more detailed textures, such as faded, round distress marks.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude scales values before Center; Center offsets them; Mask Contrast adjusts contrast",
+    "Pattern: Element Size, Offset, Tile Size as repeat interval",
+    "Primary Mask and Secondary Mask: visibility of the foreground and background wipe layers",
+    "Density: how many wipes appear",
+    "Shape Width: thickness of the wipes",
+    "Shape Detail: how broken up the curves are",
+    "Mixing and Mixing Scale: how much the foreground and background wipes blend and distort each other",
+    "Seed: changes the randomized result while keeping the same look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Values can fall outside 0 to 1, including negatives and values above 1; use the Clamp options",
+    "Fold has no visible effect when all values are positive",
+    "Complement assumes values from 0 to 1",
+    "Post-processing Contrast is separate from Noise Contrast",
+    "Tile Size should match the aspect ratio of non-square images"
+  ],
+  "resume_fr": "Grunge Wipe Trails imite les traces laissées par des essuyages circulaires, utilisable en masque ou comme base pour des marques d'usure arrondies."
+}

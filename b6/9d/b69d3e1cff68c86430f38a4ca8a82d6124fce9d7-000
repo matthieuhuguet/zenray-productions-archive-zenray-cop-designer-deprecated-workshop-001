@@ -1,0 +1,26 @@
+{
+  "name": "Cop equalize",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/equalize.html",
+  "status": "ok",
+  "summary_en": "The Equalize node rescales or repositions a layer's colors so they fit a desired range. It is most useful when the input's range is unknown and must be mapped onto a specific one.",
+  "inputs": [
+    "source: layer or VDB to equalize",
+    "active: optional layer or VDB whose pixels define the range used for equalization; pixels above 0.5 are considered",
+    "mask: optional per-pixel mask scaling the Mask parameter"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source",
+    "Mask: how much of the equalized value is mixed into the original; default 1 uses only the new value; also selects affected channels",
+    "Toggle RGB and Red, Green, Blue, Alpha: enable or disable each channel's effect",
+    "Equalize By: Stretch (min and max to Black and White), Move Minimum to Black, Move Maximum to White, Move Average to Target Average, Scale to Maximum Length",
+    "Fit Method: shift or scale to reach a goal value; ignored by Stretch and Scale to Maximum Length",
+    "Luminance Type: brightness formula such as SGI, NTSC or HDTV luminance, or average, max or min channel, magnitude, HSV hue, saturation or value, or single-channel extraction",
+    "Black and White: target values, usually 0 and 1",
+    "Target Average: goal average when Equalize By is Move Average to Value"
+  ],
+  "caveats": [
+    "The range is computed from the input, so a frame with unusually extreme values can cause sudden unwanted changes in a procedural setup",
+    "The page recommends a Remap COP with a fixed range instead, which is also faster because it skips the range computation"
+  ],
+  "resume_fr": "Le nœud Equalize recale les couleurs d'une couche dans une plage voulue, utile quand la plage d'origine est inconnue."
+}

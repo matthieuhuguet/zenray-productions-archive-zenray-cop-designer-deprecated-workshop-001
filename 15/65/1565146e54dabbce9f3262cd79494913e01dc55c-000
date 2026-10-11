@@ -1,0 +1,28 @@
+{
+  "name": "layerfromcurves",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/layerfromcurves.html",
+  "status": "ok",
+  "summary_en": "The Layer from Curves node renders curve geometry into a layer, with controls for width, profile and colour. It is a higher-level alternative to Rasterize Curves and gives more control over the look of the curves.",
+  "inputs": [
+    "size_ref: representative layer that sets the output image size and metadata",
+    "curves: source curve geometry to render"
+  ],
+  "key_parameters": [
+    "Width / Width along Curve: width in image space, optionally varied along the curve",
+    "Profile: adjusts the profile across the curve width",
+    "Color along Length / Color across Width: colour along the length and across the width",
+    "UV Twist Rate: scrolls the U value along the curve for a twisted rope look",
+    "Tile / Tile Size / Force Tilable V: replicates curves so the layer tiles, with tile size matching the aspect ratio",
+    "Joints / Endpoints / Max Joint Scale: corner joins (Round or Sharp), end caps (Flat or Round), and spike limit on sharp corners",
+    "Resample / Segment Length: resamples the input curves to smooth them",
+    "Treat Polygons As: Straight, Subdivision, Interpolating or Resample by Polygon Edge"
+  ],
+  "caveats": [
+    "size_ref must be connected, since it sets the output image size",
+    "Subdivision smooths curves without passing through the original points; Interpolating passes through them but can oscillate",
+    "UV outputs are intended for a Texture Sample COP, and the uvscale output helps UV Transform COP filter correctly",
+    "The page describes this node as higher level than Rasterize Curves",
+    "Documented as available since version 21.0"
+  ],
+  "resume_fr": "Rend des courbes dans une couche avec largeur, profil et couleur contrôlables, plus finement que Rasterize Curves."
+}

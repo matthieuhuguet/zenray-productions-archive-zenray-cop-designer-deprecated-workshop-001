@@ -1,0 +1,23 @@
+{
+  "name": "layerproperties",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/layerproperties.html",
+  "status": "ok",
+  "summary_en": "The Layer Properties node changes a layer basic storage and sampling metadata, such as precision, fixed point storage, border behaviour and type info. It takes one source layer and outputs that same layer with the revised properties.",
+  "inputs": [
+    "source: the original layer whose properties are set"
+  ],
+  "key_parameters": [
+    "Signature: layer type the source accepts",
+    "Precision: per-channel storage size (8, 16 or 32 bits), trading memory against integer range or float accuracy",
+    "Use Fixed Point Storage: stores 8-bit unsigned and 16-bit signed values as fixed point",
+    "Border: sampling behaviour outside the layer boundaries, defaulting to the layer own border property",
+    "Type Info: how the layer is visualised in the 3D viewport"
+  ],
+  "caveats": [
+    "Fixed point storage limits 8-bit values to 0 to 1 and 16-bit values to -1 to 1, and applies only to non-ID layers",
+    "Storage types propagate through the network, so downstream nodes often inherit them",
+    "Higher precision allows larger or more accurate values but uses more memory",
+    "The storage type can be inspected in the node info window, opened by holding the middle mouse button on the node"
+  ],
+  "resume_fr": "Modifie les métadonnées de stockage et d'échantillonnage d'une couche (précision, bord, type d'information) sans changer son contenu."
+}

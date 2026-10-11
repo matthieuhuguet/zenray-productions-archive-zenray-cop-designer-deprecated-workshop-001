@@ -1,0 +1,19 @@
+{
+  "name": "Cop blocktogeo",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/blocktogeo.html",
+  "status": "ok",
+  "summary_en": "Compiles a block into a geometry form of its program. The geometry can be used as a fast preview filter in a slap comp, or rendered directly with husk.",
+  "inputs": [
+    "The page documents no input ports; the node references the Block End COP through its Block End Node parameter"
+  ],
+  "key_parameters": [
+    "Block End Node: path to the Block End COP that closes the block to convert",
+    "Input States: All Connected (assumes every block input exists) or Network (compiles the network as it is; only Block Begin ports with data plugged in count as connected)",
+    "Output: program, a geometry representation of the compiled program"
+  ],
+  "caveats": [
+    "Compiled COP networks do not support simulation",
+    "Input state changes the compiled result: in Network mode unconnected block inputs are treated as absent"
+  ],
+  "resume_fr": "Compile un bloc en géométrie de programme, utilisable comme filtre d'aperçu rapide en slap comp ou rendu directement avec husk."
+}

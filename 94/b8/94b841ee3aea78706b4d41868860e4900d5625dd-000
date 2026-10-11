@@ -1,0 +1,31 @@
+{
+  "name": "heightfieldtomono",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfieldtomono.html",
+  "status": "ok",
+  "summary_en": "Converts a heightfield into a grayscale mono layer: resets the layer type to None and linearly remaps heights from the input range to the output range.",
+  "inputs": [
+    "height: the original height layer"
+  ],
+  "key_parameters": [
+    {
+      "name": "Compute Range",
+      "meaning": "fills Input Min and Input Max from the layer minimum and maximum heights"
+    },
+    {
+      "name": "Input Min / Input Max",
+      "meaning": "heights at or below Input Min map to Output Min; at or above Input Max map to Output Max"
+    },
+    {
+      "name": "Output Min / Output Max",
+      "meaning": "lower and upper ends of the output range"
+    },
+    {
+      "name": "Clamp to Output Range",
+      "meaning": "limits output values to the output range when enabled"
+    }
+  ],
+  "caveats": [
+    "By default values outside the input range can extend beyond the output range; enable Clamp to Output Range to prevent this."
+  ],
+  "resume_fr": "Convertit un champ de hauteur en couche mono en grisés, en remappant linéairement la plage de hauteurs vers la plage de sortie."
+}

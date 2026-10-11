@@ -1,0 +1,27 @@
+{
+  "name": "grunge_moisture",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_moisture.html",
+  "status": "ok",
+  "summary_en": "Grunge Moisture procedurally generates a spotted pattern resembling damp, sponge-like texture. It works well as a mask or as a building block for textures such as sponge-painted surfaces or condensation on glass.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude scales values before Center, Center offsets them, Mask Contrast adjusts contrast",
+    "Pattern: Element Size, Offset, Tile Size",
+    "Detail: visibility of the spots set by Density",
+    "Distort: directional distortion, which can produce cellular looks",
+    "Density: amount of spots, of various sizes at higher values",
+    "Sharpen: sharpens or softens the spots",
+    "Seed: changes the random result while keeping the same look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can be negative or above 1; the page recommends the Clamp options",
+    "Fold has no visible effect when all values are positive",
+    "Complement assumes values in the 0 to 1 range",
+    "Post-processing Contrast differs from Noise Contrast",
+    "Tile Size should match the aspect ratio of non-square images"
+  ],
+  "resume_fr": "Grunge Moisture produit un motif de taches humides, proche d'une éponge, utilisable en masque pour une surface peinte à l'éponge ou de la condensation sur verre."
+}

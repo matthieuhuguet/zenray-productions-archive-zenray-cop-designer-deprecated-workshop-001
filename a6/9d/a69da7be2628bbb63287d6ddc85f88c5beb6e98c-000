@@ -1,0 +1,24 @@
+{
+  "name": "layertopoints",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/layertopoints.html",
+  "status": "ok",
+  "summary_en": "The Layer to Points node creates points from the pixels of an input layer, useful for stamp points, VDB activation or scattering points across a layer. Because it can create many points quickly, Scatter SOP or VDB Leaf Points may suit some workflows better.",
+  "inputs": [
+    "layer: the layer that supplies point locations and controls how many points are generated"
+  ],
+  "key_parameters": [
+    "Method: how points are generated (one per pixel, one per non-zero pixel, a count stored per pixel, one per unique value, or a count read from the first or last pixel)",
+    "Layer Attrib: integer attribute storing the value of the pixel that produced each point",
+    "Index Attrib: integer attribute storing the raw buffer offset of each point source pixel",
+    "Set Positions: fills the position attribute with each pixel location; when off, positions are zero",
+    "Ignore Minus One: excludes the value -1 when computing unique values",
+    "Point Attributes: defines extra point attributes (name, class, type, tuple size)"
+  ],
+  "caveats": [
+    "The node can easily create more points than intended, so check the layer and Method before use",
+    "Zero-valued attributes use no memory, so turning off Set Positions saves memory when positions are not needed",
+    "Only the Detail and Point classes apply, since the node creates points only",
+    "Documented as available since version 21.0"
+  ],
+  "resume_fr": "Crée des points à partir des pixels d'une couche, pour poser des points de tampon, activer des VDB ou disperser des points."
+}

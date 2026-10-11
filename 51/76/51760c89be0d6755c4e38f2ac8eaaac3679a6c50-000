@@ -1,0 +1,28 @@
+{
+  "name": "cloudnoise3d",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cloudnoise3d.html",
+  "status": "ok",
+  "summary_en": "Cloud Noise 3D generates puffy, billowy noise in 3D space, useful for cumulus-style cloud patterns. Unlike Bubble Noise, its output is non-periodic.",
+  "inputs": [
+    "size_ref: representative layer that sets output image size and metadata",
+    "pos (optional): layer or VDB supplying the position at each pixel where noise is evaluated"
+  ],
+  "key_parameters": [
+    "Amplitude: multiplies the noise before the Center offset",
+    "Center: offsets the output value range",
+    "Element Size: world-space size of the base noise element, with per-component scale",
+    "Offset: shifts the noise function in world coordinates",
+    "Noise Type: Simplex or Curl (divergence-free)",
+    "Max Octaves, Lacunarity, Roughness: fractal layering controls",
+    "Distortion: warps the noise toward decreasing or increasing values",
+    "Stretch: stretches noise along each world axis, recommended over Element Size",
+    "Droop / Droop Direction: bends the pattern toward a direction",
+    "Fold Each Octave: remaps each layer so negative valleys become positive peaks",
+    "Post Processing (in order): Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum and Maximum"
+  ],
+  "caveats": [
+    "Output can exceed the usual range (negative values and values above 1); use the Post Processing clamps",
+    "Complement is only reliable for values between 0 and 1"
+  ],
+  "resume_fr": "Le nœud Cloud Noise 3D produit un bruit gonflé et non périodique, adapté aux nuages de type cumulus."
+}

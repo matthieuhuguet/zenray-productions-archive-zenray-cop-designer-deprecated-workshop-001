@@ -1,0 +1,26 @@
+{
+  "name": "Cop file",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/file.html",
+  "status": "ok",
+  "summary_en": "The File node brings image or video files from disk into a COP network. It can also import the AOVs and their properties from a source file, which then become the node's outputs.",
+  "inputs": [
+    "size_ref: representative layer that sets the output image size and controls the metadata"
+  ],
+  "key_parameters": [
+    "Source: File on disk, Clone from the Clone Control Panel, or Live Render LOP",
+    "File Name: path to an image, image sequence or video; tokens $F or <F> for sequence frames, <UDIM> for UDIM tiles, <LAYER> for multiple AOV files",
+    "Video Timing: frame numbers generated from a Start Frame or a specific Frame Number",
+    "Border: raster edge handling (Default, Constant, Clamp, Mirror, Wrap) when Tile Visualization is on",
+    "Missing Data: report an error or warning, or substitute a Missing Color, for missing AOVs or frames",
+    "Incoming Colorspace: interprets color via OpenColorIO rules, as raw data, or with pre-multiplication where needed",
+    "Load Camera: reads camera data from file metadata to set the layer transform and camera",
+    "Display Window from Input: uses the input's display window so pixels correspond one-to-one",
+    "Add AOVs from File: imports AOVs from the file; Ctrl+click resets the list",
+    "Number of AOVs, File AOV, Channel Type, Precision, Raw: source name, data format (Mono, UV, RGB, RGBA, ID), bit depth and color handling of each loaded AOV"
+  ],
+  "caveats": [
+    "Several parameters override the defaults set on the enclosing COP Network node or COP Network SOP",
+    "Video files only support the C AOV"
+  ],
+  "resume_fr": "Le nœud File charge une image ou une vidéo depuis le disque dans le réseau COP, avec ses AOV et ses métadonnées."
+}

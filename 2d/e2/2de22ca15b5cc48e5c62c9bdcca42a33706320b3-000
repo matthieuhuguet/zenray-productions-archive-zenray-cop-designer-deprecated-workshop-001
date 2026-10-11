@@ -1,0 +1,33 @@
+{
+  "name": "heatdistort",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heatdistort.html",
+  "status": "ok",
+  "summary_en": "Heat Distort warps an input layer to imitate the shimmering haze seen around fire and mirage effects. It combines large-scale and fine-scale noise distortions to reproduce most common types of heat distortion.",
+  "inputs": [
+    "source: original layer to distort",
+    "effect: optional per-pixel scale for the distortion amount",
+    "mask: optional per-pixel mask, scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Distortion: overall strength, scaling both base and detail noise",
+    "Element Size: pattern size in image coordinates; Per-Component Controls adds per-axis Element Scale",
+    "Angle: direction of the distortion, where 0 points along positive X",
+    "Accurate Distortion: traces curved paths for a more precise result, with a quality value",
+    "Streak Blur: averages samples along the distortion direction",
+    "Scale by Timestep: scales strength by the timestep, usually 1/FPS",
+    "Base Distortion: large-scale waviness, with Distortion Scale and Element Size Scale",
+    "Detail Distortion: finer distortion, with Cutoff and Roughness",
+    "Blur Source: blurs the source in proportion to distortion strength, using Blur Scale",
+    "Chromatic Aberration: per-channel offsets for colour fringing, with an overall Scale",
+    "Animation: Time Offset, Pulse Length, Direction and Speed for drifting haze",
+    "Mask: how much of the new value mixes with the original"
+  ],
+  "caveats": [
+    "With Accurate Distortion off, one step per pixel finds the source: fast but inaccurate when directions or scales vary",
+    "With Accurate Distortion on, larger steps run faster but may miss intermediate variations",
+    "Detail noise shows mainly where base distortion is strong; lower Cutoff to show it in weaker regions",
+    "The page recommends Heat Distort By Layer for finer control of direction",
+    "The noise algorithm and performance limits are not described"
+  ],
+  "resume_fr": "Heat Distort déforme un calque pour imiter le miroitement de l'air chaud autour d'un feu ou d'un mirage, en combinant deux niveaux de bruit."
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Cop edgedetect",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/edgedetect.html",
+  "status": "ok",
+  "summary_en": "Finds edges in an image with several selectable algorithms. Does not cover the Edge Detect by Contour, Normal or Depth nodes.",
+  "inputs": [
+    "source: initial image to process (only input)"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source",
+    "Mode: edges from Luminance, or Per Channel for RGB and RGBA inputs",
+    "Method: Sobel, Prewitt, Laplacian, Simple or Thresholded Sobel",
+    "Normalize: keeps output in 0 to 1",
+    "Blur Before: blurs the image before detection",
+    "High Threshold: strong-pixel cutoff, used only by Thresholded Sobel"
+  ],
+  "caveats": [
+    "High Threshold has no effect unless Method is Thresholded Sobel.",
+    "Per Channel mode is meant for RGB and RGBA inputs.",
+    "The page gives no default values or guidance on choosing a method."
+  ],
+  "resume_fr": "Détecte les contours d'une image selon plusieurs méthodes : Sobel, Prewitt, Laplacien, simple ou Sobel seuillé."
+}

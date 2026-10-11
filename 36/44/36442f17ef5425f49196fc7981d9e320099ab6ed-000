@@ -1,0 +1,28 @@
+{
+  "name": "channeljoin",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/channeljoin.html",
+  "status": "ok",
+  "summary_en": "Merges up to four single-channel inputs (red, green, blue, alpha) into one multichannel result named rgba; missing channels fall back to the Default Color.",
+  "inputs": [
+    "red: first output channel (Mono layer, VDB or attribute)",
+    "green: second output channel",
+    "blue: third output channel",
+    "alpha: fourth output channel"
+  ],
+  "key_parameters": [
+    {
+      "name": "Signature",
+      "meaning": "Sets the output type and therefore the channel count; inputs the signature does not need are ignored"
+    },
+    {
+      "name": "Default Color",
+      "meaning": "Value used for any missing input channel; default 0, 0, 0, 1"
+    }
+  ],
+  "caveats": [
+    "Extra inputs are not used if the Signature does not require them",
+    "Missing channels fall back to Default Color rather than causing an error",
+    "The page does not explain the signature types itself"
+  ],
+  "resume_fr": "Le nœud channeljoin assemble jusqu'à quatre canaux simples en une seule couche multicanale, les canaux manquants prenant la Default Color."
+}

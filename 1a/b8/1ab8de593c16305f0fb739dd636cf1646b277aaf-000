@@ -1,0 +1,20 @@
+{
+  "name": "cross",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cross.html",
+  "status": "ok",
+  "summary_en": "The Cross Product node computes the vector cross product of two RGB layers, VDBs or attributes. The result is perpendicular to both inputs, so it is mainly used with signed vector data.",
+  "inputs": [
+    "a: the first value to cross",
+    "b: the value to cross against; if unconnected the node uses {0, 0, 1}"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by source (see the Signatures glossary)"
+  ],
+  "caveats": [
+    "Most meaningful for signed vectors",
+    "When b is unconnected, a is crossed against the fixed vector {0, 0, 1}, which may not be intended",
+    "The page documents only the Signature parameter"
+  ],
+  "outputs": ["cross: the cross product as an RGB layer, VDB or attribute"],
+  "resume_fr": "Le nœud Cross calcule le produit vectoriel de deux entrées, un résultat perpendiculaire aux deux, utile surtout sur des vecteurs signés."
+}

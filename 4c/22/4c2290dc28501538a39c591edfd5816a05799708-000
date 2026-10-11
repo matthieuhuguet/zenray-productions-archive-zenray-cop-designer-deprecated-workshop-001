@@ -1,0 +1,31 @@
+{
+  "name": "convolve3",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/convolve3.html",
+  "status": "ok",
+  "summary_en": "The Convolve 3x3 node applies a 3x3 convolution kernel to a layer, computing each output pixel from its 3x3 neighbourhood. It is commonly used for sharpening (default), edge detection and neighbourhood counting. Available since version 20.5.",
+  "inputs": [
+    "source: the layer to convolve",
+    "mask (optional): per-pixel mask amount scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by source",
+    "Mask: default 1, only the new value is used",
+    "Toggle RGB, Red, Green, Blue, Alpha: channels affected",
+    "Multiplicative (Top, Middle, Bottom): 3x3 grid of coefficients on the neighbourhood",
+    "Multiplicative Uniform Scale: scales all coefficients",
+    "Normalize Kernel: divides by the coefficient sum so brightness is kept",
+    "Additive (Top, Middle, Bottom): values added to neighbourhood pixels, default 0",
+    "Additive Uniform Scale",
+    "Combine Operation: Add, Multiply, Maximum, Minimum",
+    "Active Terms: which neighbourhood pixels contribute; turning terms off improves performance but limits kernel shape",
+    "Clamp Below Zero / Clamp Above One",
+    "Treat RGBA as Premultiplied: un-premultiplies before the kernel and re-premultiplies after; turn off when blurring colour and alpha together"
+  ],
+  "caveats": [
+    "Convolution happens in buffer space, so it does not respect pixel scale",
+    "Normalize Kernel has no effect when the kernel sums to zero (e.g. the Outline recipe)",
+    "Edge detection on premultiplied RGB reports edges where opacity varies",
+    "Turning off Active Terms restricts the kernel to specific shapes"
+  ],
+  "resume_fr": "Le nœud Convolve 3x3 applique un noyau 3x3 à chaque pixel, à partir de son voisinage immédiat, pour la netteté, la détection de contours ou le comptage de voisinage."
+}

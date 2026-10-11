@@ -1,0 +1,32 @@
+{
+  "name": "Cop fractalsample",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/fractalsample.html",
+  "status": "ok",
+  "summary_en": "Fractal Sample builds a fractal from a source layer by sampling that input at rising frequencies and blending the results into a continuous pattern of shrinking copies. Its randomization options add organic or inorganic variation, suiting effects such as algae, frost, or kaleidoscopic patterns.",
+  "inputs": [
+    "size_ref: sets the output size and controls metadata",
+    "source: original layer to which the fractal effect is applied",
+    "octaves (optional): multiplies Max Octaves",
+    "lacunarity (optional): multiplies Lacunarity",
+    "roughness (optional): multiplies Roughness"
+  ],
+  "key_parameters": [
+    "Max Octaves: number of octaves combined",
+    "Lacunarity: scale factor applied to each octave",
+    "Roughness: amplitude scale applied to each successive octave",
+    "Blend Mode: Add, Subtract, Maximum or Over",
+    "Maintain Tileable: clamps or rounds certain values (for example Lacunarity to integers) to help preserve tiling",
+    "Seed: random values for Jitter, Angle and Flip",
+    "Jitter: random position offset applied to each octave",
+    "Angle: rotation per octave, applied incrementally (Per Octave) or randomly within a range (Random)",
+    "Random Flip X and Random Flip Y: randomly flip each octave on an axis",
+    "Post-processing (Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum): adjusts output values, run in the order listed"
+  ],
+  "caveats": [
+    "Maintain Tileable does not create tileability; it only preserves tiling if the source input already tiles",
+    "The Over blend mode is valid only when the input is RGBA",
+    "Complement assumes values in the 0 to 1 range, so other ranges can produce negative or out-of-range values",
+    "Fold has no effect when all values are positive"
+  ],
+  "resume_fr": "Le nœud Fractal Sample construit une fractale à partir d'une couche source, en superposant des copies de plus en plus petites de celle-ci."
+}

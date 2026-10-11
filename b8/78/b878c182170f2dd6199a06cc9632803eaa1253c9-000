@@ -1,0 +1,39 @@
+{
+  "name": "heightfield_erode",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_erode.html",
+  "status": "ok",
+  "summary_en": "HeightField Erode simulates water-driven and slope-driven erosion on a height layer, with the scale of the effects set by a feature-size control. Several instances at different scales can build landforms from broad valleys down to fine channels.",
+  "inputs": [
+    "height: height layer to erode (required)",
+    "debris: optional layer updated by the simulation",
+    "sediment: optional layer updated by the simulation",
+    "flow: optional layer updated by the simulation",
+    "erodability: optional mask controlling how soft the terrain is",
+    "rainfall: optional mask controlling the rainfall amount"
+  ],
+  "key_parameters": [
+    "Simulate: runs the simulation with the playbar; when off, runs a fixed number of Iterations",
+    "Substeps: erosion iterations per frame; higher is stronger but slower",
+    "Start Frame and Reset Simulation: where the simulation begins and clearing its cache",
+    "Cache Simulation, Cached Frames, Checkpoint Rate: frame storage for faster scrubbing",
+    "Feature Size: width of features in metres",
+    "Spread Iterations: material-transport passes per frame",
+    "Random Seed: changes the distribution of erosion features",
+    "Erodability: how easily the terrain erodes",
+    "Flow Force: hydro erosion strength; 0 disables it",
+    "Rainfall Coverage: rain per frame as a share of the surface",
+    "Slope Influence: how closely streams follow the slope",
+    "Erosion Rate, Deposition Rate, Removal Rate, Evaporation Rate: pickup, deposition, sediment decay and capacity decay",
+    "Bank Angle: steepness of channel walls",
+    "Weathering Force: thermal erosion strength; 0 disables it",
+    "Cut Angle: angle where thermal cutting stops",
+    "Repose Angle: angle where debris stays put without sliding"
+  ],
+  "caveats": [
+    "The smallest feature size is three times the input pixel size; smaller requests are clamped",
+    "With caching off, every new frame recooks from the start frame, which slows playback",
+    "No performance figures are given beyond the note that higher Substeps take longer",
+    "Debris and sediment outputs are Mono layers; the flow output is a UV layer"
+  ],
+  "resume_fr": "HeightField Erode simule l'érosion par l'eau et par la pente sur une hauteur, à une échelle réglée par la taille des formes, et s'enchaîne à plusieurs échelles."
+}

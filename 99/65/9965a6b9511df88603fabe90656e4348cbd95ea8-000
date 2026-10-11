@@ -1,0 +1,28 @@
+{
+  "name": "Cop curlnoise",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/curlnoise.html",
+  "status": "ok",
+  "summary_en": "Generates fractal curl noise built on Perlin noise and outputs a UV layer named noise, meant as a direction input for nodes such as Distort or Flow Block Begin. Uses image coordinates.",
+  "inputs": [
+    "size_ref: reference layer setting output size and metadata",
+    "pos: optional UV layer replacing pixel image coordinates as the noise source",
+    "time: layer whose per-pixel value sets the time",
+    "octaves: optional amount multiplying Max Octaves",
+    "roughness: optional amount multiplying Roughness"
+  ],
+  "key_parameters": [
+    "Amplitude: multiplies the noise before Center",
+    "Center: offsets the output range",
+    "Element Size: basic feature size in image coordinates; Element Scale per axis with Per-Component Controls",
+    "Offset: shifts the pattern in image coordinates",
+    "Tile Size: repeat period in image coordinates",
+    "3D Noise group (Animate, Pulselength, Timescale, Timeoffset, Loop Length): time variation and seamless loop",
+    "Fractal group (Max Octaves, Lacunarity, Roughness, Octave Offset): octave stacking"
+  ],
+  "caveats": [
+    "Without the fractal process the node is equivalent to wiring Perlin noise into the Slope Direction COP.",
+    "Uses image coordinates; use Curl Noise 3D for world-space coordinates.",
+    "With tileable behaviour, Element Size and Lacunarity are rounded or clamped."
+  ],
+  "resume_fr": "Produit un bruit de rotationnel fractal en coordonnées image, utilisable comme champ de direction."
+}

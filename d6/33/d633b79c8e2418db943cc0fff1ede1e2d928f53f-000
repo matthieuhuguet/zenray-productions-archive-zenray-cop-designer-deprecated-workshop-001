@@ -1,0 +1,26 @@
+{
+  "name": "heightfield_clip",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_clip.html",
+  "status": "ok",
+  "summary_en": "HeightField Clip clamps a height layer between optional lower and upper limits. It also outputs masks that show which regions were clipped by each limit.",
+  "inputs": [
+    "height: heightfield to clamp",
+    "lower: optional per-pixel scaling of the lower limit",
+    "upper: optional per-pixel scaling of the upper limit",
+    "mask: optional per-pixel mask, scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Mask: how much of the clipped height mixes back with the original height",
+    "Compute Range: fills Lower Limit and Upper Limit with the minimum and maximum of the input height",
+    "Lower Limit and Upper Limit: enable and set each limit; a dropper picks the value in the viewport",
+    "Clamped Values: Replace with Limit Value, or Soft Clip",
+    "Soft Clip Direction: smooth transition outside the range (extending the clip) or inside it (narrowing the clip)",
+    "Soft Clip Range: width of the smoothing transition from the limit to the original values"
+  ],
+  "caveats": [
+    "The page lists no explicit limitations, performance notes or edge cases",
+    "Soft Clip changes values near the limits as well as the clamped values, so it is not a pure hard clamp",
+    "The internal type name cop heightfield_clip is inferred from the page file name, not stated on the page"
+  ],
+  "resume_fr": "HeightField Clip borne une couche de hauteur entre deux limites optionnelles et fournit des masques des zones écrêtées."
+}

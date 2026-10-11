@@ -1,0 +1,25 @@
+{
+  "name": "Cop blur",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/blur.html",
+  "status": "ok",
+  "summary_en": "Softens a layer by averaging each pixel with the pixels around it. The size and shape of that neighborhood control how strong the blur looks.",
+  "inputs": [
+    "source: layer or VDB to blur",
+    "size: mono or float input that scales the blur amount"
+  ],
+  "key_parameters": [
+    "Filter: Box (even average) or Gaussian (default, weights nearby pixels by a Gaussian distribution)",
+    "Read Pixels outside Image: includes pixels beyond the image edges in the average; the border type sets what those pixels contain",
+    "Units: Image (default), Pixels or Local; sets how the radius is measured",
+    "Size: blur radius in the chosen units",
+    "Scale Size: scales the radius along a specific axis",
+    "Scale by Timestep: adjusts strength using the current timestep, usually 1/$FPS; uses the step size in sub-stepped simulations"
+  ],
+  "caveats": [
+    "Edge behavior depends on Read Pixels outside Image and the border type; without it, edge pixels average only inside the image",
+    "The meaning of Size depends entirely on Units, so the same number can give very different results",
+    "Timestep scaling matters for time-based or simulated data; its effect on static images is not specified",
+    "The page gives no numeric limits for Size and no performance costs"
+  ],
+  "resume_fr": "Adoucit une couche en moyennant chaque pixel avec ses voisins, par un filtre Box ou Gaussian dont le rayon dépend de l'unité choisie."
+}

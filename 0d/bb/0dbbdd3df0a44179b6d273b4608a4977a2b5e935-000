@@ -1,0 +1,24 @@
+{
+  "name": "Cop geoattribfromlayer",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/geoattribfromlayer.html",
+  "status": "ok",
+  "summary_en": "The Geometry Attribute from Layer node samples image layers at each point of a geometry's position attribute and writes the results back onto that geometry as new attributes. It is a quick way to turn layer data into geometry attributes, for example to stamp points with a Stamp Points COP.",
+  "inputs": [
+    "geometry: supplies the position attribute and receives the new attributes",
+    "attrib#: layers to sample; the number of these inputs follows the Attributes count"
+  ],
+  "key_parameters": [
+    "Class: geometry class of the Position Attribute and of the Attributes (Primitive, Point or Vertex)",
+    "Space: Texture (0 to 1 across the input's data window), Image (-1 to 1 across the display window) or World (3D modeling-space location)",
+    "Position Attribute: geometry attribute used for sampling, such as P; use a float3 for World space, and a float2 or float3 for Texture and Image space",
+    "Attributes: number of attributes inserted onto the geometry",
+    "Attribute Name and data type: Input (auto-detected), ID (int), Mono (float), UV (float2), RGB (float3), RGBA (float4)",
+    "Do Nothing if Unwired: skips sampling and inserting an attribute when its attrib# input is null or unwired"
+  ],
+  "caveats": [
+    "With a float3 position attribute in Texture or Image space, only the xy components are used",
+    "The attribute type comes from the chosen data type, which should match the layer wired in",
+    "The page does not describe behavior for points that fall outside the layer bounds"
+  ],
+  "resume_fr": "Le nœud Geometry Attribute from Layer échantillonne des couches image aux positions d'une géométrie et écrit les valeurs en attributs de cette géométrie."
+}

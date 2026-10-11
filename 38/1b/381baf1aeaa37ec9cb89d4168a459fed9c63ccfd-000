@@ -1,0 +1,22 @@
+{
+  "name": "convolvefilter",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/convolvefilter.html",
+  "status": "ok",
+  "summary_en": "The Convolve Filter node filters an image by convolving it with a second image used as the kernel, so the filter pattern can be arbitrary. It computes the result in frequency space with an FFT, which keeps large or irregular filters practical. Available since Houdini 22.0.",
+  "inputs": [
+    "input: the image to convolve",
+    "kernel: the image defining the filter pattern"
+  ],
+  "key_parameters": [
+    "Signature: layer type used to interpret input and kernel",
+    "Normalize Kernel: scales the kernel to sum to 1, so brightness is kept; turn off if the kernel is already normalised or its magnitude should scale the result",
+    "Centered Kernel: uses the kernel centre as origin; when off, the origin is the corner and the output shifts by half the kernel size",
+    "Padding: border added before the transform, as a fraction of image size; reduces wrap-around artifacts at higher transform cost",
+    "Border: Unchanged, Constant (zeros), Clamp, Mirror, or Wrap"
+  ],
+  "caveats": [
+    "The FFT convolution is cyclic, so the kernel wraps from one edge to the opposite edge and produces artifacts",
+    "Enable Padding to push these artifacts outside the cropped output"
+  ],
+  "resume_fr": "Le nœud Convolve Filter filtre une image en la convoluant avec une image-noyau, calculée par FFT, ce qui permet des motifs de filtre arbitraires."
+}

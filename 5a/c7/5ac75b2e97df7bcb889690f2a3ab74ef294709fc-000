@@ -1,0 +1,23 @@
+{
+  "name": "cryptomatte",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cryptomatte.html",
+  "status": "ok",
+  "summary_en": "The Cryptomatte node builds a single mask from one or more Cryptomatte layers. It sums the coverage of the objects you select, giving a matte for those objects.",
+  "inputs": [
+    "crypto1: a variable number of RGBA Cryptomatte layers; each is split into coverage and ID channels, and coverage is added wherever IDs match the selection"
+  ],
+  "key_parameters": [
+    "Populate Selection from Manifest: fills Selection from the Cryptomatte manifest metadata",
+    "Select All: includes every ID",
+    "Invert Mask: flips the output mask",
+    "Selection: comma-separated object names, hashed with the standard murmur hash; accepts string patterns such as *wall* ^*left*; an eyedropper can sample it"
+  ],
+  "caveats": [
+    "Name-based selection requires the standard hash and a valid manifest",
+    "The viewer state needs the manifest as a layer property, so it does not work downstream of a Slap Comp Import COP, which has not yet written the manifest",
+    "To enter the viewer state, press Enter while hovering over the Scene View",
+    "Cryptomatte Decode and Cryptomatte Encode are documented on separate pages"
+  ],
+  "outputs": ["mask: the sum of the coverages that matched the selection"],
+  "resume_fr": "Le nœud Cryptomatte produit un masque en additionnant la couverture des objets choisis dans une ou plusieurs couches Cryptomatte."
+}

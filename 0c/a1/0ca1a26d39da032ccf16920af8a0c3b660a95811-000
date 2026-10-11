@@ -1,0 +1,29 @@
+{
+  "name": "contactsheet",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/contactsheet.html",
+  "status": "ok",
+  "summary_en": "The Contact Sheet node arranges its input layers into a grid, similar to a printed contact sheet, also called a mosaic. You control the grid layout, scaling and sampling.",
+  "inputs": [
+    "image1: a series of layers to arrange into the contact sheet"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by source",
+    "Images per Line: layers per row before a new row starts",
+    "Stack Vertically: Top to Bottom or Bottom to Top",
+    "Stack Horizontally: Left to Right or Right to Left",
+    "Stack Images in Rows: fills rows first when on, columns first when off",
+    "Max Lines: caps the number of rows; extra layers go to additional outputs",
+    "Keep Full Size: outputs maximum size for the given limits",
+    "Background Color: fill for empty areas",
+    "First Input Offset: shifts the first input position",
+    "Scale Output Resolution: reduces output resolution for quick previews",
+    "Scale Input Images and Scale Input Method: X Axis, Y Axis, or Stretch to Fit",
+    "Clipped Sampling: returns background colour outside a data window",
+    "Filter: sampling method, default Box"
+  ],
+  "caveats": [
+    "May gain additional outputs if more source images are present",
+    "Full-resolution output can become very large; use Scale Output Resolution"
+  ],
+  "resume_fr": "Le nœud Contact Sheet dispose les couches d'entrée en grille, comme une planche-contact, avec un contrôle de la disposition, de l'échelle et de l'échantillonnage."
+}

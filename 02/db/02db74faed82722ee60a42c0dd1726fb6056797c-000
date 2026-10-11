@@ -1,0 +1,23 @@
+{
+  "name": "cryptomattedecode",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cryptomattedecode.html",
+  "status": "ok",
+  "summary_en": "The Cryptomatte Decode node takes one RGBA Cryptomatte layer and separates it into coverage and object-ID data.",
+  "inputs": [
+    "crypto: an RGBA Cryptomatte layer"
+  ],
+  "key_parameters": [
+    "The page lists no parameters"
+  ],
+  "caveats": [
+    "The ID values are hashes of the original object names, not readable names; re-hash names with the standard hash or check the hash values stored in the EXR metadata",
+    "Cryptomattes usually span several RGBA layers and this node decodes only one, so full coverage requires reading all layers together"
+  ],
+  "outputs": [
+    "id_a: hash of the first object",
+    "cov_a: coverage of the first object",
+    "id_b: hash of the second object",
+    "cov_b: coverage of the second object"
+  ],
+  "resume_fr": "Le nœud Cryptomatte Decode sépare une couche Cryptomatte RGBA en identifiants d'objets hachés et couvertures, sans paramètre documenté sur la page."
+}

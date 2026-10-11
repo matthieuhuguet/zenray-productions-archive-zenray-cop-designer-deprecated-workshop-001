@@ -1,0 +1,24 @@
+{
+  "name": "grunge_pinebark",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_pinebark.html",
+  "status": "ok",
+  "summary_en": "Grunge Pine Bark generates a pattern of layered noise resembling pine tree bark. It serves as a building block for more intricate textures, such as flaky bark for trees or wooden furniture.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude multiplies values (originally 0 to 1), Center offsets them, Mask Contrast increases extremes first",
+    "Pattern: Element Size, Element Scale (with Per-Component Controls), Offset, Tile Size",
+    "Bark Intensity: how much of the bark is covered by the secondary vertical scale cells",
+    "Bark Size: scale of those cells; higher values give fewer, larger scales",
+    "Bark Roughness: bumpy, alligator-like detail of the base layer",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can fall below 0 or above 1; use Clamp Minimum and Clamp Maximum",
+    "Complement works as expected only for values from 0 to 1",
+    "Fold has no effect when all values are positive",
+    "Post-processing Contrast is not the same as Noise Contrast"
+  ],
+  "resume_fr": "Grunge Pine Bark produit un motif d'écorce de pin par bruits superposés, utile pour une écorce écaillée ou un meuble en bois."
+}

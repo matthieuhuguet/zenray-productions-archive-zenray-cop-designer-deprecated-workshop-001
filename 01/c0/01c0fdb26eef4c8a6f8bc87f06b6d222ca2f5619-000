@@ -1,0 +1,25 @@
+{
+  "name": "Cop curvature",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/curvature.html",
+  "status": "ok",
+  "summary_en": "Computes the curvature of an input layer, useful for edge detection and for separating convex and concave regions. Similar in purpose to the Derivative COP.",
+  "inputs": [
+    "source: a mono height-field layer, or an RGB normal vector field derived from a height field"
+  ],
+  "key_parameters": [
+    "Signature / Space: layer type accepted and space used to measure curvature",
+    "Method: Finite Difference (derivative-based, stable on smooth inputs) or Angle Deficit (polygon-vertex based, more robust on complex variations)",
+    "Curvature Type: Gaussian, Mean, Principal (max) or Principal (min)",
+    "Output Type: full curvature, convex regions only, or concave regions only",
+    "Normal Type (pre-process): must match the Height to Normal node setting when the input is a normal field",
+    "Read Pixels outside Image (pre-process): uses pixels beyond the edge at boundaries",
+    "Kernel Size (pre-process): neighbourhood scale; larger gives smoother results",
+    "Scale, Normalize, Minimum, Maximum (post-process): adjust, keep in 0 to 1, or clamp output"
+  ],
+  "caveats": [
+    "Normal Type must match Height to Normal or the input is misread.",
+    "With a constant border type, turn off Read Pixels outside Image to get correct edge values.",
+    "Minor pixel-to-pixel variation can give unexpectedly high values; Normalize may be needed for display."
+  ],
+  "resume_fr": "Calcule la courbure d'une hauteur ou d'une normale pour détecter les bords et séparer zones convexes et concaves."
+}

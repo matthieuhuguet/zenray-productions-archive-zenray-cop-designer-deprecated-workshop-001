@@ -1,0 +1,24 @@
+{
+  "name": "chromakey",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/chromakey.html",
+  "status": "ok",
+  "summary_en": "The Chroma Key node removes parts of an image whose hue, saturation and luminance fall within defined ranges by setting their alpha to zero. It isolates a foreground subject from a green screen.",
+  "inputs": ["source: the original layer to key"],
+  "key_parameters": [
+    "Method: legacy Chromakey or Channel Separation key",
+    "Invert: inverts the resulting matte",
+    "Hue / Saturation: hue and saturation ranges to key, sampled with an eyedropper",
+    "Luminance Range: luminance range to key",
+    "Screen Color: colour to key out (Channel Separation only)",
+    "Threshold and Width: matte threshold and range on both sides (Channel Separation only)",
+    "Rolloff (Hue, Saturation, Luminance): soft falloff extending each range, with Interpolation curve (linear, ease in, ease out, smooth, Gaussian)",
+    "Preview and Preview Color: tints the keyed result without removing pixels",
+    "Premultiply: multiplies the input by the generated matte"
+  ],
+  "caveats": [
+    "Screen Color, Threshold and Width apply only when Method is Channel Separation",
+    "Preview does not key out pixels, it only colours the result",
+    "Premultiply permanently discards keyed-out pixels; use the matte output to process the matte first"
+  ],
+  "resume_fr": "Le nœud Chroma Key retire les zones d'une image dont la teinte, la saturation et la luminance tombent dans des plages choisies, pour isoler un sujet sur fond vert."
+}

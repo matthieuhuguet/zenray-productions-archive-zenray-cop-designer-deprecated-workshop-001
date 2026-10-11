@@ -1,0 +1,52 @@
+{
+  "name": "heightfield_xform2d",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_xform2d.html",
+  "status": "ok",
+  "summary_en": "Applies a 2D transformation to a height layer and can also scale and offset the height values themselves.",
+  "inputs": [
+    "height: the height layer to transform"
+  ],
+  "key_parameters": [
+    {
+      "name": "Units",
+      "meaning": "space in which translations are measured: image, texture, pixel or local"
+    },
+    {
+      "name": "Transform Order",
+      "meaning": "order in which the transformations are applied"
+    },
+    {
+      "name": "Translate, Rotate, Scale, Shear, Uniform Scale",
+      "meaning": "the 2D transform, rotation in degrees about the pivot"
+    },
+    {
+      "name": "Pivot Translate",
+      "meaning": "moves the local pivot used for the transform"
+    },
+    {
+      "name": "Invert Transformation",
+      "meaning": "applies the inverse, so matching nodes cancel each other"
+    },
+    {
+      "name": "Apply Transform Scale to Height",
+      "meaning": "scales height pixels along with the 2D transform"
+    },
+    {
+      "name": "Grid Scale",
+      "meaning": "stretches or contracts the layer horizontally"
+    },
+    {
+      "name": "Height Scale",
+      "meaning": "stretches or contracts the height values vertically"
+    },
+    {
+      "name": "Height Offset",
+      "meaning": "shifts the height values up or down"
+    }
+  ],
+  "caveats": [
+    "Height Scale and Height Offset change the height values, not just the layer position.",
+    "The page does not say how Transform Order interacts with the height settings."
+  ],
+  "resume_fr": "Applique une transformation 2D à une couche de hauteur, avec mise à l'échelle et décalage optionnels des valeurs de hauteur."
+}

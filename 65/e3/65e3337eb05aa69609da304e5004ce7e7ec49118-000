@@ -1,0 +1,18 @@
+{
+  "name": "matchcamera",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/matchcamera.html",
+  "status": "ok",
+  "summary_en": "Moves a layer into the space of a reference camera. It copies the location, orientation and camera information from the reference onto the source layer without changing the layer's data. Identity Transform resets the layer to canonical space.",
+  "inputs": [
+    "source: the layer to transform into the new camera space (geometry is also accepted)",
+    "camera_ref: the layer that serves as the reference camera"
+  ],
+  "key_parameters": [
+    "Identity Transform: resets the layer to canonical space, at the origin, aligned with the XY plane, with the canonical orthographic camera. No other parameters are described on the page."
+  ],
+  "caveats": [
+    "If no camera is specified, the layer returns to the Default Canvas of the enclosing COP Network node or COP Network SOP.",
+    "The page does not explain how geometry sources are processed beyond saying they are accepted."
+  ],
+  "resume_fr": "Déplace un calque dans l'espace d'une caméra de référence en recopiant sa position, son orientation et ses informations de caméra, sans modifier ses données."
+}

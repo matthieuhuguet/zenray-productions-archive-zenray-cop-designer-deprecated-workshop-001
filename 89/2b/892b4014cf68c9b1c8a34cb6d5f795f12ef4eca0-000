@@ -1,0 +1,27 @@
+{
+  "name": "heightfield_slump",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_slump.html",
+  "status": "ok",
+  "summary_en": "HeightField Slump simulates loose material moving down slopes and collecting at the base of terrain. It runs a set number of spread iterations on a debris layer with a chosen transport method, and can also generate flow fields.",
+  "inputs": [
+    "height: height layer the debris slumps across",
+    "debris: optional layer setting the initial debris depth, scaled by Debris Scale; if unwired, a constant debris depth equal to Debris Scale is used"
+  ],
+  "key_parameters": [
+    "Slump Mode: Smooth (liquid-like diffusion), Granular (chunky, randomized flow) or Rainfall (hydraulic erosion through streams)",
+    "Debris Scale: scales the debris layer, or sets the constant depth when no debris input is connected",
+    "Spread Iterations: number of material transport iterations",
+    "Repose Angle: steepest slope, in degrees from horizontal, where material stays put",
+    "Spread Rate: how quickly material spreads in each iteration",
+    "Random Seed: seeds the randomization of the slumping process",
+    "Rainfall-only controls: Flow Force, Rainfall Coverage, Slope Influence, Erosion Rate, Deposition Rate, Removal Rate, Evaporation Rate",
+    "Remove Debris from Input Height and Add Debris to Output Height: control whether debris is subtracted before and added back after the simulation"
+  ],
+  "caveats": [
+    "Rainfall-specific parameters have no effect in Smooth or Granular modes",
+    "For flow fields, use Rainfall or Smooth; with Smooth, set Repose Angle to 0 and raise Spread Iterations",
+    "Available since Houdini 22.0, so older versions do not have it",
+    "The page gives no performance costs, parameter ranges or detailed output behaviour"
+  ],
+  "resume_fr": "HeightField Slump simule la chute de matériaux meubles le long des pentes jusqu'au pied du relief, selon trois modes de transport."
+}

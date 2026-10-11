@@ -1,0 +1,38 @@
+{
+  "name": "Cop curvescatter",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/curvescatter.html",
+  "status": "ok",
+  "summary_en": "Scatters one or more input stamps along an input curve, with randomisation of placement, scale, angle, stretch, colour and alpha. Titled Scatter on Curves in Houdini 22.0.",
+  "inputs": [
+    "size_ref: sets output image size and metadata",
+    "curve: curve to scatter along (required)",
+    "density: rejection-sampling layer used with Distribution set to Scatter",
+    "direction: controls stamp angle direction",
+    "angle: rotates stamps (0 = 0 degrees, 1 = 360 degrees)",
+    "scale: multiplies uniform stamp scale",
+    "stretch: multiplies non-uniform stamp scale",
+    "color: multiplies stamp colour",
+    "alpha: multiplies stamp alpha",
+    "sort: depth-based sorting",
+    "select: chooses stamps when Selection Mode is Layer Select",
+    "stamps: up to 8 stamps; a default star is used if unwired"
+  ],
+  "key_parameters": [
+    "Distribution: Distance (equal spacing), Scatter (random via density or Max Count), By Count",
+    "Max Count, Relaxation, Scatter Seed",
+    "Treat Input Curve As: Straight, Subdivision or Interpolating",
+    "Scale, Angle, Stretch: base values with variance or min/max randomisation and layer masks",
+    "Mirror Stamps: mirrors across the curve tangent",
+    "Blend Method: Depth-Sorted Over, Add, Multiply, Maximum and others",
+    "Stamp Color / Stamp Alpha: Uniform, Variance, Random from Ramp, or Ramp along Curve",
+    "Selection Mode: Cycle, Random, Layer Select, Limit Selection",
+    "Wrap Mode, Tile Size"
+  ],
+  "caveats": [
+    "The curve input must be wired or the node does not work.",
+    "Density Scale has no effect when Max Count is on.",
+    "Mirrored angles may not stay symmetric under Treat Independently randomisation.",
+    "Depth-Sorted Over is expensive because it sorts."
+  ],
+  "resume_fr": "Répartit des tampons le long d'une courbe, avec des variations de position, d'échelle, d'angle, d'étirement, de couleur et d'alpha."
+}

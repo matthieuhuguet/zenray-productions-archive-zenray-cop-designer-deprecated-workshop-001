@@ -1,0 +1,25 @@
+{
+  "name": "grunge_moldspots",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_moldspots.html",
+  "status": "ok",
+  "summary_en": "Grunge Mold Spots generates a pattern of layered noise that looks like mold spots. It can be used as a mask or as a building block for detailed textures, such as fungus-stained surfaces.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude, Center, Mask Contrast",
+    "Pattern: Element Size, Element Scale (with Per-Component Controls), Offset, Tile Size",
+    "Spread: blurs the spots; higher values cover more area, lower values sharpen them",
+    "Primary Size, Secondary Size, Tertiary Size: size of each spot layer relative to Element Size; larger values give fewer, bigger spots",
+    "Secondary Mask and Tertiary Mask: visibility of those layers",
+    "Seed: changes the randomization while keeping the same look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can be negative or above 1; use Clamp Minimum and Clamp Maximum",
+    "Fold has no effect when all values are positive",
+    "Complement produces valid results only for values from 0 to 1",
+    "Post-processing Contrast differs from Noise Contrast"
+  ],
+  "resume_fr": "Grunge Mold Spots produit un motif de taches de moisissure par bruits superposés, utilisable en masque ou pour des surfaces tachées de champignons."
+}

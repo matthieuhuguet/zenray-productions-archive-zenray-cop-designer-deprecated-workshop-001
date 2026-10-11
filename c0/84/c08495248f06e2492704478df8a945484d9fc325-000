@@ -1,0 +1,27 @@
+{
+  "name": "Cop bakepreprocess",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/bakepreprocess.html",
+  "status": "ok",
+  "summary_en": "Prepares a low-resolution mesh for texture baking by generating a cage, ray directions and ray lengths, and provides an interactive viewport state to preview the rays and cage positions. The page states that this COP is a direct copy of the Bake Pre-Process SOP, and that a Bake Setup recipe creates it automatically. Available since Houdini 22.0.",
+  "inputs": [
+    "low: low-resolution geometry used to build the cage",
+    "high: high-resolution geometry, passed through unchanged for comparison with the cage"
+  ],
+  "key_parameters": [
+    "Normal Mode: keep geometric normals, smooth them into point normals, or override them",
+    "Missing Normals: from messages and warnings to errors, or silent creation",
+    "Ray Start Offset and Ray Start Mode: cage extent, uniform or scaled by an attribute",
+    "Ray Direction: toward the matching low-res polygons, or from a float3 vertex attribute",
+    "Ray End Offset and Ray End Mode: sets ray length; No End writes -1 for endless rays",
+    "Soften Cage and Soften Mode: split by faces, UV seams or an edge group",
+    "Cage outputs: Ray Start (point), Ray Direction (vertex), Ray Length (point)"
+  ],
+  "caveats": [
+    "Baking works best when the low-res mesh has normals; without them the node may warn or error",
+    "From Low Vertex Attribute requires a float3 vertex attribute on the low-res mesh",
+    "By UV Seams requires a UV attribute",
+    "Ray length is the difference between the end and start offsets",
+    "The page states the COP and the SOP can produce the same result"
+  ],
+  "resume_fr": "Prépare un maillage basse résolution au bake en générant la cage, les directions et les longueurs de rayons, avec un aperçu interactif."
+}

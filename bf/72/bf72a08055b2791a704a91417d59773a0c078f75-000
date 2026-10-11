@@ -1,0 +1,30 @@
+{
+  "name": "layer",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/layer.html",
+  "status": "ok",
+  "summary_en": "The Layer node generates a 2D pixel layer that can hold mono, UV, RGB, RGBA or ID values. It is usually unnecessary to add explicitly, since project defaults apply, but it sets specific resolution, precision and other options.",
+  "inputs": [
+    "size_ref: optional representative layer that sets the output image size and controls its metadata"
+  ],
+  "key_parameters": [
+    "Signature: layer type to generate (mono, UV, RGB, RGBA or ID)",
+    "Value / Color: initial values for each layer type",
+    "Resolution: number of pixels in the layer",
+    "Pixel Aspect Ratio: overrides the square pixel default, which can create anisotropic pixels",
+    "Pixel Padding (Left/Right, Top/Bottom): expands or erodes the data window for overscan or cropping",
+    "Precision: storage precision of 8, 16 or 32 bits",
+    "Use Fixed Point Storage: stores 8-bit unsigned and 16-bit signed values as fixed point",
+    "Border: behaviour for reads outside the data window (Constant, Clamp, Mirror or Wrap)",
+    "Type Info: how the layer is visualised in the 3D viewport",
+    "Pixel Scale: number of pixels per buffer element, enabling faster proxy cooking",
+    "Identity Transform: resets the layer to canonical space and orthographic camera settings"
+  ],
+  "caveats": [
+    "The page states 8-bit precision is supported only for ID layers",
+    "16-bit floats offer limited precision for derivatives, so 32-bit is often preferred for height workflows",
+    "Fixed point storage clamps 8-bit values to 0 to 1 and 16-bit values to -1 to 1, and does not apply to ID layers",
+    "Pixel Scale changes the buffer element count, so the stored size can differ from the specified resolution",
+    "Storage types propagate through the network, so downstream nodes usually match their inputs"
+  ],
+  "resume_fr": "Crée une couche 2D de pixels (mono, UV, RGB, RGBA ou ID) pour fixer la résolution, la précision et les options de stockage."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Cop dot",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/dot.html",
+  "status": "ok",
+  "summary_en": "Computes a per-pixel dot product of two layers and outputs a single mono layer: for each pixel, corresponding channel values are multiplied and summed.",
+  "inputs": [
+    "a: first layer or VDB, the reference for the operation",
+    "b: second layer or VDB, extended with the channel extension rules so its channels match a"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source (linked to the Signatures glossary)"
+  ],
+  "caveats": [
+    "The channel extension rules are not explained on the page; only a glossary link is given.",
+    "The output is always mono, so multichannel colour is collapsed into one value per pixel."
+  ],
+  "resume_fr": "Calcule le produit scalaire pixel par pixel de deux couches, avec une sortie mono."
+}

@@ -1,0 +1,47 @@
+{
+  "name": "heightfield_xform",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_xform.html",
+  "status": "ok",
+  "summary_en": "Applies a 3D transform (translate, rotate, scale, shear) to a height layer, with optional separate scale and offset of the height values.",
+  "inputs": [
+    "height: the height layer to transform"
+  ],
+  "key_parameters": [
+    {
+      "name": "Transform Order / Rotate Order",
+      "meaning": "sequence of transform and rotation operations"
+    },
+    {
+      "name": "Translate, Rotate, Scale, Shear, Uniform Scale",
+      "meaning": "XYZ movement, rotation in degrees, non-uniform and overall scaling, shear"
+    },
+    {
+      "name": "Invert Transformation",
+      "meaning": "applies the inverse, which undoes a matching transform"
+    },
+    {
+      "name": "Pivot Translate / Pivot Rotate",
+      "meaning": "moves and rotates the local pivot used for transforms"
+    },
+    {
+      "name": "Apply Transform Scale to Height",
+      "meaning": "scales height pixels with the 3D transform"
+    },
+    {
+      "name": "Grid Scale",
+      "meaning": "stretches or contracts the layer horizontally"
+    },
+    {
+      "name": "Height Scale",
+      "meaning": "stretches or contracts the height values vertically"
+    },
+    {
+      "name": "Height Offset",
+      "meaning": "shifts the height values up or down"
+    }
+  ],
+  "caveats": [
+    "Height-specific scaling is separate from the 3D transform unless Apply Transform Scale to Height is enabled."
+  ],
+  "resume_fr": "Applique une transformation 3D (translation, rotation, échelle, cisaillement) à une couche de hauteur, avec mise à l'échelle et décalage propres des valeurs de hauteur."
+}

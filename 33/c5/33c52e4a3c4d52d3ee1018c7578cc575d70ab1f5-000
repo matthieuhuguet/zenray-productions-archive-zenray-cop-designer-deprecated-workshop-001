@@ -1,0 +1,45 @@
+{
+  "name": "cablesplit",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cablesplit.html",
+  "status": "ok",
+  "summary_en": "Divides one cable into two outputs, matching and non_matching, using filters on name pattern, wire type, wire index range or random chance. Available since version 21.0.",
+  "inputs": [
+    "cable: the cable to split"
+  ],
+  "key_parameters": [
+    {
+      "name": "Split by Pattern / Name Pattern",
+      "meaning": "Filters wires by name using Houdini pattern matching"
+    },
+    {
+      "name": "Split by Type / Type",
+      "meaning": "Filters wires by data type; wires must match to reach matching"
+    },
+    {
+      "name": "Split by Range / Select",
+      "meaning": "Picks every Nth wire (every other by default)"
+    },
+    {
+      "name": "Split by Range / Start, End",
+      "meaning": "First and last wire indices of the range"
+    },
+    {
+      "name": "Split by Range / Offset",
+      "meaning": "Subtracted from the wire index before the range check"
+    },
+    {
+      "name": "Split by Chance / Probability",
+      "meaning": "Chance a wire goes to matching, given as a percentage"
+    },
+    {
+      "name": "Split by Chance / Seed",
+      "meaning": "Changes the random result"
+    }
+  ],
+  "caveats": [
+    "The page says the filters run sequentially and are unioned, yet also says that enabling both Pattern and Type requires a wire to satisfy both; verify in Houdini",
+    "Probability is a percentage, but the page says a value of 1 selects all wires, which looks inconsistent; verify in Houdini",
+    "Iteration idiom from the page: Select 1, of 1, Start 0, End 0, Offset C@cop_iteration"
+  ],
+  "resume_fr": "Le nœud cablesplit sépare un câble en deux sorties, matching et non_matching, selon le motif de nom, le type, une plage d'index ou un tirage aléatoire."
+}

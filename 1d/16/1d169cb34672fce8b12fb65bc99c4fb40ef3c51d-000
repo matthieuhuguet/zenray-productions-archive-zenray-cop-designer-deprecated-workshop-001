@@ -1,0 +1,25 @@
+{
+  "name": "Cop extrapolateboundaries",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/extrapolateboundaries.html",
+  "status": "ok",
+  "summary_en": "Extrapolate Boundaries fills empty areas of an image by copying colors outward from the edges of non-empty regions. It is typically used to add a bleed around texture maps so that mip-mapping does not pull black values into sampled areas.",
+  "inputs": [
+    "source: Mono, UV, RGB or RGBA layer to extrapolate",
+    "fillarea: layer defining the interior, which is extrapolated into the exterior",
+    "mask: optional per-pixel mask amount scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Exterior: Unchanged, Black, or Diffuse Fill (smooth fill) for pixels beyond the edge padding",
+    "Inner Side: Below Threshold or Above Threshold, which side of fillarea counts as inside",
+    "Threshold: value separating inside from outside in fillarea; a dropper can set it from the layer",
+    "Edge Padding: distance in image coordinates over which pixel values are copied directly outward",
+    "Edge Offset: how far to backtrack when reading clean source values, so extrapolated exterior colors are not reused",
+    "Sample Only Present: uses original values only from the source area, preventing black leaking from uninitialized areas",
+    "Diffuse Iterations: relaxation passes smoothing the extrapolated values in Diffuse Fill mode"
+  ],
+  "caveats": [
+    "If the source is RGBA, consider splitting alpha with an RGBA to RGB node first, since alpha often defines the fillarea and RGB is the source",
+    "With Sample Only Present on, Edge Offset can usually be set to 0; turning Sample Only Present off gives a smooth interpolated edge when the fillarea holds valid data"
+  ],
+  "resume_fr": "Le nœud Extrapolate Boundaries prolonge vers l'extérieur les couleurs des bords d'une zone, notamment pour ajouter un débord aux textures."
+}

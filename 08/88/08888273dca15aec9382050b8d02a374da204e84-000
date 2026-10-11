@@ -1,0 +1,21 @@
+{
+  "name": "camerablend",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/camerablend.html",
+  "status": "ok",
+  "summary_en": "Combines two cameras into one by blending focal length, aperture, transform, clipping range, shutter, focus distance and f-stop. Output named blend. Listed as Houdini 22.0.",
+  "inputs": [
+    "bg: background camera to blend",
+    "fg: source camera to blend"
+  ],
+  "key_parameters": [
+    {
+      "name": "Blend",
+      "meaning": "Blend weight between fg and bg: 0 shows only fg, 1 shows only bg"
+    }
+  ],
+  "caveats": [
+    "Blending an orthographic camera with a perspective camera blends only the transform",
+    "In that mixed case, Blend 1 copies the other parameters from the second input, and Blend below 1 copies them from the first input"
+  ],
+  "resume_fr": "Le nœud camerablend fusionne deux caméras en une seule, le paramètre Blend réglant le poids entre la caméra fg et la caméra bg."
+}

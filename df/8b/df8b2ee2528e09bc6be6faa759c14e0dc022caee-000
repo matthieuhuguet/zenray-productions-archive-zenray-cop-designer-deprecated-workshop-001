@@ -1,0 +1,25 @@
+{
+  "name": "grunge_layerednoise",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_layerednoise.html",
+  "status": "ok",
+  "summary_en": "Grunge Layered Noise layers several simple noise patterns, built from Fractal Noise COPs, into a default pattern that looks like a stormy sky reflected in water. It works as a building block for intricate textures, such as smoky skies.",
+  "inputs": [
+    "size_ref: sets only the output image size and metadata, not the pattern"
+  ],
+  "key_parameters": [
+    "Range: Amplitude and Center set the output from C-A to C+A; Mask Contrast increases extremes before them",
+    "Pattern: Element Size, Element Scale (with Per-Component Controls), Offset, Tile Size",
+    "Base Noise: web-shaped starting pattern, with Amplitude and Element Size",
+    "Base Cells: carves cellular boundaries into the base noise, with Amplitude, Element Size and Complement",
+    "Secondary Noise: fine detail in darker areas, with Amplitude, Center, Element Size and Complement",
+    "Secondary Cells: final cellular layer, most visible in the brightest and darkest areas, with Amplitude, Center, Element Size and Complement",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Layers can hold negative values and values above 1; use the Clamp options",
+    "Complement and Bias-style operations assume values from 0 to 1",
+    "Fold has no visible effect when all values are positive",
+    "Post-processing Contrast differs from Noise Contrast on some noise nodes"
+  ],
+  "resume_fr": "Grunge Layered Noise superpose quatre couches de bruit pour imiter un ciel d'orage reflété dans l'eau, brique utile pour des fumées."
+}

@@ -1,0 +1,28 @@
+{
+  "name": "grunge_rustysurface",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_rustysurface.html",
+  "status": "ok",
+  "summary_en": "Grunge Rusty Surface generates a layered-noise pattern imitating a rusty surface, with controls for rust intensity, variation and corrosion lines. It is meant as a mask or building block for detailed textures, such as metal roofs or vehicle parts.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Amplitude: multiplies values (originally 0 to 1) before Center",
+    "Center: offsets the output values",
+    "Mask Contrast: adjusts contrast before Amplitude and Center",
+    "Element Size, Offset, Tile Size: pattern scale, position and repeat period",
+    "Primary Roughness: horizontal distortion along Y, giving rougher edges and waves",
+    "Secondary Roughness: vertical distortion along X, with similar effects",
+    "Cracks Mask: visibility of the vertical crack lines; higher values darken and reveal them",
+    "Cracks Size: crack scale relative to Element Size; higher values give fewer, larger cracks",
+    "Seed: changes the random variation while keeping the look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Amplitude and Center can produce values below 0 or above 1; use the Clamp options",
+    "Complement assumes values from 0 to 1",
+    "Fold has no visible effect when all values are positive",
+    "Post-processing Contrast differs from Noise Contrast on some noise nodes"
+  ],
+  "resume_fr": "Grunge Rusty Surface imite une surface rouillée avec ses bords irréguliers et ses fissures de corrosion, utilisable en masque pour une toiture ou une pièce de véhicule."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Cop bakegeometrytextures::2.0",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/bakegeometrytextures-2.0.html",
+  "status": "ok",
+  "summary_en": "Transfers surface detail from a high-resolution mesh into texture maps on a low-resolution mesh, with fast preview updates. The baked maps and AOVs stay available inside Copernicus networks for further processing or shader building. The page says the node has been available since version 21.0 and is documented in the Houdini 22.0 docs.",
+  "inputs": [
+    "size_ref: sets the output image size and controls metadata",
+    "low: mesh that fires rays and receives the projected maps, based on its UV layout",
+    "high: mesh whose detail is baked",
+    "cage (optional): cage mesh used when Tracing Mode is Cage Mesh",
+    "skew: input map that controls where skew correction is applied"
+  ],
+  "key_parameters": [
+    "Tracing Mode: Surface Normal (rays from low-res normals), Cage Mesh (rays from the cage toward the low-res surface) or Single Mesh (low) (one mesh serves as low and high)",
+    "Sample Multiplier: scales all sample counts, such as Occlusion Samples, as a quality control",
+    "Ray Setup: Face Culling and Visibility Culling decide which faces are ignored for primary and secondary rays",
+    "Cage Attributes: names of the Ray Start, Ray Direction and Ray Length attributes; Ray Bias offsets ray origins along the low-res surface without a cage",
+    "Geometry Setup: Normals and Tangents decide whether missing attributes error, warn or are generated; UV Attribute selects the UV source",
+    "Match Pieces by Name: restricts tracing to matching primitives, with a piece attribute and Include and Exclude Pieces",
+    "Enable UV Boundary Filling: fills areas around UV islands, with Exterior, Edge Padding and Edge Offset",
+    "Texture Maps: Tangent Normal, Rounded Edge Normal, World Normal, Position, Ambient Occlusion, Curvature, Edge, Cavity, Thickness, Height, Alpha, Custom Attributes, each with its own sample and style settings"
+  ],
+  "caveats": [
+    "The cage mesh must have the same topology and vertex order as the low-res mesh and fully enclose both meshes without entering the high-res mesh",
+    "Cage meshes are used only when Tracing Mode is Cage Mesh",
+    "OptiX is available only on NVIDIA hardware",
+    "Finalize low-res normals and tangents before baking; triangulate the low-res mesh if the target application triangulates on import",
+    "Changing Match Pieces by Name settings triggers a rebake and changes results",
+    "UV Boundary Filling can be slow; recommended mainly for final bakes",
+    "Height maps often look nearly black unless Custom height space is used",
+    "For lighting, material and shader baking, the page points to the Karma Texture Baker"
+  ],
+  "resume_fr": "Version 2.0 de la cuisson de textures géométriques, avec aperçu rapide, qui transfère le détail d'un maillage haute résolution vers des cartes basse résolution."
+}

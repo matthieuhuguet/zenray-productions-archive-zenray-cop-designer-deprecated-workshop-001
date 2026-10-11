@@ -1,0 +1,27 @@
+{
+  "name": "grunge_leakingstreaks",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_leakingstreaks.html",
+  "status": "ok",
+  "summary_en": "Grunge Leaking Streaks generates a layered-noise pattern resembling leaking streaks, with base and secondary layers for streaks and background stains, and a highlight layer that brightens the streaks. It can serve as a mask or building block for textures such as smudged windows or water-damaged walls.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude multiplies values, Center offsets them, output spans C-A to C+A; Mask Contrast increases extremeness first",
+    "Pattern: Element Size, Offset, Tile Size as repeat period",
+    "Primary Distortion and Primary Roughness: vertical contours and edge roughness of the base streaks",
+    "Secondary Mask and Secondary Distortion: background horizontal folds and stains",
+    "Tertiary Mask: visibility of the highlights",
+    "Tertiary Balance: threshold for adding highlights, multiplied by Tertiary Mask",
+    "Seed: randomizes the result while keeping the same look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Values can be negative or above 1; use the Clamp options",
+    "Complement is designed for the 0 to 1 range",
+    "Fold has no effect when all values are positive",
+    "Post-processing Contrast differs from Noise Contrast",
+    "The page does not describe the algorithm, performance, or behaviour in versions other than 22.0"
+  ],
+  "resume_fr": "Grunge Leaking Streaks produit des traces qui coulent et des taches de fond, avec une couche de reflets, utile en masque pour des vitres ou des murs touchés par l'eau."
+}

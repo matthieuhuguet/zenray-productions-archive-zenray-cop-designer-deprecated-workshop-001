@@ -1,0 +1,24 @@
+{
+  "name": "Cop attribinsert",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/attribinsert.html",
+  "status": "ok",
+  "summary_en": "Adds a detached attribute to a geometry, so values computed outside the geometry can be written back into it.",
+  "inputs": [
+    "geometry: geometry that receives the attribute",
+    "input2: attribute to insert"
+  ],
+  "key_parameters": [
+    "Class: geometry class to insert into; the attribute length must match its element count",
+    "Attribute Name: name the attribute gets after insertion",
+    "Input Type: defaults to the type of the incoming wire, or can be set explicitly (for example promote Float to Vector)",
+    "Do Nothing If Unwired: passes the geometry through instead of raising an error"
+  ],
+  "caveats": [
+    "The attribute length must match the element count of the chosen class",
+    "An existing attribute with the same name is replaced",
+    "An unconnected attribute input errors unless Do Nothing If Unwired is enabled",
+    "Single output: the modified geometry",
+    "Introduced in Houdini 22.0"
+  ],
+  "resume_fr": "Réinjecte un attribut détaché dans une géométrie, à condition que sa longueur corresponde au nombre d'éléments de la classe choisie."
+}

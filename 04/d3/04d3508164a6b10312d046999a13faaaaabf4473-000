@@ -1,0 +1,16 @@
+{
+  "name": "channelsplit",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/channelsplit.html",
+  "status": "ok",
+  "summary_en": "Divides a multichannel layer, VDB or attribute into four separate Mono outputs (red, green, blue, alpha) so each channel can be processed on its own; recombine them with Channel Join.",
+  "inputs": [
+    "rgba: the layer, VDB or attribute to split; missing channels follow the standard channel extension rules"
+  ],
+  "key_parameters": [],
+  "caveats": [
+    "The page documents no parameters",
+    "For swapping channels within one multichannel input, Channel Swap is more efficient",
+    "If only one channel is needed, Channel Extract gives a cleaner network"
+  ],
+  "resume_fr": "Le nœud channelsplit sépare une couche multicanale en quatre couches Mono, rouge, verte, bleue et alpha, pour les traiter séparément."
+}

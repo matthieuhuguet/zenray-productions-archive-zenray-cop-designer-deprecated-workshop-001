@@ -1,0 +1,27 @@
+{
+  "name": "heightfield_maskbyfeature",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_maskbyfeature.html",
+  "status": "ok",
+  "summary_en": "HeightField Mask By Feature builds a mask from a heightfield by measuring slope, height, curvature, direction and ambient occlusion. When several features are enabled, it combines them into a single mask layer using the Blend Mode.",
+  "inputs": [
+    "height: heightfield to generate the mask from"
+  ],
+  "key_parameters": [
+    "Smooth Radius: blur radius in local space applied before features are measured",
+    "Blend Mode: Add, Multiply, Average, Minimum or Maximum for combining feature masks",
+    "Invert Mask: inverts the final mask values",
+    "Slope: Min and Max Slope Angle, Slope Ramp",
+    "Height: Min and Max Height, Height Ramp, Compute Range",
+    "Peaks and Valleys: Max Curvature, Curvature Ramp",
+    "Direction: Goal Angle (0 degrees points along increasing pixels across the width), Angle Spread, Direction Ramp",
+    "Occlusion: Minimum and Maximum Occlusion, Height Scale, Occlusion Ramp",
+    "Occlusion Quality: View Radius, Step Scale, Sample Count, Sample from Hemisphere; accuracy against calculation time"
+  ],
+  "caveats": [
+    "The node has one input, and its only output is the mask layer",
+    "A larger Step Scale calculates faster but may miss thin features",
+    "A higher View Radius and Sample Count improve occlusion accuracy but increase calculation time",
+    "The page gives no performance figures and does not describe the exact ramp curve shapes"
+  ],
+  "resume_fr": "HeightField Mask By Feature fabrique un masque à partir de la pente, de la hauteur, de la courbure, de la direction et de l'occlusion, puis combine ces critères par un mode de fusion."
+}

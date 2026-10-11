@@ -1,0 +1,24 @@
+{
+  "name": "Cop average",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/average.html",
+  "status": "ok",
+  "summary_en": "Combines all connected inputs into one output, processing each channel separately. The combination is set by the Operation parameter (Add, Average, Multiply, Min, Max, Over, Clip by Data Window, Crop to Content). The page title is Layer Merge; the file and internal name are average, and Average is only one Operation option.",
+  "inputs": [
+    "source: one or more layers, VDBs or attributes; all connected inputs are merged"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted",
+    "Space: Image, Texture, Pixel or World, controlling how pixels are matched",
+    "Border: Auto uses the input's own border property",
+    "Filter: sampling method",
+    "Operation: Add, Average, Multiply, Min, Max, Over, Clip by Data Window, Crop to Content"
+  ],
+  "caveats": [
+    "The UI label is Layer Merge; the internal name is average",
+    "All inputs must share the same Signature; mismatched inputs are converted by channel extension rules",
+    "With Border Auto and a Constant border on an input, the Clip border behavior is used instead",
+    "Clip by Data Window produces sharp, hard-edged clipping",
+    "With Over, non-RGBA layers simply copy the pixels of the final layer"
+  ],
+  "resume_fr": "Fusionne toutes les entrées connectées en une seule sortie, canal par canal, selon l'opération choisie (Add, Average, Multiply, Min, Max, Over, etc.)."
+}

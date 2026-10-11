@@ -1,0 +1,29 @@
+{
+  "name": "Cop align",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/align.html",
+  "status": "ok",
+  "summary_en": "Applies a 2D transformation that moves, and optionally scales, a source layer so it lines up with a reference target. The target can be a reference layer, a reference data or display window, or a target point.",
+  "inputs": [
+    "source: layer to align",
+    "size_ref (optional): reference layer to align to"
+  ],
+  "key_parameters": [
+    "Source Data Window / Display Window: source rectangle used for alignment",
+    "Justify with: Reference Data Window, Reference Display Window or Target Point",
+    "Units: Image, Texture, Pixels or World, applied to the size_ref target values",
+    "Target Point and Target Size: target position and size in the chosen units",
+    "Justify X / Justify Y: None, Min, Center or Max",
+    "Goal X / Goal Y: Same, Min, Center or Max",
+    "Offset by: extra image-space offset applied after alignment",
+    "Scale to Fit: Uniform Scale, or per-axis Scale X and Scale Y through Scale Axis"
+  ],
+  "caveats": [
+    "The transformation runs in world space, so pixel values are unchanged",
+    "Merging should also be done in world space for the transform to take effect",
+    "Units only affects the target values tied to size_ref",
+    "Offset by is in image space, not in the units chosen for the target",
+    "The page points to Align Pixels as a related node without explaining the difference",
+    "Available since Houdini 22.0"
+  ],
+  "resume_fr": "Déplace et met à l'échelle une couche pour l'aligner sur une couche de référence ou sur un point cible."
+}

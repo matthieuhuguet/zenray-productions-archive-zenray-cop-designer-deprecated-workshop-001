@@ -1,0 +1,24 @@
+{
+  "name": "Cop fill",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/fill.html",
+  "status": "ok",
+  "summary_en": "The Fill node overwrites a layer with one constant color or ID, with a Mask setting controlling how strongly that value replaces the original. It is similar to the Constant COP, but it can take its fill color from another wired layer.",
+  "inputs": [
+    "source: layer to fill",
+    "fillvalue: optional layer supplying the fill color; if nothing is wired, the source is used",
+    "mask: optional per-pixel mask amount scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source",
+    "Mask: how much of the new value is mixed in; default 1 uses only the new value",
+    "Source: fill color origin, Value, First Pixel (bottom-left valid pixel), Last Pixel (top-right valid pixel) or Image Location",
+    "Color: fill color for Mono, UV, RGB and RGBA layers, used when Source is Value",
+    "ID: integer fill value for ID layers, used when Source is Value",
+    "Image Location: point sampled for the color; set with the sample icon then a click on the image"
+  ],
+  "caveats": [
+    "At the default Mask of 1 the layer is replaced entirely by the new value, not blended with the original",
+    "Image Location samples the source input, and samples the fillvalue input only when one is wired"
+  ],
+  "resume_fr": "Le nœud Fill remplace le contenu d'une couche par une couleur ou un identifiant constant, ou par une couleur prise dans une autre couche."
+}

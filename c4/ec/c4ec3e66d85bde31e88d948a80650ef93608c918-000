@@ -1,0 +1,30 @@
+{
+  "name": "heatdistortbylayer",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heatdistortbylayer.html",
+  "status": "ok",
+  "summary_en": "Heat Distort By Layer warps a source layer using a separate control layer to create heat-haze and mirage effects. It is a lower-level building block than Heat Distort, so complex haze is usually built by chaining several of these nodes.",
+  "inputs": [
+    "source: original layer to distort",
+    "noise: layer that controls the distortion",
+    "effect: optional per-pixel scaling of the distortion strength",
+    "dir: optional per-pixel distortion direction",
+    "mask: optional per-pixel mask, scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Mask: how much of the distorted result mixes into the original (default 1)",
+    "Scale: overall distortion strength",
+    "Angle: distortion direction, where 0 points along positive X",
+    "Accurate Distortion: traces curved paths; a pixels-per-step setting controls quality",
+    "Streak Blur: smears the image along the distortion direction",
+    "Scale by Timestep: scales strength by the timestep, usually 1/FPS",
+    "Blur Source (with Blur Size and Scale): blurs the source in proportion to distortion",
+    "Blur Noise (with Blur Size and Scale): blurs the noise input before it builds the direction map",
+    "Chromatic Aberration (Scale, Red, Green, Blue): per-channel offsets for colour fringing"
+  ],
+  "caveats": [
+    "Without a dir input, the direction is derived from the noise input",
+    "With Accurate Distortion off, results can be inaccurate when directions or scales vary strongly",
+    "Needs more manual configuration than Heat Distort, which has built-in noises"
+  ],
+  "resume_fr": "Heat Distort By Layer déforme un calque à partir d'un calque de contrôle séparé, brique de bas niveau à chaîner pour construire un mirage."
+}

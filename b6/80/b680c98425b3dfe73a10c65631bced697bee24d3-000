@@ -1,0 +1,24 @@
+{
+  "name": "grunge_rust",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_rust.html",
+  "status": "ok",
+  "summary_en": "Grunge Rust procedurally generates a rust-like texture by stacking several noise layers. Its Rust controls set how much of the surface is fully rusted, bare, or partly rusted, so it can serve as a mask for rust damage.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude scales values before Center; Center offsets them; Mask Contrast increases extremes",
+    "Pattern: Element Size, Element Scale (with Per-Component Controls), Offset, Tile Size in image coordinates",
+    "Coverage: balance of fully rusted (white) and unrusted (black) areas",
+    "Softness: how much partial rust shows under the fully rusted areas",
+    "Rust: how much partial rust shows under the unrusted areas",
+    "Rust Size: flake size; higher values give larger flakes",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can be negative or above 1 because layers store such values; use Clamp Minimum and Clamp Maximum",
+    "Complement assumes values from 0 to 1",
+    "The Contrast post-processing option differs from Noise Contrast on some noise nodes"
+  ],
+  "resume_fr": "Grunge Rust génère une texture de rouille par empilement de bruits, avec des réglages de couverture, de douceur et de taille de paillettes."
+}

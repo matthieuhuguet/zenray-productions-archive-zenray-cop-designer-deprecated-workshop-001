@@ -1,0 +1,21 @@
+{
+  "name": "Cop curl",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/curl.html",
+  "status": "ok",
+  "summary_en": "Computes the curl of an input vector field, which measures its circulation and therefore local rotation. Available since Houdini 22.0.",
+  "inputs": [
+    "v: a UV layer or a Vector VDB containing the vector field (only input)"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source",
+    "Space: Image, Pixel or Local coordinate space for the computation",
+    "Scale: constant multiplier applied to the curl",
+    "Kernel Size: maximum neighbour distance, in buffer elements, used for derivatives",
+    "Read Pixels outside Image: reads beyond the image edge for Wrap borders, off for Clamp borders"
+  ],
+  "caveats": [
+    "A UV input gives a mono 2D scalar curl; a Vector VDB input gives a Vector VDB 3D curl.",
+    "Results depend on Space and border settings, so magnitudes are not directly comparable across configurations."
+  ],
+  "resume_fr": "Calcule le rotationnel d'un champ vectoriel pour repérer les rotations locales."
+}

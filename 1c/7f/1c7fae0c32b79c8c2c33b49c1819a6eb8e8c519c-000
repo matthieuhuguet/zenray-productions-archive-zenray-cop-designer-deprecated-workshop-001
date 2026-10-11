@@ -1,0 +1,22 @@
+{
+  "name": "Cop fetch",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/fetch.html",
+  "status": "ok",
+  "summary_en": "Fetch brings a chosen COP node's outputs into the current network so they can be used there. Changes made to the original target COP flow through to the Fetch node automatically.",
+  "inputs": [
+    "none described on the page; the source is set through the COP Path parameter"
+  ],
+  "key_parameters": [
+    "COP Path: COP node whose outputs are fetched; dragging a node into the field fills in its path",
+    "Set Outputs from Selected COP: reads the target COP's signature and fills the Outputs count and output details",
+    "Outputs: number of outputs to fetch from the target COP",
+    "Source Port: 0-indexed number of the target COP output to fetch",
+    "Output Label: name of the fetched output port; filled from the target COP but renamable",
+    "Output Type: data type of the fetched output; filled from the target COP but changeable"
+  ],
+  "caveats": [
+    "If Source Port is off, outputs are matched by order; for example the third Fetch output pulls the target's third output",
+    "Changing Output Type can cause an error if the source type cannot convert to the new type"
+  ],
+  "resume_fr": "Le nœud Fetch importe les sorties d'un autre nœud COP dans le réseau courant et suit automatiquement ses modifications."
+}

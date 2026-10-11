@@ -1,0 +1,15 @@
+{
+  "name": "Cop dopnet",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/dopnet.html",
+  "status": "missing",
+  "summary_en": "",
+  "inputs": [],
+  "key_parameters": [],
+  "caveats": [
+    "https://www.sidefx.com/docs/houdini/nodes/cop/dopnet.html returns HTTP 404.",
+    "The Copernicus index at https://www.sidefx.com/docs/houdini/nodes/cop/index.html has no dopnet or DOP Network entry; its DOP references are icon paths only.",
+    "Web search found only non-Copernicus pages: nodes/obj/dopnet.html (Dop Network object node) and nodes/sop/dopnet.html (DOP Network SOP). They do not describe a Copernicus node, so they are not used here.",
+    "No description is invented for this node."
+  ],
+  "resume_fr": "Aucune page officielle Copernicus trouvée pour dopnet : cop/dopnet.html renvoie 404 et les pages trouvées décrivent d'autres nœuds."
+}

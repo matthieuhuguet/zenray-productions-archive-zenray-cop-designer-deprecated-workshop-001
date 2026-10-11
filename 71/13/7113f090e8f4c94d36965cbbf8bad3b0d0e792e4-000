@@ -1,0 +1,25 @@
+{
+  "name": "heightfield_project",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_project.html",
+  "status": "ok",
+  "summary_en": "HeightField Project projects 3D polygon geometry onto a heightfield by rasterizing each piece's distance from the heightfield's imaging plane. It blends that projected height into the input, so it can build mountains or carve valleys.",
+  "inputs": [
+    "height: input heightfield",
+    "geometry: polygon geometry to project",
+    "mask: optional per-pixel mask"
+  ],
+  "key_parameters": [
+    "Project: rasterizes either the Minimum Height or the Maximum Height sample",
+    "Max Projection Height: largest absolute height that can be projected; geometry outside this range is not projected",
+    "Mask: how much of the projected height mixes with the original height",
+    "Blend Mode: Blend, Add, Multiply, Maximum or Minimum",
+    "Output Projection Only: outputs only the projected height values"
+  ],
+  "caveats": [
+    "The geometry input must be polygons",
+    "It does not work on packed geometry or volumes",
+    "It uses the Rasterize Geometry COP internally and shares that node's geometry restrictions",
+    "For mountains, use Maximum Height with the Maximum blend; for valleys, use Minimum Height with the Minimum blend"
+  ],
+  "resume_fr": "HeightField Project projette une géométrie polygonale sur une hauteur pour y ajouter des montagnes ou y creuser des vallées."
+}

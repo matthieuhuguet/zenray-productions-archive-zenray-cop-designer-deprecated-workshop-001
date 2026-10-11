@@ -1,0 +1,29 @@
+{
+  "name": "kuwaharafilter",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/kuwaharafilter.html",
+  "status": "ok",
+  "summary_en": "The Kuwahara Filter node sets each pixel to the average of the smoothest of four diagonally offset regions around it. It preserves edges while flattening noise, which gives a painterly look.",
+  "inputs": [
+    "source: the original layer to filter",
+    "radius: optional per-pixel scale for the filter size, multiplied by the Radius parameter",
+    "mask: optional per-pixel mask amount, multiplied by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Signature: layer type the source accepts",
+    "Mask: how much of the filtered value is mixed with the original; 1 uses only the new value",
+    "Method: Approximate (fast, one pass of means and deviations) or Exact (computes each pixel directly)",
+    "Luminance: luminance measure used to pick the quadrant with the smallest standard deviation",
+    "Radius: offset size in pixels of the four regions",
+    "Blur Scale: size of each averaging region, which changes blur strength without changing quadrant selection",
+    "Blend to Blur: 0 uses the smoothest region average; 1 averages the four region averages; values between weight by standard deviation",
+    "Separation: scales the region offsets; 0 gives a box blur, values above 1 sample dislocated areas"
+  ],
+  "caveats": [
+    "The filter reads k squared pixels per pixel (k is the kernel diameter), so large kernels can be expensive",
+    "Approximate mode is faster but causes radius variations that affect neighbouring pixels",
+    "Exact mode is often practical on GPUs even at large radii",
+    "Blur Scale and Blend to Blur change the look without changing quadrant selection, except where Blend to Blur weights the regions",
+    "The page does not specify the Mask input beyond scaling the Mask parameter per pixel"
+  ],
+  "resume_fr": "Filtre de Kuwahara qui remplace chaque pixel par la moyenne de la région la plus lisse parmi quatre voisines, pour lisser le bruit en gardant les contours."
+}

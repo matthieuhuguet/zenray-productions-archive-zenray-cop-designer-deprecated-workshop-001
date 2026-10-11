@@ -1,0 +1,27 @@
+{
+  "name": "Cop crystalnoise3d",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/crystalnoise3d.html",
+  "status": "ok",
+  "summary_en": "Produces crisp, faceted Worley-style noise sampled at each pixel's world-space position. It blends two randomly offset Worley noises for sharp angles, suited to rock patterns and chipping.",
+  "inputs": [
+    "size_ref: sets output image size and metadata",
+    "pos: optional RGB layer replacing the pixel world coordinates as the noise source",
+    "time: optional layer giving a per-pixel time value"
+  ],
+  "key_parameters": [
+    "Primary Metric: Euclidean, Manhattan or Chebyshev distance shaping the edges",
+    "Jitter and Element Size: point displacement and cell size; Element Scale adjusts per axis",
+    "Secondary: when on, primary settings drive the first noise and a second Metric, Jitter and Element Size set the second",
+    "Flatten Faces: smooths faces so internal noise does not bulge",
+    "Amplitude, Center, Noise Contrast: scale, offset and contrast before post-processing",
+    "Offset: shifts the whole pattern in world space",
+    "Post-processing (Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum): run in listed order"
+  ],
+  "caveats": [
+    "Negative values or values above 1 can occur; a Clamp COP can enforce range.",
+    "Jitter above 1 can cause artifacts because points move past the search radius.",
+    "Complement assumes 0 to 1 values and gives out-of-range results otherwise.",
+    "Post-processing order changes the result."
+  ],
+  "resume_fr": "Génère un bruit de Worley anguleux en coordonnées monde 3D, adapté aux roches et aux éclats."
+}

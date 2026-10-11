@@ -1,0 +1,23 @@
+{
+  "name": "channelextract",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/channelextract.html",
+  "status": "ok",
+  "summary_en": "Pulls one channel out of a layer, VDB or attribute and outputs it as a single Mono result named channel. It is a simpler alternative to Channel Split with one output.",
+  "inputs": [
+    "channels: multichannel layer, VDB or attribute to extract from"
+  ],
+  "key_parameters": [
+    {
+      "name": "Signature",
+      "meaning": "Layer type the input accepts; see the Signatures section of the glossary"
+    },
+    {
+      "name": "Channel to Extract",
+      "meaning": "Channel index; default 0 is Red (x), 1 is green"
+    }
+  ],
+  "caveats": [
+    "If the requested channel is missing, the standard channel extension rules apply; the page does not describe them"
+  ],
+  "resume_fr": "Le nœud channelextract extrait un seul canal d'une couche multicanale et le sort sous forme de couche Mono."
+}

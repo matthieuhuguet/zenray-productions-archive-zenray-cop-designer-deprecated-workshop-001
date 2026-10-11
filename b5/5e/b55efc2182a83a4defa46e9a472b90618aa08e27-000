@@ -1,0 +1,34 @@
+{
+  "name": "heightfield_strata",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heightfield_strata.html",
+  "status": "ok",
+  "summary_en": "HeightField Strata adds rock- or sediment-like layering to a heightfield. It can stack several strata layers with different tilts and rotations.",
+  "inputs": [
+    "height: heightfield that receives the strata",
+    "baseheight: optional extra height that deforms the strata pattern",
+    "mask: optional per-pixel mask, scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Mask: how much strata noise mixes into the height input",
+    "Blend Mode: Add, Subtract, Multiply, Difference, Maximum or Minimum",
+    "Output Strata Only: outputs the strata layer without blending it with height",
+    "Amplitude and Center: scale and offset the strata noise",
+    "Noise Contrast: increases extremeness inside the noise before Amplitude and Center",
+    "Noise Type: base noise function, such as Simplex, Perlin, Worley variants or Sparse Convolution",
+    "Element Size and Offset: size and position of the base noise pattern",
+    "Strata Size and Strata Offset: layer thickness and position",
+    "Tilt and Rotate (with Origin): angle of the layers and their rotation centre",
+    "Add Layers, Layers, Roughness, Tilt Variance, Rotate Variance, Seed: several strata layers with randomization",
+    "Base Height Influence: how strongly baseheight affects the pattern",
+    "Fractal Type, Max Octaves, Lacunarity, Octave Offset, Roughness: finer detail through successive noise octaves",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Worley Jitter values above 1 can produce artifacts, because points may jitter past the search radius",
+    "Complement assumes values from 0 to 1; other values can become negative or out of range",
+    "Fold has no effect when all values are positive",
+    "Noise Contrast (inside the noise function) differs from the post-processing Contrast",
+    "The page does not document performance characteristics or other limits"
+  ],
+  "resume_fr": "HeightField Strata ajoute des strates de type roche ou sédiment à une hauteur, en empilant plusieurs couches inclinées et tournées."
+}

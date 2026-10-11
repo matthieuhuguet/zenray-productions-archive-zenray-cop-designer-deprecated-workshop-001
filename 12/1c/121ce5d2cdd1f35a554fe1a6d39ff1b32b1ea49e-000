@@ -1,0 +1,37 @@
+{
+  "name": "configurestamps",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/configurestamps.html",
+  "status": "ok",
+  "summary_en": "Configure Stamps takes geometry points and adds stamp/sprite attributes that the Stamp Points node can read. It also provides inputs and randomisation controls for each stamp's position, scale, rotation, colour, alpha and stamp choice.",
+  "inputs": [
+    "points: geometry receiving the attributes",
+    "jitter (optional): layer offsetting stamp positions",
+    "direction (optional): layer setting stamp angle direction",
+    "angle (optional): rotates stamps, 0 to 1 maps to 0 to 360 degrees",
+    "scale (optional): multiplies uniform scale",
+    "stretch (optional): multiplies non-uniform scale",
+    "color (optional): tints stamps",
+    "alpha (optional): multiplies stamp alpha",
+    "sort (optional): small Z offsets for depth sorting",
+    "select (optional): chooses stamps in layer-based mode"
+  ],
+  "key_parameters": [
+    "Seed: changes the random pattern for all random values",
+    "Jitter / Jitter Scale: random position offset, per-axis with per-component controls",
+    "Scale / Scale Mode: stamp size in image space (uniform, percent variance, or min/max)",
+    "Stretch X / Stretch Y / Stretch Mode: non-uniform scale per axis",
+    "Angle / Angle Mode / Angle Variance: rotation in degrees",
+    "Stamp Color / Color Seed: uniform tint, hue/saturation/value variation, or ramp",
+    "Stamp Alpha / Alpha Variance: opacity, randomised or ramp",
+    "Use Sort Layer: enables the sort input",
+    "Stamp Count: number of stamps, so selection works",
+    "Mode: Cycle, Random (with Select Seed), or Layer Select"
+  ],
+  "caveats": [
+    "Stamp Count must match the number of stamps for select to work; the Stamp Sprites recipe sets it automatically",
+    "Without a stamps input, Mode applies to a default star pattern",
+    "Scale and Stretch multiply into the same spritescale attribute",
+    "The page is inconsistent between Layer Select (parameter) and Layer Sort (inputs); check the menu in the build"
+  ],
+  "resume_fr": "Le nœud Configure Stamps ajoute aux points les attributs de tampon que lit Stamp Points, avec des entrées et des aléas pour la position, l'échelle, la rotation, la couleur et le choix du tampon."
+}

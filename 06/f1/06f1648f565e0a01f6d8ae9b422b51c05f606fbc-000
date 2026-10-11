@@ -1,0 +1,21 @@
+{
+  "name": "cornerdetect",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cornerdetect.html",
+  "status": "ok",
+  "summary_en": "Corner Detect analyses a single-channel (mono) layer to locate corner features. Its output is a grayscale layer in which detected corners appear as blobs, usable downstream for example with Points from Blobs. Available since 22.0.",
+  "inputs": [
+    "input: a mono layer"
+  ],
+  "key_parameters": [
+    "Type: selects the detection algorithm; one option is Harris Stephens (fast) 1988; other options are not listed on the page",
+    "Neighbors: number of adjacent pixels considered",
+    "Threshold: only values above this level are corner candidates",
+    "K: Harris Stephens sensitivity, valid range 0.04 to 0.06; higher values make the detector less sensitive"
+  ],
+  "caveats": [
+    "K applies only to Harris Stephens and its valid range is narrow",
+    "The other Type options and tuning guidance for Neighbors and Threshold are not documented",
+    "The input must be mono; the page does not say how other layer types are handled"
+  ],
+  "resume_fr": "Le nœud Corner Detect repère les coins d'une couche mono et les restitue en taches lumineuses, exploitables ensuite par exemple avec Points from Blobs."
+}

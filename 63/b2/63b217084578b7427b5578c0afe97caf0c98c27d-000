@@ -1,0 +1,34 @@
+{
+  "name": "channelswap",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/channelswap.html",
+  "status": "ok",
+  "summary_en": "Rearranges the channels within one multichannel layer, VDB or attribute, for example RGB to BGR. It can also copy a channel from a second input, or set a channel to Zero, One or a constant Value.",
+  "inputs": [
+    "channels: the layer, VDB or attribute whose channels are swapped",
+    "alternate: the layer, VDB or attribute to take channels from",
+    "mask (optional): per-pixel mask, scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    {
+      "name": "Signature",
+      "meaning": "Layer type the input accepts"
+    },
+    {
+      "name": "Mask",
+      "meaning": "How much of the new value is mixed in; default 1 uses only the new value"
+    },
+    {
+      "name": "Source for Red / Green / Blue / Alpha",
+      "meaning": "First Input or Second Input, then Red, Green, Blue, Alpha, Zero, One or Value; defaults map each channel to itself"
+    },
+    {
+      "name": "Value for Red / Green / Blue / Alpha",
+      "meaning": "Constant used when that channel's source is Value"
+    }
+  ],
+  "caveats": [
+    "A channel that does not exist in the input follows the standard channel extension rules",
+    "For complex workflows, the page suggests Channel Split and Channel Join; Channel Swap creates fewer intermediate buffers"
+  ],
+  "resume_fr": "Le nœud channelswap réordonne ou remplace les canaux d'une même couche multicanale, par exemple du RGB vers du BGR."
+}

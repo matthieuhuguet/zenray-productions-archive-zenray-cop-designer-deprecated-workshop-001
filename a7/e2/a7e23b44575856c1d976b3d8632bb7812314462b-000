@@ -1,0 +1,36 @@
+{
+  "name": "knit",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/knit.html",
+  "status": "ok",
+  "summary_en": "The Knit node procedurally generates a grid of knitted fabric stitches, arranged in rows and columns, each shaped as a knit or purl stitch. It outputs a height map along with colour, per-stitch id and UV layers for lighting and texturing.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata",
+    "jitter: optional layer driving per-stitch positional jitter",
+    "direction: optional layer orienting each stitch",
+    "angle: optional layer rotating each stitch",
+    "scale: optional layer resizing each stitch",
+    "stretch: optional layer stretching each stitch",
+    "color: optional RGB layer tinting each stitch",
+    "alpha: optional mask layer controlling per-stitch opacity",
+    "flip: optional layer switching stitches between knit and purl"
+  ],
+  "key_parameters": [
+    "Preset: loads predefined knit style settings and overwrites other parameters",
+    "Seed: controls all randomization",
+    "Rows / Columns: size of the stitch grid",
+    "Knit Shape Type: Purl (bumpy) or Knit (V-shaped interlocking) stitch style",
+    "Scale / Scale Mode: base stitch size and how it is chosen (Uniform, Variance, Min/Max)",
+    "Jitter: random positional offset per stitch",
+    "Angle: base rotation of every stitch in degrees",
+    "Stretch X / Stretch Y: horizontal and vertical stretch per stitch",
+    "Layer Mask parameters: strength with which each optional input affects the result"
+  ],
+  "caveats": [
+    "Leave transform controls at defaults for the Knit shape: moving individual stitches breaks interlocking fibers and creates discontinuities",
+    "Layer Mask parameters have no effect unless the matching optional input is connected",
+    "Purl-specific and Knit-specific controls apply only to their own shape type",
+    "Round to Multiples is a post-process applied to the final stitch angle",
+    "Page is labelled as available since Houdini 22.0"
+  ],
+  "resume_fr": "Génère une grille de mailles de tricot (endroit ou envers) et sort une hauteur accompagnée de la couleur, de l'identifiant par maille et des UV."
+}

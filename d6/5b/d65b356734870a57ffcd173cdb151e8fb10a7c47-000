@@ -1,0 +1,23 @@
+{
+  "name": "Cop edgedetectcontour",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/edgedetectcontour.html",
+  "status": "ok",
+  "summary_en": "Finds silhouette outlines and draws them with varying widths by comparing each pixel's input value, such as a primitive ID, with its neighbours using ray differentials.",
+  "inputs": [
+    "source: signal to run silhouette detection on",
+    "thickness: optional input varying line thickness"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source",
+    "Thickness Scale: kernel radius in pixels; a multiplier when thickness is connected",
+    "Edge Spread: spread of the Gaussian weight, controlling edge falloff",
+    "Blur: blurs the image before detection",
+    "Contour Tolerance: minimum difference from neighbours for a pixel to count as part of the line",
+    "Min Probe Radius: minimum search radius for probe pixels"
+  ],
+  "caveats": [
+    "The page gives no default values, numeric ranges or interaction guidance; tuning needs experiments.",
+    "Covers silhouettes only; crease lines are for Edge Detect by Normal and self-occluding depth edges for Edge Detect by Depth."
+  ],
+  "resume_fr": "Trace des contours de silhouette d'épaisseur variable en comparant chaque pixel à ses voisins."
+}

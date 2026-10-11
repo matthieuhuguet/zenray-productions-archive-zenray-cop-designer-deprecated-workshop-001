@@ -1,0 +1,27 @@
+# DEPRECATED: zenray-cop-designer (11 October 2026)
+
+**Status: DEPRECATED.** Do not use this tool. Do not restore it into `~/.claude/skills/` without a new decision from Matthieu.
+
+**Statut : DÉPRÉCIÉ.** Ne pas utiliser cet outil. Ne pas le restaurer dans `~/.claude/skills/` sans nouvelle décision de Matthieu.
+
+## Why (11 October 2026)
+
+- Matthieu judged the results unusable: "y'a rien à tirer de zenray-cop-designer" (11 October 2026).
+- Measured against the reference with the same tool (Metrics2 EQUIV, 11 October 2026): window designer 0.50, whitepaint designer 0.51, tile designer 0.42. The old Houdini finals scored 0.82 to 0.83.
+- Visible defects, seen in the planches: whitepaint holes look like camouflage; tile wood is flat and the bottom edge too smooth; window flakes too large, no louver bevel.
+- Lesson kept: an EQUIV-driven search gamed the score with high-frequency streaks. The objective had to be statistical, and the statistical version was not validated.
+
+## Pourquoi (11 octobre 2026)
+
+- Matthieu a jugé les résultats inexploitables.
+- Mesures EQUIV contre la référence : fenêtre 0,50, lames blanches 0,51, tuile 0,42, contre 0,82 à 0,83 pour les anciens finals Houdini.
+
+## Where it was (11 October 2026)
+
+- Source of truth: `/Users/zenray/.claude/skills/zenray-cop-designer/`, removed after the cloud proof.
+- Sync copies, removed after the cloud proof: `/Users/zenray/.claude/Memory1/Skills/zenray-cop-designer/` (identical to the source) and `/Users/zenray/.codex/skills/zenray-cop-designer/` (older, missing `tile_height.py`, `whitepaint_height.py`, `optimize.py`, `planche.py`, `measure_target.py`, `make_manifest.py`).
+- Designer outputs: `/Users/zenray/Create/Build/Productions/ZenRayHoudini/LouisianaBayou/Heights/CopDesigner/`, archived under the `louisiana-bayou` project (production source), removed after the cloud proof.
+
+## Not affected (11 October 2026)
+
+- `Heights/SimpleHeight/`, `Heights/refs/`, `Heights/archive/` and the old finals are kept. They are not part of this tool.

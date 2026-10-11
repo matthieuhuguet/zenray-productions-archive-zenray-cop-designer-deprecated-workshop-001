@@ -1,0 +1,24 @@
+{
+  "name": "Cop attribextract",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/attribextract.html",
+  "status": "ok",
+  "summary_en": "Pulls a detached attribute out of an input geometry, so it can be handled as its own wire without staying attached to the geometry.",
+  "inputs": [
+    "geometry: geometry to extract the attribute from"
+  ],
+  "key_parameters": [
+    "Class: attribute class (point, primitive); stored to help re-insertion, advisory only",
+    "Attribute Name: name of the attribute to extract",
+    "Output Type: attribute type to extract; the geometry attribute must match its size and type",
+    "Optional: when the attribute is missing, creates a constant attribute filled with the default value instead of raising an error",
+    "Default Value (one per type): fallback for Float, Vector 2, Vector, Vector 4 and Integer"
+  ],
+  "caveats": [
+    "The extracted attribute length equals the number of elements in the source geometry",
+    "The attribute on the geometry must match the Output Type in both size and type",
+    "Without Optional enabled, a missing attribute causes an error",
+    "Class is advisory and enforces nothing",
+    "Default values are documented only for the five listed types"
+  ],
+  "resume_fr": "Extrait un attribut de géométrie sous forme de fil indépendant, réutilisable ailleurs dans le réseau."
+}

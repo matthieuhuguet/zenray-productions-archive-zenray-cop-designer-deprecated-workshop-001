@@ -1,0 +1,25 @@
+{
+  "name": "Cop bend",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/bend.html",
+  "status": "ok",
+  "summary_en": "Warps an image by moving pivot handles or by applying a bend across a captured rectangular region. It offers free-form transformation, so a layer can be warped, stretched and twisted; the page describes it as simpler than the Lattice Deform COP.",
+  "inputs": [
+    "size_ref: representative layer that sets the output image size and metadata",
+    "source: layer to bend"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source",
+    "Mode: Corners (two tangent handles and one point handle at each corner), Sides (point handle at each corner and at each side midpoint), Angle (a captured region defines the area to bend)",
+    "Filter: sampling method",
+    "Corners and Corner Handles: image-space positions of the four corners and their U and V tangent handles (Corners mode)",
+    "Side Handles: Bottom, Top, Left and Right midpoints (Sides mode)",
+    "Capture: Bend Angle in degrees, Capture Origin, Capture Direction, Capture Length, Deform in Both Directions"
+  ],
+  "caveats": [
+    "Capture Length must not be 0, otherwise nothing bends",
+    "In Angle mode the captured region is a rectangle: Capture Direction sets its lower side and Capture Length sets the left and right sides",
+    "Use Lattice Deform when more detailed control is needed",
+    "The Handles tool allows transforming the image in the viewport"
+  ],
+  "resume_fr": "Déforme une image par des poignées de pivot ou par une courbure appliquée à une zone capturée, pour plier, étirer ou tordre une couche."
+}

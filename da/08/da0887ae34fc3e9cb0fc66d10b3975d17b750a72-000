@@ -1,0 +1,27 @@
+{
+  "name": "latticedeform",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/latticedeform.html",
+  "status": "ok",
+  "summary_en": "The Lattice Deform node applies grid-based deformation to a layer, where the grid points act as handles that reshape the image. It offers finer deformation than the Bend COP, which is better suited to quick simple warps.",
+  "inputs": [
+    "size_ref: representative layer that sets the output image size and controls its metadata",
+    "source: the source layer to deform"
+  ],
+  "key_parameters": [
+    "Signature: layer type the source accepts",
+    "Filter: method used to sample the image",
+    "Mode: Linear (deformation follows the grid exactly) or Smooth (NURBS interpolation for fluid deformation)",
+    "U / V: point density in each direction when NURBS curves convert to polygons",
+    "Cells per Column / Columns: grid cell and column counts, always differing by one",
+    "Row 0: number of grid points in a row, set through the row tabs",
+    "Point 0_0: image-space position of a grid point, shown as a viewport handle"
+  ],
+  "caveats": [
+    "Columns and Cells per Column are linked: changing one changes the other by one",
+    "The Handles tool moves grid points directly in the viewport",
+    "U and V affect the output only when Smooth mode converts NURBS to polygons",
+    "For simple quick deformations the Bend COP is recommended",
+    "Page targets Houdini 22.0 and notes availability since 21.0; the Filter options are described in the Copernicus glossary, not on this page"
+  ],
+  "resume_fr": "Déforme une couche à l'aide d'une grille de points de contrôle, avec plus de finesse que le nœud Bend pour des déformations simples."
+}

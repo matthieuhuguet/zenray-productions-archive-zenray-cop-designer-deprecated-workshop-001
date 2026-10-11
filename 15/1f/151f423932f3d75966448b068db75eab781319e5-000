@@ -1,0 +1,28 @@
+{
+  "name": "grunge_sheets",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_sheets.html",
+  "status": "ok",
+  "summary_en": "Grunge Sheets generates a layered-noise pattern that looks like sheets. It can serve as a mask or building block for detailed textures, such as misshapen sheet metal.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude scales values before Center; Center offsets them; Mask Contrast adjusts contrast",
+    "Pattern: Element Size, Offset, Tile Size",
+    "Primary Distortion: horizontal distortion along Y, roughening the edges",
+    "Primary Roughness: sharper detail on the base layer",
+    "Secondary Mask: visibility and spread of the highlights",
+    "Secondary Amount: how many highlights appear",
+    "Secondary Distortion: vertical distortion along X on the highlight layer",
+    "Seed: randomizes the output while keeping the same look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Layers can hold negative values and values above 1; use Clamp Minimum and Clamp Maximum",
+    "Complement (1 - x) works as expected only for values from 0 to 1",
+    "Fold has no visible effect when all values are positive",
+    "Tile Size should match the aspect ratio of non-square images",
+    "Post-processing Contrast differs from Noise Contrast on some noise nodes"
+  ],
+  "resume_fr": "Grunge Sheets produit un motif de feuilles superposées par bruits, utilisable en masque ou pour une tôle déformée."
+}

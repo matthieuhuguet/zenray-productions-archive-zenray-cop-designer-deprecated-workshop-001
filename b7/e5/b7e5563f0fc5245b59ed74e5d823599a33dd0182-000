@@ -1,0 +1,26 @@
+{
+  "name": "compare",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/compare.html",
+  "status": "ok",
+  "summary_en": "The Compare node creates a 0 to 1 mask by testing two layers, VDBs or attributes against each other pixel by pixel. If input B is not wired, the first input is compared with a constant Comparison Value.",
+  "inputs": [
+    "A: layer, VDB or attribute to compare",
+    "B: layer, VDB or attribute to compare with (any type convertible to A's type)",
+    "tolerance (optional): mono per-pixel tolerance"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by source",
+    "Comparison Value: constant compared against each channel of A when B is not wired",
+    "Tolerance: band around the comparison that gets soft mask values (both sides for equality, one side for strict inequality)",
+    "True If: condition that sets the mask to 1 (==, !=, >, >=, <, <=)",
+    "Components: True if All or True if Any channel passes",
+    "Falloff: None (hard cutoff), Linear, or Elendt (smooth S-curve)"
+  ],
+  "caveats": [
+    "For multi-channel inputs the Components setting decides the result",
+    "Comparison Value is ignored when B is wired",
+    "The page's description of the mask output is somewhat ambiguous next to True If",
+    "Not the same node as Compare and Blend (compareblend)"
+  ],
+  "resume_fr": "Le nœud Compare produit un masque de 0 à 1 en comparant pixel par pixel deux entrées selon une condition choisie, avec une tolérance et une chute réglables."
+}

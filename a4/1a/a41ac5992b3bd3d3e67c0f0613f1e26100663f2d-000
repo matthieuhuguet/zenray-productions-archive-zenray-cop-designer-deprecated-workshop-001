@@ -1,0 +1,19 @@
+{
+  "name": "cablesort",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cablesort.html",
+  "status": "ok",
+  "summary_en": "Alphabetically orders the wires of a cable by name without changing their contents; output named sort. Available since version 21.0.",
+  "inputs": [
+    "cable: the cable to sort (only input)"
+  ],
+  "key_parameters": [
+    {
+      "name": "Reverse",
+      "meaning": "Reverses the sorted order"
+    }
+  ],
+  "caveats": [
+    "The page gives no further caveats"
+  ],
+  "resume_fr": "Le nœud cablesort range les fils d'un câble par ordre alphabétique de leur nom, avec une option d'inversion."
+}

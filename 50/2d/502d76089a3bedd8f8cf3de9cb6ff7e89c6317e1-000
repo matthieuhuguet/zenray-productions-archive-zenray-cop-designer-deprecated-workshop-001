@@ -1,0 +1,19 @@
+{
+  "name": "idtorgb",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/idtorgb.html",
+  "status": "ok",
+  "summary_en": "Converts an ID layer, VDB or attribute into an RGB layer, VDB or attribute by using the ID value as a seed for a random number generator, giving each ID its own color.",
+  "inputs": [
+    "id: the ID layer, VDB or attribute to convert"
+  ],
+  "key_parameters": [
+    {
+      "name": "Seed",
+      "meaning": "seed for the random number generator; changing it produces new random colors"
+    }
+  ],
+  "caveats": [
+    "The page does not say how colors are distributed, or whether the same ID always yields the same color across seeds."
+  ],
+  "resume_fr": "Attribue une couleur à chaque identifiant en utilisant sa valeur comme graine d'un générateur aléatoire."
+}

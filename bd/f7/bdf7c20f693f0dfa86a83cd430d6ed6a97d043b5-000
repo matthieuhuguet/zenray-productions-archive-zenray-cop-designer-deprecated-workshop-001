@@ -1,0 +1,24 @@
+{
+  "name": "grunge_birchbark",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_birchbark.html",
+  "status": "ok",
+  "summary_en": "Grunge Birch Bark generates a procedural pattern resembling birch tree bark by layering several noise patterns. It can serve as a base for more complex textures.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude and Center set the output range from C-A to C+A; Mask Contrast adjusts contrast before them",
+    "Pattern: Element Size, Element Scale, Offset, Tile Size as repeat interval",
+    "Base Coverage and Base Sharpness: control the cellular base noise",
+    "Lenticels and Lenticel Size: horizontal pore lines",
+    "Cracks and Crack Size: vertical crack lines",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can fall below 0 or above 1; use the Clamp options",
+    "Fold has no visible effect when all values are already positive",
+    "Complement assumes values between 0 and 1",
+    "The Contrast post-processing option differs from Noise Contrast on other noise nodes"
+  ],
+  "resume_fr": "Grunge Birch Bark produit un motif d'écorce de bouleau avec ses lenticelles horizontales et ses fissures verticales, par superposition de bruits."
+}

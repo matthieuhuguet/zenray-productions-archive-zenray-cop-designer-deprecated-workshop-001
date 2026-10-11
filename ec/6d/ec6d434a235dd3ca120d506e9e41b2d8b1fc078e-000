@@ -1,0 +1,17 @@
+{
+  "name": "Cop geotoadjacency",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/geotoadjacency.html",
+  "status": "ok",
+  "summary_en": "Geometry to Adjacency converts geometry into triangles and rasterizes it into an adjacency cable, which other adjacency COP nodes can process. For most workflows it is wired into Attribute Sample with Adjacency to rasterize geometry attributes.",
+  "inputs": [
+    "size_ref: sets the output image size and controls the metadata",
+    "geometry: geometry to rasterize"
+  ],
+  "key_parameters": [
+    "UV Attribute: name of the vertex UV attribute to rasterize"
+  ],
+  "caveats": [
+    "If the geometry contains n-gons and attributes are sampled from it, the workflow may show unwanted distortion"
+  ],
+  "resume_fr": "Le nœud Geometry to Adjacency rastérise une géométrie triangulée en câble d'adjacence, utilisable ensuite pour échantillonner ses attributs."
+}

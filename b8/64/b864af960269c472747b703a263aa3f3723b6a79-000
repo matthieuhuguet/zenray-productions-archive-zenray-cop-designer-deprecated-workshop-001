@@ -1,0 +1,21 @@
+{
+  "name": "Cop fft",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/fft.html",
+  "status": "ok",
+  "summary_en": "The FFT node is a low-level utility that converts an image between the spatial domain and the frequency domain, in either direction. It lets you manipulate an image's frequency content, for example to blur or sharpen it.",
+  "inputs": [
+    "real: real component of the signal; the only required input for a forward transform, so a normal image goes here",
+    "imaginary: imaginary component of the signal; needed to obtain a purely real result from an inverse transform"
+  ],
+  "key_parameters": [
+    "FFT Direction: forward transform (image to frequencies) or inverse transform (frequencies back to image)",
+    "Center DC: when on, low frequencies are moved to the center; when off, low frequencies sit in the corners",
+    "Normalize on Forward Pass: applies normalization during the forward pass instead of the inverse pass, making the spectrum easier to visualize",
+    "Target Sum: when enabled, rescales the spectrum so the sum of pixel values after the inverse pass equals the set value"
+  ],
+  "caveats": [
+    "The Normalize on Forward Pass setting must match on the forward and inverse FFT nodes, or the image will not reconstruct faithfully",
+    "The node works with complex numbers, so the inverse transform needs both the real and imaginary inputs"
+  ],
+  "resume_fr": "Le nœud FFT convertit une image entre le domaine spatial et le domaine fréquentiel, dans les deux sens, pour agir sur ses fréquences."
+}

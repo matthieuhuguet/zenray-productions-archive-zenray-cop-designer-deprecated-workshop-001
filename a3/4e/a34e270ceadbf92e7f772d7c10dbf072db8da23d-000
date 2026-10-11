@@ -1,0 +1,23 @@
+{
+  "name": "Cop autostereogram",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/autostereogram.html",
+  "status": "ok",
+  "summary_en": "Creates a flat image that shows a 3D illusion when the viewer looks past its surface. It samples a repeating texture and warps the sampling coordinates according to a depth image.",
+  "inputs": [
+    "source: pattern sampled to form the stereogram",
+    "depth: depth image; larger values make that area appear more raised"
+  ],
+  "key_parameters": [
+    "Scale: sampling frequency of the source; higher values repeat the texture more often",
+    "Depth Range: clamps depth values so results stay stable",
+    "Border: sampling beyond the input edges; defaults to the layer border property",
+    "Re-Center: when on, distortion spreads outward from the center; when off, it applies left to right"
+  ],
+  "caveats": [
+    "Depth values must be positive",
+    "A Remap COP placed before the node can bring depth values into a usable range",
+    "Use Mirror for textures that do not tile naturally, and Wrap for textures that do",
+    "A Scale that is too high can produce noise that cannot be resolved"
+  ],
+  "resume_fr": "Produit une image stéréogramme qui cache une illusion de relief, en déformant l'échantillonnage d'une texture selon une carte de profondeur."
+}

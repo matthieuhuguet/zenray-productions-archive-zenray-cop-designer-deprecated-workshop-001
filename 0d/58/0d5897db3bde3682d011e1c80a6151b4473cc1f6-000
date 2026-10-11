@@ -1,0 +1,41 @@
+{
+  "name": "heighttocaustics",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heighttocaustics.html",
+  "status": "ok",
+  "summary_en": "Treats a height layer as a refractive surface and generates caustic light patterns on the ground by tracing light through the surface, bending rays with the surface normal and accumulating where they land.",
+  "inputs": [
+    "height: the refractive surface (required)",
+    "ground: optional height layer for the ground; if unconnected a flat plane at Ground Offset is used"
+  ],
+  "key_parameters": [
+    {
+      "name": "Signature",
+      "meaning": "set to RGB to enable dispersion"
+    },
+    {
+      "name": "Directional, Light Azimuth, Light Altitude, Light Position",
+      "meaning": "control the light source"
+    },
+    {
+      "name": "Index of Refraction",
+      "meaning": "defaults to 1.33, approximating water"
+    },
+    {
+      "name": "Ground Offset / Ground Scale",
+      "meaning": "flat ground height, or scale of the ground input"
+    },
+    {
+      "name": "Photon Iterations / Denoise Iterations",
+      "meaning": "trade quality and noise against cook time"
+    },
+    {
+      "name": "Method",
+      "meaning": "Perturbation is fast but approximate; Spectrum is more accurate but expensive"
+    }
+  ],
+  "caveats": [
+    "Dispersion parameters only apply when Signature is RGB.",
+    "Photon Jitter Radius has no effect when Photon Iterations is 1."
+  ],
+  "resume_fr": "Transforme un champ de hauteur en surface réfractive et génère les motifs de caustiques projetés au sol par traçage de photons."
+}

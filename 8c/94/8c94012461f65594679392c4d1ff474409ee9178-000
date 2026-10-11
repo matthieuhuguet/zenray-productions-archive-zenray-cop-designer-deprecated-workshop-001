@@ -1,0 +1,35 @@
+{
+  "name": "Cop bakegeometrytextures",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/bakegeometrytextures.html",
+  "status": "ok",
+  "summary_en": "Transfers surface detail from a high-resolution mesh into texture maps on a low-resolution mesh, working as a near real-time baker. The resulting maps and AOVs can be used in later Copernicus processing. This page documents version 1; the page does not mention version 2.0, which has its own page (bakegeometrytextures-2.0.html).",
+  "inputs": [
+    "size_ref: representative layer that sets the output image size and metadata",
+    "low: low-resolution mesh that fires rays and receives the baked maps, rasterized by its UVs",
+    "high: high-resolution mesh to bake",
+    "cage (optional): cage mesh, used when Tracing Mode is Cage Mesh",
+    "skew: input map for skew correction"
+  ],
+  "key_parameters": [
+    "Tracer and Tracing Mode: Surface Normal, Cage Mesh or Single Mesh (low); the tracer menu depends on hardware",
+    "Face Visibility Culling: Backface or No Culling for secondary rays",
+    "Sample Multiplier: global quality control scaling all sample counts",
+    "Auto Generate Cage with Cage Offset and Soften Cage",
+    "Setup Normals and Tangents: error, warning or silent generation when missing",
+    "Advanced: UV Attribute and Ray Bias",
+    "Match Pieces by Name with Piece Attribute, Include Pieces and Exclude Pieces",
+    "Enable UV Boundary Filling with Exterior, Edge Padding, Edge Offset and Exclude Alpha from UV Fill",
+    "Texture Maps: Tangent Normal, Rounded Edge Normal, World Normal, Position, Ambient Occlusion, Curvature, Edge, Cavity, Thickness, Height, Alpha, Custom Attributes"
+  ],
+  "caveats": [
+    "The cage mesh must have the same topology as the low-res mesh and fully enclose both meshes without intersecting the wrong surfaces",
+    "Cage meshes are used only when Tracing Mode is Cage Mesh",
+    "OptiX is available only on NVIDIA hardware",
+    "UV Boundary Filling can be slow; best enabled for final bakes",
+    "Turning on Match Pieces by Name triggers a rebake and changes results",
+    "Low-res normals and tangents should be set before baking; triangulate first if the target application triangulates on import",
+    "Height output often looks nearly black unless Custom height space is used",
+    "Not the same as the Karma Texture Baker, which handles lighting, material and shader baking"
+  ],
+  "resume_fr": "Transfère le détail d'un maillage haute résolution vers des cartes de texture d'un maillage basse résolution, en quasi temps réel, et c'est la version 1 seulement."
+}

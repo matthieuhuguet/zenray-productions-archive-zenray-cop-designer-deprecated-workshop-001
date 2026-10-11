@@ -1,0 +1,27 @@
+{
+  "name": "compareblend",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/compareblend.html",
+  "status": "ok",
+  "summary_en": "Compare and Blend works per pixel. It compares input A against input B and selects pixels from either the true or the false input, so the result blends between two sources. The page calls it a pixel switcher based on specific values. Available since Houdini 22.0.",
+  "inputs": [
+    "true: source for pixels where the comparison passes",
+    "false: source for pixels where it fails",
+    "A: value being compared",
+    "B: value compared against A",
+    "tolerance (optional): mono per-pixel tolerance"
+  ],
+  "key_parameters": [
+    "Signature: layer, VDB or attribute",
+    "True If: equal, not equal, A greater than B, A greater than or equal to B, A less than B, A less than or equal to B",
+    "B Value: fallback constant for B when B is not wired",
+    "Bias: shifts the result toward the true or false input (calculation not documented)",
+    "Tolerance: band around the threshold, both sides for equality, one side for strict inequality",
+    "Falloff: None, Linear, or Elendt (smooth S-curve)"
+  ],
+  "caveats": [
+    "The inequality labels are easy to misread (page lists B greater than A as (<)); check the operator against the description when wiring",
+    "The page does not say how the tolerance input interacts with the Tolerance parameter; test before relying on it",
+    "Not the separate Compare VOP node"
+  ],
+  "resume_fr": "Le nœud Compare and Blend choisit pixel par pixel entre deux sources selon la comparaison de A et B, ce qui en fait un aiguillage entre deux couches."
+}

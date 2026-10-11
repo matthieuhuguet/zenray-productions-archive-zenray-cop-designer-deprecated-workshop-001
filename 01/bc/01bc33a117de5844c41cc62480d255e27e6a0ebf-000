@@ -1,0 +1,41 @@
+{
+  "name": "cellularnoise",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cellularnoise.html",
+  "status": "ok",
+  "summary_en": "Generates Worley-noise cell patterns with controllable spacing and beveled edges, for surface textures such as skin, leather, cobblestone, pebbles or dried earth. Samples image coordinates; for world coordinates the page points to Cellular Noise 3D.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata",
+    "pos (optional): UV layer whose values replace the pixel image coordinates"
+  ],
+  "key_parameters": [
+    {
+      "name": "Range",
+      "meaning": "Amplitude (contrast between elements) and Shift (overall brightness)"
+    },
+    {
+      "name": "Pattern",
+      "meaning": "Element Size, Jitter, Lattice Type (Grid or Hexagonal), Metric (Euclidean, Manhattan, Chebyshev), Smooth Edge, Offset, Tile Size"
+    },
+    {
+      "name": "Per-Component Controls",
+      "meaning": "When enabled, per-axis Element Scale and Jitter Scale"
+    },
+    {
+      "name": "Shape",
+      "meaning": "Mode (Absolute or Relative 0 to 1), Gap, Bevel, Bevel Ramp"
+    },
+    {
+      "name": "Post Processing",
+      "meaning": "Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum, in listed order"
+    }
+  ],
+  "caveats": [
+    "Post-processing runs in the order listed",
+    "Jitter above 1 may produce artifacts",
+    "With Tile Size on, Element Size is rounded or clamped to keep the noise tileable",
+    "Smooth Edge applies only with the Euclidean metric",
+    "Fold has no effect when all values are positive; Complement is intended for 0 to 1",
+    "Contrast differs from Noise Contrast in other noise nodes"
+  ],
+  "resume_fr": "Le nœud cellularnoise produit un bruit de Worley en cellules biseautées, calculé à partir des coordonnées image du pixel."
+}

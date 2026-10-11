@@ -1,0 +1,29 @@
+{
+  "name": "crop",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/crop.html",
+  "status": "ok",
+  "summary_en": "The Crop node trims a layer down to a smaller region, or extends it to a larger size, filling new pixels using the border rules. Copernicus has several spaces, so crop can mean discarding pixels, reframing the view, or both.",
+  "inputs": [
+    "source: the layer to crop",
+    "size_ref: layer that sets output size and controls metadata",
+    "bounds: reference geometry supplying the crop dimensions"
+  ],
+  "key_parameters": [
+    "Mode: discard cropped pixels in place, discard and reframe to fill, or leave unchanged while reframing to the crop",
+    "Border: edge behaviour when uncropping (Constant, Clamp, Mirror, Wrap, Clip)",
+    "Units: Image (-1 to 1), Texture (0 to 1), Pixels",
+    "Geometry Units: Image, Texture, Pixels or World",
+    "Method: lower-left and upper-right corners, or lower-left corner and size",
+    "Aspect Ratio: adjusts the final crop to a ratio",
+    "Extract Tile / Tile Counts / Tile Number: divides the region into equal tiles and keeps one",
+    "Minimum and Maximum Resolution",
+    "Reset Pixel Origin: realigns pixel coordinates with the display window",
+    "Pixel Padding (Left/Right, Top/Bottom)"
+  ],
+  "caveats": [
+    "Cropping always happens in pixels, so values may round when they do not match buffer elements",
+    "Reframe to Crop mode appears to have no effect in the 2D viewport",
+    "Reset Pixel Origin can make pixel coordinates look offset"
+  ],
+  "resume_fr": "Le nœud Crop recadre une couche sur une région plus petite, ou l'étend en remplissant les nouveaux pixels selon les règles de bord."
+}

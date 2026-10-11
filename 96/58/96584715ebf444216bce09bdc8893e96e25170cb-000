@@ -1,0 +1,43 @@
+{
+  "name": "cellularnoise3d",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cellularnoise3d.html",
+  "status": "ok",
+  "summary_en": "Generates Worley-style cellular noise sampled from 3D world locations rather than image coordinates, with controllable cell spacing and beveled edges.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata",
+    "pos (optional): RGB layer whose values replace the pixel world coordinates as the noise source"
+  ],
+  "key_parameters": [
+    {
+      "name": "Range",
+      "meaning": "Amplitude (contrast strength) and Shift (overall brightness)"
+    },
+    {
+      "name": "Pattern",
+      "meaning": "Element Size, Jitter, Metric (Euclidean circular, Manhattan diamond, Chebyshev square), Offset"
+    },
+    {
+      "name": "Shape",
+      "meaning": "Mode (absolute image-space or normalized 0 to 1), Gap, Bevel, Bevel Ramp"
+    },
+    {
+      "name": "Post Processing",
+      "meaning": "Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum, in listed order"
+    },
+    {
+      "name": "Per-Component Controls",
+      "meaning": "Toggle enabling per-axis Element Scale and Jitter Scale"
+    },
+    {
+      "name": "Smooth Edge",
+      "meaning": "Cell roundness; applies only when Metric is Euclidean"
+    }
+  ],
+  "caveats": [
+    "Jitter above 1 can cause artifacts because points jitter past the search radius",
+    "Fold has no visible effect when all values are positive",
+    "Complement assumes values in the 0 to 1 range",
+    "Contrast differs from the Noise Contrast parameter of other noise nodes"
+  ],
+  "resume_fr": "Le nœud cellularnoise3d produit un bruit cellulaire à partir des coordonnées monde 3D du pixel, et non de ses coordonnées image."
+}

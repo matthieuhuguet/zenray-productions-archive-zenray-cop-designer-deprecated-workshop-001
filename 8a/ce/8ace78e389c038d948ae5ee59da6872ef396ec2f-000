@@ -1,0 +1,27 @@
+{
+  "name": "contrast",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/contrast.html",
+  "status": "ok",
+  "summary_en": "The Contrast node changes the tonal spread of a layer, VDB or attribute around a chosen midpoint. Raising Contrast spreads values outward from the midpoint, lowering it pulls them back toward it.",
+  "inputs": [
+    "source: the layer, VDB or attribute to modify",
+    "contrast (optional): per-pixel control scaling the Contrast amount",
+    "mask (optional): per-pixel control scaling the Mask amount"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by source",
+    "Mask: blend of new value with original, default 1",
+    "Toggle RGB, Red, Green, Blue, Alpha: channels affected",
+    "Contrast: 1 leaves the image unchanged, 0 sets all values to the centre",
+    "Contrast Center: pivot point of the adjustment",
+    "Per-channel Contrast and offset pairs for Red, Green, Blue, Alpha (offset not explained in detail on the page)",
+    "Clamp Below Zero: stops values going negative",
+    "Clamp Above One: limits values to 1, useful for masks; HDR images may need values above 1",
+    "Treat RGBA as Premultiplied: un-premultiplies, applies contrast, re-premultiplies"
+  ],
+  "caveats": [
+    "Black values can be pushed below zero unless Clamp Below Zero is enabled",
+    "Without Treat RGBA as Premultiplied, a fixed pivot can make low-coverage premultiplied pixels too dark"
+  ],
+  "resume_fr": "Le nœud Contrast étire ou resserre les valeurs d'une couche autour d'un centre choisi, avec un réglage par canal et des bornes optionnelles."
+}

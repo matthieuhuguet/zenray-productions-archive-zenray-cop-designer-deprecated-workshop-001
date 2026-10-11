@@ -1,0 +1,28 @@
+{
+  "name": "Cop curveanimate3d",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/curveanimate3d.html",
+  "status": "ok",
+  "summary_en": "Interactive viewport state for drawing and animating curves with tools similar to 2D illustration software. Mainly targets cubic Bezier curves, also supports polylines and NURBS, with optional animation and orientation or radius attributes. Distinct from the SOP Curve Animate node.",
+  "inputs": [
+    "none documented on the page; the output is curve primitives plus an optional Animation packed primitive"
+  ],
+  "key_parameters": [
+    "Stashed Geometry: stores the current curve geometry and animation",
+    "Reset All Changes: clears all curve edits and animation",
+    "Apply Keys: applies geometry channels to the output",
+    "Live Update Mode: continuous update during drags or only on mouse-up",
+    "Synchronize Keys per Curve",
+    "Edit Plane: Axis Aligned or View Plane",
+    "Show Handle: transform handle for moving selected points in 3D",
+    "Primitive Type, New Anchor Type, Order: for new curves in Draw mode",
+    "Output Channel Primitives: includes animation data in the output",
+    "Output Quaternion, Output X/Y/Z Axis, Enable Output Radius",
+    "Tangent Type"
+  ],
+  "caveats": [
+    "In a perspective viewport drawing snaps to the view-facing plane; orthographic is easier for flat drawing.",
+    "Shaded display may not fill Bezier curves; wireframe is recommended for closed curves.",
+    "Esc switches to the View tool; select the node, hover the viewer and press Enter to return."
+  ],
+  "resume_fr": "Fournit un état de vue interactif pour dessiner et animer des courbes, avec sortie de primitives de courbes et animation optionnelle."
+}

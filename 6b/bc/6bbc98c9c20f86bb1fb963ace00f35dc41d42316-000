@@ -1,0 +1,24 @@
+{
+  "name": "Cop attribute",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/attribute.html",
+  "status": "ok",
+  "summary_en": "Creates a detached attribute of a chosen type and size, sized either explicitly or from a reference attribute. Useful to reserve array sizes, or to match an existing attribute's size while changing its type.",
+  "inputs": [
+    "attrib_ref (optional): reference attribute supplying sizing and initial properties"
+  ],
+  "key_parameters": [
+    "Signature: attribute type to generate, which need not match the input type",
+    "Class: a hint for how the detached attribute is treated; copy from input, set a specific class, or None",
+    "Value fields: initial values for Float, Vector 2, Vector (Color), Vector 4 (Color and alpha) and Integer",
+    "Sizing Method: Set (uses Size, ignores input), Add (input size plus Size) or Multiply (input size times Multiply Size)",
+    "Size and Multiply Size: values used by the chosen sizing method",
+    "Set Type Info: None, Position, Vector, Normal, Color, Quaternion, Transform Matrix or Texture Coordinate"
+  ],
+  "caveats": [
+    "With no input connected, the base size is 0, so sizing depends entirely on the Size parameter",
+    "Setting Class to None stops automatic class deduction on insertion",
+    "The page gives no size limits and describes Set Type Info only in general terms",
+    "Available since Houdini 22.0"
+  ],
+  "resume_fr": "Crée un attribut détaché de type et de taille choisis, dimensionné par un paramètre ou calqué sur un attribut de référence."
+}

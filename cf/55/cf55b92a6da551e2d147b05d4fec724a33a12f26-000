@@ -1,0 +1,25 @@
+{
+  "name": "Cop dilateerode",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/dilateerode.html",
+  "status": "ok",
+  "summary_en": "Expands or shrinks a layer, mostly to grow or trim masks. Positive radius dilates, negative radius erodes. Output is named dilate.",
+  "inputs": [
+    "source: original layer to dilate or erode",
+    "radius: optional per-pixel radius scaled by the Radius parameter",
+    "mask: optional per-pixel mask scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source",
+    "Mask: mix of new value with original; default 1 uses only the new value",
+    "Units: Image, Pixels or Local space for the radius",
+    "Radius: dilation amount; positive dilates, negative erodes; clamped by the maximum",
+    "Soft Edge: gradient for softer edges",
+    "Fill Holes / Remove Specks: dilates inward to patch holes",
+    "Maximum Pixel Radius: caps Radius to limit cost"
+  ],
+  "caveats": [
+    "Large radius values slow performance, which is why the clamp exists.",
+    "The page is inconsistent on the clamp name: Maximum Pixel Radius in the parameter list, Maximum Radius in the Radius entry; check the label in your Houdini version."
+  ],
+  "resume_fr": "Élargit ou réduit une couche, en pratique pour agrandir ou rogner un masque."
+}

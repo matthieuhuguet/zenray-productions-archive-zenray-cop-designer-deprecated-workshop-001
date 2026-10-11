@@ -1,0 +1,23 @@
+{
+  "name": "colorcorrect",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/colorcorrect.html",
+  "status": "ok",
+  "summary_en": "The Color Correct node adjusts image colours with separate Shadow, Midtone and Highlight regions. A Master set of adjustments then applies to the combined result.",
+  "inputs": [
+    "source: the original layer",
+    "mask (optional): per-pixel mask amount scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by source",
+    "Mask: blends the new values with the original, default 1; also sets the affected RGBA channels",
+    "Toggle RGB, Red, Green, Blue, Alpha",
+    "Treat RGBA as Premultiplied: multiplies RGB by alpha",
+    "Shadow, Midtone, Highlight: each has a toggle and Add (offset), Mult (scale), Gamma (power curve), Contrast controls",
+    "Master: a toggle plus the same Add, Mult, Gamma, Contrast controls, applied to the combined result"
+  ],
+  "caveats": [
+    "Shadow, Midtone and Highlight are applied first and combined, then Master is applied",
+    "If the Master or a range toggle is off, its values are removed from the final output"
+  ],
+  "resume_fr": "Le nœud Color Correct règle séparément les ombres, les médiotons et les hautes lumières, puis applique un réglage maître à l'ensemble."
+}

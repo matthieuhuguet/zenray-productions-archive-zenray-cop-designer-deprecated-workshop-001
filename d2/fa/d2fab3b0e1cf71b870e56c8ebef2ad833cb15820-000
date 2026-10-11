@@ -1,0 +1,26 @@
+{
+  "name": "Cop alignpixels",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/alignpixels.html",
+  "status": "ok",
+  "summary_en": "Shifts a layer so it lines up pixel-for-pixel with a reference layer. It snaps the layer into the reference pixel grid, matching pixel size and orientation, then applies an integer-pixel translation. Intended mainly for pixel-perfect overlays such as sprite grids or watermarks.",
+  "inputs": [
+    "source: layer to align",
+    "size_ref (optional): reference layer to align to"
+  ],
+  "key_parameters": [
+    "Snapping: point of the source (Data Window or Display Window) that is snapped, with Side Y and Side X",
+    "Justify with: reference or source Data / Display Window, or a Target Point",
+    "Units: Image, Texture, Pixels or World, applied to size_ref",
+    "Target Point: point to align to, interpreted in the chosen Units",
+    "Justify X / Justify Y: None, Min, Center or Max",
+    "Goal X / Goal Y: Same, Min, Center or Max",
+    "Offset by: extra pixel nudge applied after the computed alignment"
+  ],
+  "caveats": [
+    "The alignment translation is always a whole number of pixels, with no interpolation, so the input is fully preserved",
+    "If the source differs in scale or rotation, points other than the snapping point may drift away from their snapped locations",
+    "No resizing is possible; a Target Point gives only a single point to align to",
+    "Available since Houdini 22.0"
+  ],
+  "resume_fr": "Cale une couche sur la grille de pixels d'une référence, au pixel près, pour les superpositions exactes comme les grilles de sprites ou les filigranes."
+}

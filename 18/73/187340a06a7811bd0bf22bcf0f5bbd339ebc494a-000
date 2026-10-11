@@ -1,0 +1,15 @@
+{
+  "name": "cablefilter",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cablefilter.html",
+  "status": "ok",
+  "summary_en": "Removes the empty wires from an input cable and outputs the same cable holding only wires that contain data, named filter. Available since version 21.0. The page documents no parameters.",
+  "inputs": [
+    "cable: the input cable"
+  ],
+  "key_parameters": [],
+  "caveats": [
+    "The page lists no parameters",
+    "Add a Cable Merge downstream if the original cable structure must be restored"
+  ],
+  "resume_fr": "Le nœud cablefilter retire les fils vides d'un câble pour ne garder que les fils qui portent des données."
+}

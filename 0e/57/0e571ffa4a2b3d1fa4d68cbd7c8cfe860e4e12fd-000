@@ -1,0 +1,44 @@
+{
+  "name": "heighttoambientocclusion",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heighttoambientocclusion.html",
+  "status": "ok",
+  "summary_en": "Estimates ambient occlusion from a height layer: each pixel is tested with imaginary spheres against the heights of its neighbors. Output is an AO map or an occlusion mask (for example to add dirt where occlusion is high).",
+  "inputs": [
+    "layer: the original height layer"
+  ],
+  "key_parameters": [
+    {
+      "name": "Height Scale",
+      "meaning": "scales heights before the calculation; higher values exaggerate occlusion"
+    },
+    {
+      "name": "Space",
+      "meaning": "space used to interpret the steepness of the height"
+    },
+    {
+      "name": "View Radius",
+      "meaning": "how far rays are sent; larger is more accurate but slower"
+    },
+    {
+      "name": "Step Scale",
+      "meaning": "spacing of steps along each ray; larger cooks faster but may miss thin features"
+    },
+    {
+      "name": "Sample Count",
+      "meaning": "number of rays per pixel; more is more accurate but slower"
+    },
+    {
+      "name": "Sample from Hemisphere",
+      "meaning": "divides the angle by 90 instead of 180 degrees"
+    },
+    {
+      "name": "Remap Ramp",
+      "meaning": "remaps the output occlusion values"
+    }
+  ],
+  "caveats": [
+    "Accuracy and speed trade off against each other.",
+    "The page notes the node is based on the HeightField Mask by Occlusion SOP."
+  ],
+  "resume_fr": "Estime l'occlusion ambiante d'un champ de hauteur par lancers de rayons, pour obtenir une carte AO ou un masque."
+}

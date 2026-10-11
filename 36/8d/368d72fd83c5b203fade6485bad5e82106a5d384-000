@@ -1,0 +1,28 @@
+{
+  "name": "Cop curlnoise3d",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/curlnoise3d.html",
+  "status": "ok",
+  "summary_en": "Generates a 3D divergence-free noise field built as a fractal curl of Perlin noise. Outputs a vector field as an RGB layer or a Vector VDB, sampled at world coordinates.",
+  "inputs": [
+    "size_ref (required): representative layer setting output size and metadata",
+    "pos (optional): layer or VDB giving the position at each pixel",
+    "octaves (optional): multiplier applied to Max Octaves",
+    "roughness (optional): multiplier applied to Roughness"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by the source",
+    "Amplitude: scales the noise before Center",
+    "Center: offsets the output range",
+    "Element Size: world-space size of the basic element; Element Scale per axis with Per-Component Controls",
+    "Offset: shifts the noise function in world coordinates",
+    "Max Octaves: number of stacked noise layers",
+    "Lacunarity: scale change per octave",
+    "Roughness: amplitude change per octave",
+    "Octave Offset: positional offset per octave"
+  ],
+  "caveats": [
+    "Amplitude and Center can push values outside the expected range; add a Clamp COP to enforce it.",
+    "Unlike Curl Noise, samples at world coordinates rather than image coordinates."
+  ],
+  "resume_fr": "Produit un champ vectoriel 3D sans divergence en coordonnées monde, construit comme rotationnel fractal de bruit de Perlin."
+}

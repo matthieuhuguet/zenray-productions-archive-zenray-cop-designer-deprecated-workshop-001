@@ -1,0 +1,22 @@
+{
+  "name": "Cop edgedetectnormal",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/edgedetectnormal.html",
+  "status": "ok",
+  "summary_en": "Detects crease lines of varying width by comparing the input vector, typically a surface normal, at each pixel with its neighbours using ray differentials.",
+  "inputs": [
+    "normal: normal input processed for crease-line detection",
+    "thickness: optional input that multiplies Thickness Scale rather than replacing it"
+  ],
+  "key_parameters": [
+    "Thickness Scale: kernel radius in pixels; a multiplier when thickness is connected",
+    "Edge Spread: multiplies the Gaussian weight spread",
+    "Blur: blurs the input before detection",
+    "Normal Tolerance: minimum dot product between a pixel normal and its neighbours' normals for them to count as part of the line",
+    "Min Probe Radius: minimum search radius for probe pixels"
+  ],
+  "caveats": [
+    "The page gives no default values, performance notes or examples.",
+    "The page does not explain how Normal Tolerance interacts with the other parameters; tuning may need experiments."
+  ],
+  "resume_fr": "Trace les lignes de pli d'épaisseur variable en comparant les normales de chaque pixel à celles de ses voisins."
+}

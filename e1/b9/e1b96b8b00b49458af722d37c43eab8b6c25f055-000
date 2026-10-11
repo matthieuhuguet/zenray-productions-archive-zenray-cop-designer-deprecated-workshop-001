@@ -1,0 +1,43 @@
+{
+  "name": "heighttoshadow",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heighttoshadow.html",
+  "status": "ok",
+  "summary_en": "Creates approximate shadows from a height field by placing a virtual light source and testing how much each pixel's neighbors block it. Intended for shading and texture synthesis.",
+  "inputs": [
+    "height: the original height layer used to calculate shadows"
+  ],
+  "key_parameters": [
+    {
+      "name": "Space",
+      "meaning": "Local or World space for interpreting light position, direction and normal"
+    },
+    {
+      "name": "Height Map Scale",
+      "meaning": "scales height values before occlusion is computed"
+    },
+    {
+      "name": "Step Scale",
+      "meaning": "spacing of steps along each ray; larger cooks faster but may miss thin features"
+    },
+    {
+      "name": "Type",
+      "meaning": "light profile: Disk, Sphere or Directional"
+    },
+    {
+      "name": "Radius / Angular Size",
+      "meaning": "radius for Disk and Sphere; angular size in degrees for Directional"
+    },
+    {
+      "name": "Use / Light Normal",
+      "meaning": "how Disk and Sphere positions are defined, and the Disk normal direction"
+    },
+    {
+      "name": "Single Sided",
+      "meaning": "for Disk lights, ignores light from the back side"
+    }
+  ],
+  "caveats": [
+    "The shadows are approximate, and thin features can be missed at higher Step Scale values."
+  ],
+  "resume_fr": "Crée des ombres approximatives à partir d'un champ de hauteur, avec une lumière virtuelle de type disque, sphère ou directionnelle."
+}

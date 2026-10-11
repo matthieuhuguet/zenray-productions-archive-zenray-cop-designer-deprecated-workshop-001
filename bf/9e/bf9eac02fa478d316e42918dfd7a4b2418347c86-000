@@ -1,0 +1,28 @@
+{
+  "name": "Cop font",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/font.html",
+  "status": "ok",
+  "summary_en": "The Font node adds text to a layer by drawing Type 1, TrueType, or OpenType fonts into it. It supports any Unicode glyph and can output the result as a mask or a signed distance field.",
+  "inputs": [
+    "size_ref: representative layer that sets the output image size and controls the metadata"
+  ],
+  "key_parameters": [
+    "Space: Image (layer image space, 0,0 at the display window center) or World (text placed in the X/Y plane with the 3D transform applied)",
+    "Font: typeface; system fonts are listed automatically and other font files can be browsed",
+    "Text: string to generate",
+    "Output Type: Mask (rasterized mask) or SDF (signed distance field)",
+    "Smoothing with Units and Width: softens jagged edges, in image-space units or pixels",
+    "Horizontal Alignment and Vertical Alignment: position relative to the origin (Left, Center, Right, Top, Middle, Bottom and similar); Include Descender in Vertical Alignment moves the baseline to the descender",
+    "Font Size: base size; Scale is applied on top of it",
+    "Translate and Rotate Z: position and rotation around the world Z axis",
+    "Tracking and Leading: horizontal and vertical character spacing; Leading only has an effect with multiple lines",
+    "Oblique Angle: slant in degrees",
+    "Level of Detail: number of points used in polygonal fonts"
+  ],
+  "caveats": [
+    "The text stays in world space even when size_ref is in a different space",
+    "Leading has no effect on single-line text",
+    "The available fonts depend on what is installed on the system"
+  ],
+  "resume_fr": "Le nœud Font dessine du texte Unicode dans une couche, sous forme de masque ou de champ de distance signée."
+}

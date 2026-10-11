@@ -1,0 +1,25 @@
+{
+  "name": "grunge_galvanizedsteel",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_galvanizedsteel.html",
+  "status": "ok",
+  "summary_en": "Grunge Galvanized Steel generates a layered-noise pattern that imitates the crystalline surface of galvanized steel. It can be used as a mask or as a building block for detailed textures, such as steel surfaces on nails or roofs.",
+  "inputs": [
+    "size_ref: reference layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude scales values before Center; Center offsets them; Mask Contrast adjusts contrast",
+    "Pattern: Element Size (Element Scale with Per-Component Controls), Offset, Tile Size",
+    "Distort Size, Distort Angle, Distort Scale: bend the spangle shapes in the base layer",
+    "Secondary Distort Size and Secondary Distort Roughness: edge softness and wave roughness",
+    "Seed: randomizes the result while keeping the same look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can fall below 0 or above 1; use the Clamp options",
+    "Complement assumes values between 0 and 1",
+    "Fold has no visible effect when all values are positive",
+    "Post-processing Contrast is separate from Noise Contrast",
+    "Tile Size should match the aspect ratio of non-square images"
+  ],
+  "resume_fr": "Grunge Galvanized Steel imite la surface cristalline de l'acier galvanisé par un bruit en couches, utilisable en masque ou comme brique de texture métallique."
+}

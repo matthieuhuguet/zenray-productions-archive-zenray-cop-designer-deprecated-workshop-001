@@ -1,0 +1,30 @@
+{
+  "name": "Cop defocus",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/defocus.html",
+  "status": "ok",
+  "summary_en": "Blurs an input layer the way a real camera lens does, with optional colour correction of out-of-focus areas and a custom bokeh mask.",
+  "inputs": [
+    "source: layer to defocus",
+    "depth: depth map in meters giving each object's distance from the camera",
+    "bokeh: optional mono mask shaping the blur; a circular bokeh is used if omitted",
+    "mask: optional per-pixel mask scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Focus Distance: distance at which objects are sharp",
+    "Focal Length: camera zoom to mimic",
+    "F-Stop: strength of the defocus",
+    "Focus Plane Blur: softens the transition between sharp and blurred areas",
+    "Radius: maximum bokeh radius in pixels",
+    "Gain: overall bokeh luminance",
+    "Resample Input and Resolution: quality versus speed",
+    "Color Correct group: brightness, saturation and gamma applied only to out-of-focus areas",
+    "Depth Blend Min and Max: remap the depth range used to blend sharp and defocused layers"
+  ],
+  "caveats": [
+    "Large Radius values are expensive because many samples are scattered.",
+    "Depth must be in meters for correct results.",
+    "Resampling speeds up computation at a small quality cost.",
+    "Karma can output a depth AOV for use with this node."
+  ],
+  "resume_fr": "Floute une image comme un objectif photographique à partir d'une carte de profondeur en mètres, avec une forme de bokeh personnalisable."
+}

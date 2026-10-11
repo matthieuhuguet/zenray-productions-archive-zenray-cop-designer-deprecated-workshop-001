@@ -1,0 +1,20 @@
+{
+  "name": "Cop error",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/error.html",
+  "status": "ok",
+  "summary_en": "The Error node passes its input through unchanged while generating a message, warning, or error for the network. It is useful for flagging parameter values that would produce unusable results.",
+  "inputs": [
+    "input#: layer passed through unchanged; the page lists only this input, and output# is the same layer"
+  ],
+  "key_parameters": [
+    "Number of Errors: how many messages, warnings or errors to generate",
+    "Error Message: text shown when the notice is active; if empty, the notice is not reported",
+    "Severity: Message (node info window only), Warning (badge and text, cooking continues), Error (prominent badge, downstream nodes do not cook)",
+    "Report This Error: expression that triggers the notice when non-zero, for example a threshold check on another node's parameter"
+  ],
+  "caveats": [
+    "Use the Error severity only for problems the network cannot recover from, because it stops downstream cooking",
+    "Inside a digital asset, notices do not reach the user unless the Error node is added to the asset's Message Nodes list in Operator Type Properties"
+  ],
+  "resume_fr": "Le nœud Error transmet son entrée sans modification et signale un message, un avertissement ou une erreur selon une condition."
+}

@@ -1,0 +1,80 @@
+{
+  "name": "bubblenoise",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/bubblenoise.html",
+  "status": "ok",
+  "summary_en": "Generates a bubbly noise pattern that resembles Fractal Noise with the Torus noise type, but each fractal level is distorted so it compresses and expands. Typical uses are billowy clouds and sharp caustics. Introduced in version 21.0.",
+  "inputs": [
+    "size_ref: representative layer that sets the output image size and metadata",
+    "pos (optional): UV layer whose values replace the pixel image coordinates for the noise"
+  ],
+  "key_parameters": [
+    {
+      "name": "Amplitude",
+      "meaning": "Multiplies the noise before the Center adjustment"
+    },
+    {
+      "name": "Center",
+      "meaning": "Offsets the output noise range"
+    },
+    {
+      "name": "Element Size",
+      "meaning": "Size of the basic noise element; Per-Component Controls enables per-axis Element Scale"
+    },
+    {
+      "name": "Phase",
+      "meaning": "Moves the noise through 4D space to pick different seeds"
+    },
+    {
+      "name": "Offset",
+      "meaning": "Shifts the whole noise function in image coordinates"
+    },
+    {
+      "name": "Tile Size",
+      "meaning": "Size of the repeating noise tile"
+    },
+    {
+      "name": "Noise Type (Fractal)",
+      "meaning": "Simplex (Perlin on simplex grid) or Curl (divergence-free curl on Perlin)"
+    },
+    {
+      "name": "Max Octaves",
+      "meaning": "Number of noise layers added together"
+    },
+    {
+      "name": "Lacunarity",
+      "meaning": "Scale factor per octave, rounded to an integer for periodic noise"
+    },
+    {
+      "name": "Roughness",
+      "meaning": "Amplitude scale for each successive octave"
+    },
+    {
+      "name": "Distortion",
+      "meaning": "Warps the noise toward decreasing or increasing values"
+    },
+    {
+      "name": "Stretch",
+      "meaning": "Stretches the noise per direction; recommended over Element Size"
+    },
+    {
+      "name": "Droop / Droop Direction",
+      "meaning": "Bends the pattern toward a chosen direction"
+    },
+    {
+      "name": "Fold each Octave",
+      "meaning": "Remaps values during evaluation so valleys become peaks"
+    },
+    {
+      "name": "Post Processing",
+      "meaning": "Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum, applied in that order"
+    }
+  ],
+  "caveats": [
+    "Periodic because it is based on torus noise",
+    "Values can go below 0 or above 1; use the Clamp options for bounded output",
+    "Complement works properly only for values from 0 to 1",
+    "Fold each Octave differs from applying an absolute function afterward",
+    "Post Processing Contrast is not the same as the Noise Contrast of other noise nodes"
+  ],
+  "resume_fr": "Le nœud bubblenoise génère un bruit en bulles, proche du Fractal Noise en type Torus mais avec chaque niveau déformé, pour des nuages gonflés ou des caustiques nettes."
+}

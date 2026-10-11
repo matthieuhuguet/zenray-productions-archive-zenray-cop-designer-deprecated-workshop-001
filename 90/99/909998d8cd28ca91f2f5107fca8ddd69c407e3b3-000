@@ -1,0 +1,19 @@
+{
+  "name": "cornerpin",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cornerpin.html",
+  "status": "ok",
+  "summary_en": "The Corner Pin node sets the corner positions of a layer relative to a reference layer, so the texture is stretched to fit between those corners. The output is sized to the reference. Listed as available since 21.0.",
+  "inputs": [
+    "size_ref: reference layer the texture is rasterised into",
+    "texture: layer whose corners are pinned"
+  ],
+  "key_parameters": [
+    "Signature: layer type accepted by source",
+    "Units: Image (-1 to 1 over display window), Texture (0 to 1 over data window), Pixels (absolute), World (projected through the layer's implicit camera)",
+    "Bottom Left, Bottom Right, Top Left, Top Right: corner positions, interpreted according to Units"
+  ],
+  "caveats": [
+    "If the reference layer has a perspective camera, use world-position corners to get a perspective transform; otherwise the result is an affine stretch"
+  ],
+  "resume_fr": "Le nœud Corner Pin étire une texture entre quatre coins définis par rapport à une couche de référence, avec une transformation en perspective si la caméra l'est."
+}

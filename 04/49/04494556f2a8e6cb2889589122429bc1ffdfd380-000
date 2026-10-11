@@ -1,0 +1,30 @@
+{
+  "name": "copyxform",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/copyxform.html",
+  "status": "ok",
+  "summary_en": "Copy and Transform (copyxform) makes copies of an input stamp and applies successive transformations to each copy. The original stamp stays untouched.",
+  "inputs": [
+    "size_ref: sets output image size and metadata",
+    "shape: layer containing the stamp to copy and transform",
+    "pointmask (optional): limits which copies are stamped, based on location"
+  ],
+  "key_parameters": [
+    "Total Number: total copies including the original",
+    "Order: sequence in which Translate, Rotate and Scale are applied",
+    "Translate / Rotate / Scale: move, rotate (degrees, Z axis) and stretch or compress; Uniform Scale multiplies X and Y",
+    "Center Pivot on Shape, Pivot Translate, Pivot Rotate",
+    "Blend Method: Over, Under, Add, Subtract, Multiply, Maximum, Minimum",
+    "Filter: sampling method",
+    "Wrap Mode / Tile Size: copies outside the main tile wrap back in, for seamless repeats",
+    "Stamp Color, Change per Copy, Color Ramp",
+    "Uniform Alpha, Alpha Ramp",
+    "Background Color / Background Alpha"
+  ],
+  "caveats": [
+    "Transformations are cumulative, each copy builds on the previous one",
+    "Over and Under presort copies by creation order, which can be expensive",
+    "Color Ramp disables Change per Copy; Alpha Ramp disables its per-copy counterpart",
+    "With Wrap Mode set to Auto, wrapping depends on the Border type of size_ref"
+  ],
+  "resume_fr": "Le nœud Copy and Transform copie un tampon et applique à chaque copie des transformations cumulées, sans modifier l'original."
+}

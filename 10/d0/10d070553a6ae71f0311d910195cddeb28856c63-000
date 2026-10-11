@@ -1,0 +1,27 @@
+{
+  "name": "idtosdf",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/idtosdf.html",
+  "status": "ok",
+  "summary_en": "Computes a signed distance field from the boundaries where ID values change. Each ID gets its own distance field, so wiring a Tile Pattern id output in creates per-tile SDFs.",
+  "inputs": [
+    "id: the ID layer whose value changes define the distance"
+  ],
+  "key_parameters": [
+    {
+      "name": "Invert",
+      "meaning": "flips the sign of the distance; ID fields have no inside or outside, so defaults are positive"
+    },
+    {
+      "name": "Iterations",
+      "meaning": "how many times the distance is recomputed; 1 is enough for a uniform speed field"
+    },
+    {
+      "name": "Tile Size",
+      "meaning": "block size used to split work between serial and parallel parts; should not change the converged result"
+    }
+  ],
+  "caveats": [
+    "The output sdf is a raw distance field; pass it through a downstream node such as SDF to Mono to get a usable image."
+  ],
+  "resume_fr": "Calcule un champ de distance signé à partir des frontières entre identifiants, avec un champ distinct par identifiant."
+}

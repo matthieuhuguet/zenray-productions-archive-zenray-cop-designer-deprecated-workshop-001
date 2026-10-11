@@ -1,0 +1,29 @@
+{
+  "name": "glow",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/glow.html",
+  "status": "ok",
+  "summary_en": "Glow adds a glow effect to an input layer, usually an image, by finding its bright regions. It is useful for effects such as neon lighting and explosions.",
+  "inputs": [
+    "source: original layer that receives the glow",
+    "mask: optional per-pixel mask, scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Mask: how much of the new glow value mixes with the original (default 1)",
+    "Glow Threshold: luminance above which pixels receive glow (default 0.75)",
+    "Output Glow Only: outputs only the glow, for use as an AOV or in a Blend COP",
+    "Brightness: brightness and spread of the glow (default 2)",
+    "Saturation: colour intensity of the glow (default 1)",
+    "Tint: colour applied to the glow (default 1, 1, 1)",
+    "Filter: Gaussian (default) or Box blur used in the subnetwork",
+    "Units: Image (default) or Pixels as the blur radius unit",
+    "Size: blur radius in the chosen units (default 0.05 for Image, 3 for Pixels)",
+    "Scale Size: anisotropic scaling of the glow size"
+  ],
+  "caveats": [
+    "The blur comes from Blur COPs inside the subnetwork, so softness is controlled indirectly through Units, Size, Filter and Scale Size",
+    "The page mentions an Aspect parameter while the parameter list shows Scale Size; the page does not clarify the difference",
+    "Only high-luminance areas glow, so Glow Threshold strongly drives the result",
+    "No performance characteristics are described"
+  ],
+  "resume_fr": "Glow ajoute une lueur aux zones les plus claires d'un calque, selon un seuil de luminance réglable."
+}

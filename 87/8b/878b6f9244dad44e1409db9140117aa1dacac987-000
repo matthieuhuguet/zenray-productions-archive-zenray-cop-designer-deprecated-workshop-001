@@ -1,0 +1,30 @@
+{
+  "name": "Cop crystalnoise",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/crystalnoise.html",
+  "status": "ok",
+  "summary_en": "Generates sharp, angular Worley-type noise in image coordinates by combining two randomly offset Worley noises. Suited to rock patterns, chipping and similar hard-edged detail.",
+  "inputs": [
+    "size_ref: representative layer that sets output size and metadata",
+    "pos: optional UV layer replacing pixel image coordinates as the noise source",
+    "time: optional layer giving a per-pixel time value"
+  ],
+  "key_parameters": [
+    "Primary Metric: Euclidean, Manhattan or Chebyshev distance",
+    "Jitter and Element Size: grid point randomness and base feature size in image coordinates; Element Scale per axis with Per-Component Controls",
+    "Secondary, Secondary Metric, Secondary Jitter and Element Size: configure the second Worley noise",
+    "Amplitude, Center, Noise Contrast: scale, offset and contrast of the raw noise",
+    "Tile Size: repeat period for seamless tiling",
+    "Flatten Faces: keeps faces flat instead of bulging",
+    "3D Noise group (Animate, Pulse Length, Time Scale, Time Offset, Loop Length): time as a third dimension",
+    "Post Processing (Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum): applied in that order"
+  ],
+  "caveats": [
+    "Values can fall below 0 or above 1; add a Clamp COP to enforce range.",
+    "Jitter above 1 can cause artifacts.",
+    "Complement assumes values between 0 and 1.",
+    "Noise Contrast (inside the noise) differs from the post-processing Contrast.",
+    "With Tile Size on, Element Size and similar values are rounded or clamped to stay tileable.",
+    "For pure 3D noise use Crystal Noise 3D or Fractal Noise 3D."
+  ],
+  "resume_fr": "Génère un bruit de Worley anguleux en coordonnées image, adapté aux roches et aux éclats."
+}

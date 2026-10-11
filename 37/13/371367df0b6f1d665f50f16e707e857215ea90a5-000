@@ -1,0 +1,36 @@
+{
+  "name": "light",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/light.html",
+  "status": "ok",
+  "summary_en": "The Light node applies a simple lighting calculation to a layer from a light direction, a light colour and surface normals. Lighting is additive, so several Light nodes can be combined.",
+  "inputs": [
+    "source: layer to be lit",
+    "normal: RGB surface normal layer; its type must match the Normal Type setting",
+    "pos: RGB position layer used in place of the world-space location of the source pixel",
+    "metallic: scale multiplier for the Metallic value",
+    "vieworigin: RGB ray direction per pixel, required for Phong and metallic shading",
+    "points: optional geometry whose points act as light sources",
+    "envmap: optional RGB environment map in polar coordinates",
+    "mask: optional per-pixel mask scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Normal Type: signed normals (-1 to 1) or offset normals (0 to 1)",
+    "Mask: amount of the lit result mixed into the original layer",
+    "Directional: directional light rays or a point light at a location",
+    "Light Direction / Light Position: direction or centre used when no point geometry is provided",
+    "Light Radius: approximate sphere radius preventing infinite brightness at a point light centre",
+    "Light Color / Intensity / Exposure: colour, linear brightness and exponential brightness (each step doubles)",
+    "Diffuse / Specular / Metallic: diffuse tint, specular colour, and metallic amount",
+    "Model: Lambertian, Wrapped Diffuse or Phong",
+    "Terminator: shading boundary of Wrapped Diffuse; Exponent: highlight sharpness of Phong"
+  ],
+  "caveats": [
+    "Lights are additive, so combine several Light nodes for a multi-light setup",
+    "When point geometry is wired to points, Light Direction and Light Position are ignored",
+    "Phong and metallic shading require the vieworigin input",
+    "Light Radius is multiplied by the pscale attribute on points",
+    "Terminator affects only Wrapped Diffuse, and Exponent affects only Phong",
+    "Environment Map Offset rotates the environment map around the Y axis"
+  ],
+  "resume_fr": "Éclaire une couche à partir des normales de surface, avec une direction ou une position de lumière, un modèle de shading et une couleur, et s'additionne aux autres nœuds Light."
+}

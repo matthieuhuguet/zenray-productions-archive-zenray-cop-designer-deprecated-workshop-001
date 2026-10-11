@@ -1,0 +1,31 @@
+{
+  "name": "geotolayer::2.0",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/geotolayer-2.0.html",
+  "status": "ok",
+  "summary_en": "Geometry to Layer 2.0 converts volume, VDB, or camera primitives inside a geometry input into layers or VDBs. It also imports those primitives' attributes, except the name attribute, as properties.",
+  "inputs": [
+    "geometry: geometry containing the volumes, VDBs or camera primitives to convert",
+    "size_ref: representative layer that sets output size and metadata, used only for Optional layers",
+    "vdb_ref: VDB topology used for optional VDBs missing from the source; values reset to zero if the type differs"
+  ],
+  "key_parameters": [
+    "Precision: 8, 16 or 32 bits per channel; 8 is valid only for integer volumes and ID layers",
+    "Border: sampling behaviour outside layer boundaries, defaults to the incoming border",
+    "Slice: XY, YZ or ZX plane used to slice a 3D volume",
+    "Densify VDBs: converts collapsed VDB tiles to leaves so random writes are possible",
+    "Set Imports from Geometry: fills outputs from the volumes, VDBs or cameras in the input geometry",
+    "Outputs: one output per converted primitive",
+    "Primitive Name: name or index; a wildcard such as vel.* with the RGB data type collates volume triples into one RGB layer",
+    "Optional: falls back to size_ref (layers) or vdb_ref (VDBs) when the primitive is missing",
+    "Default Value: fallback value for Optional ID, Mono, UV, RGB or RGBA layers"
+  ],
+  "caveats": [
+    "The base page geotolayer.html documents Geometry to Layer 1.0, not 2.0; the 2.0 description was read at geotolayer-2.0.html",
+    "Precision 8 is valid only for integer volumes and ID layers",
+    "Densify VDBs moves the VDB to the CPU and may need a large amount of memory",
+    "The vdb_ref fallback is not densified; densify it beforehand if needed",
+    "size_ref is used only for Optional layers",
+    "If Primitive Name is blank, the node matches the primitive number of the multiparm index"
+  ],
+  "resume_fr": "Ce nœud convertit les volumes, VDB et caméras d'une géométrie en calques ou en VDB, et importe leurs attributs comme propriétés."
+}

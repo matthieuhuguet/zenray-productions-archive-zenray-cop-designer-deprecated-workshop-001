@@ -1,0 +1,25 @@
+{
+  "name": "cablepack",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/cablepack.html",
+  "status": "ok",
+  "summary_en": "Combines input layers into a single cable named cable, one wire per numbered input, and each wire can be renamed. Available since version 21.0. The page does not say whether input order matters or whether there is a maximum input count.",
+  "inputs": [
+    "input#: numbered inputs, each carrying the source data for one wire of the output cable"
+  ],
+  "key_parameters": [
+    {
+      "name": "Set Fields from Inputs",
+      "meaning": "Button that autofills the Name parameters from the connected inputs"
+    },
+    {
+      "name": "Name",
+      "meaning": "Name of each wire in the output cable, editable after autofill"
+    }
+  ],
+  "caveats": [
+    "Use Cable Unpack later in the network to split the cable back into individual wires",
+    "The general usage guidance lives on a separate Cables page not included here",
+    "Input order and maximum input count are not documented"
+  ],
+  "resume_fr": "Le nœud cablepack rassemble plusieurs couches en un seul câble, chaque entrée devenant un fil dont le nom se règle."
+}

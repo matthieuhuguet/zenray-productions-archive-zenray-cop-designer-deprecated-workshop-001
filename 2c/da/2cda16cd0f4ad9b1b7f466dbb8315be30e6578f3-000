@@ -1,0 +1,28 @@
+{
+  "name": "grunge_drips",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_drips.html",
+  "status": "ok",
+  "summary_en": "Grunge Drips generates a layered-noise pattern that imitates drips. It works as a mask or as a building block for more intricate textures, such as water marks on windows.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata"
+  ],
+  "key_parameters": [
+    "Output range: Amplitude scales values, Center offsets them, Mask Contrast adjusts contrast first",
+    "Pattern: Element Size, Offset, Tile Size as repeat period",
+    "Density: number of foreground drops",
+    "Distortion: horizontal waver of the drops",
+    "Primary Trailing and Secondary Trailing: stretch drops downward into streaks",
+    "Secondary Mask, Tertiary Mask, Speckle Mask: visibility of background drops, smudges and specks",
+    "Seed: changes the randomization while keeping the same look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can be negative or above 1; use the Clamp options",
+    "Complement works as intended only for values from 0 to 1",
+    "Fold has no effect when all values are positive",
+    "Post-processing Contrast is separate from Noise Contrast",
+    "Tile Size should match the aspect ratio of non-square images",
+    "Introduced in Houdini 22.0"
+  ],
+  "resume_fr": "Grunge Drips produit un motif de gouttes par bruits superposés, utilisable en masque pour des traces d'eau sur une vitre."
+}

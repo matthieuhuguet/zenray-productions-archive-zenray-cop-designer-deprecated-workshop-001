@@ -1,0 +1,27 @@
+{
+  "name": "grunge_barkstrips",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_barkstrips.html",
+  "status": "ok",
+  "summary_en": "Grunge Bark Strips builds a texture from stacked noise layers that mimic strips of tree bark. Its output works as a mask or as a base for more detailed textures, such as oak bark.",
+  "inputs": [
+    "size_ref: sets the output image size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude, Center and Mask Contrast, applied before the output range is set",
+    "Pattern: Element Size, Offset, Tile Size as repeat period",
+    "Strips Inflate: strip width and bulging",
+    "Primary Edge Breakup: jagged, worn edges",
+    "Secondary Mask and Secondary Size: visibility and scale of horizontal cuts and grooves",
+    "Tertiary Mask and Tertiary Size: visibility and scale of vertical swirl-like cells",
+    "Seed: randomizes the pattern while keeping the same overall look",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can be negative or above 1; use Clamp Minimum and Clamp Maximum",
+    "Complement assumes values between 0 and 1",
+    "Fold has no visible effect when all values are positive",
+    "Post-processing Contrast is separate from Noise Contrast",
+    "Non-square images should use a Tile Size matching their aspect ratio"
+  ],
+  "resume_fr": "Grunge Bark Strips construit une texture de bandes d'écorce par superposition de bruits, utilisable en masque ou comme base pour une écorce de chêne."
+}

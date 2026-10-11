@@ -1,0 +1,44 @@
+{
+  "name": "checkerboard",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/checkerboard.html",
+  "status": "ok",
+  "summary_en": "Generates a pattern of alternating even and odd coloured squares formed by crossing horizontal and vertical divisions, for example a checkered floor tile. Its size_ref input only sets output size and metadata.",
+  "inputs": [
+    "size_ref: representative layer that sets the output size and metadata; does not control square placement"
+  ],
+  "key_parameters": [
+    {
+      "name": "Signature",
+      "meaning": "Sets the output layer type"
+    },
+    {
+      "name": "Rows / Columns",
+      "meaning": "Number of vertical and horizontal divisions; both default to 8"
+    },
+    {
+      "name": "Even Color",
+      "meaning": "Colour of the even squares; default 1, 1, 1, 1"
+    },
+    {
+      "name": "Odd Color",
+      "meaning": "Colour of the odd squares; default 0, 0, 0, 0"
+    },
+    {
+      "name": "Offset",
+      "meaning": "Position of the pattern centre in image space; default 0, 0"
+    },
+    {
+      "name": "Bias",
+      "meaning": "Shift of the pattern as a fraction of one square's size; default 0, 0"
+    },
+    {
+      "name": "Tile Size",
+      "meaning": "Size of each square in image space, repeated as a tile; default 2, 2"
+    }
+  ],
+  "caveats": [
+    "size_ref does not affect square placement; use Offset and Bias for that",
+    "The page does not explain how Rows / Columns interact with Tile Size, so the combined square size is not specified"
+  ],
+  "resume_fr": "Le nœud checkerboard génère un damier de carrés pairs et impairs, dont les lignes, les colonnes et la taille de tuile sont réglables."
+}

@@ -1,0 +1,24 @@
+{
+  "name": "grunge_aurora",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/grunge_aurora.html",
+  "status": "ok",
+  "summary_en": "Grunge Aurora generates a pattern of leaking lines resembling an aurora display. It works as a building block for more intricate textures, such as light patterns in a night sky or water-damaged walls.",
+  "inputs": [
+    "size_ref: representative layer that sets the output image size and metadata"
+  ],
+  "key_parameters": [
+    "Range: Amplitude scales values, Center offsets them, output spans C-A to C+A; Mask Contrast adds contrast before both",
+    "Pattern: Element Size, Element Scale (with Per-Component Controls), Offset, Tile Size as repeat period",
+    "Aurora: Distortion Strength (vertical distortion along X), Distortion Size (roughness of the distortion), Streak Weight (ramp weighting samples along each pixel trajectory)",
+    "Aurora > Advanced: Maximum Steps caps distortion steps; raise it if stepping artifacts appear",
+    "Post Processing, applied in order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Output can be negative or above 1; use the Clamp options",
+    "Complement behaves as expected only for values from 0 to 1",
+    "Fold has no effect when all values are positive",
+    "Tile Size should match the aspect ratio of non-square images",
+    "Post-processing Contrast is distinct from Noise Contrast on some noise nodes"
+  ],
+  "resume_fr": "Grunge Aurora produit un motif de traits lumineux qui rappelle une aurore boréale, utile comme brique pour un ciel nocturne ou un mur abîmé par l'eau."
+}

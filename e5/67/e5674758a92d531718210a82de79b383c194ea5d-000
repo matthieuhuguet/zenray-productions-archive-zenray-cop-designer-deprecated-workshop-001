@@ -1,0 +1,22 @@
+{
+  "name": "Cop boundrect",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/boundrect.html",
+  "status": "ok",
+  "summary_en": "Finds the smallest rectangle enclosing all pixels of a monochrome layer that pass a threshold test. It outputs a mask of that rectangle plus geometry describing its four corners.",
+  "inputs": [
+    "region: monochrome layer to analyze"
+  ],
+  "key_parameters": [
+    "Inside Is: which values the rectangle is meant to contain",
+    "Below Threshold / Above Threshold: whether pixels below or above the threshold expand the rectangle",
+    "Threshold: comparison value, which can be picked from the layer with the dropper",
+    "Inside Value / Outside Value: mask values written inside and outside the rectangle",
+    "Geometry Units: image, texture or pixel coordinates for the output points; match the units of a Crop COP if one is used"
+  ],
+  "caveats": [
+    "The input must be monochrome; for an RGB layer, first create a monochrome mask of the region of interest",
+    "If no rectangle is found, all four boundrect points are zero",
+    "Geometry units must match the Crop COP units when the two are used together"
+  ],
+  "resume_fr": "Calcule le plus petit rectangle englobant les pixels d'un masque monochrome qui passent un seuil, avec ses quatre coins exposés en géométrie."
+}

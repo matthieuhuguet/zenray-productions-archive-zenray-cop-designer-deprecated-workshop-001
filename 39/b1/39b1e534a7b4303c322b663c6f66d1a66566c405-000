@@ -1,0 +1,32 @@
+{
+  "name": "heighttonormal",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/heighttonormal.html",
+  "status": "ok",
+  "summary_en": "Converts a mono height layer into an RGB layer of surface normals. Heightmaps are rarely to scale, so an explicit scale is often needed to get the expected steepness.",
+  "inputs": [
+    "height: a mono layer representing a heightmap"
+  ],
+  "key_parameters": [
+    {
+      "name": "Normal Type",
+      "meaning": "Signed (-1 to 1) suits geometry attributes; Offset (0 to 1) suits normal maps"
+    },
+    {
+      "name": "Height Scale",
+      "meaning": "globally scales height before normals are computed; higher gives steeper normals"
+    },
+    {
+      "name": "Read Pixels outside Image",
+      "meaning": "lets boundary derivatives read past the image edge, useful for seamless wrap textures"
+    },
+    {
+      "name": "Kernel Size",
+      "meaning": "pixel distance used for the derivative; can reduce stepping artifacts"
+    }
+  ],
+  "caveats": [
+    "Read Pixels outside Image can act like extrapolation with a clamp border; leave it off to avoid that.",
+    "The output is a single normals layer."
+  ],
+  "resume_fr": "Convertit une hauteur mono en couche RGB de normales de surface, avec une mise à l'échelle explicite de la pente."
+}

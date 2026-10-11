@@ -1,0 +1,28 @@
+{
+  "name": "Cop distort",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/distort.html",
+  "status": "ok",
+  "summary_en": "Warps an incoming layer either by shifting pixels in a fixed direction with adjustable strength, or by tracing pixels through the vectors of an input UV layer. Optional streak modes smear samples along the path.",
+  "inputs": [
+    "source: original layer to distort",
+    "dir: optional per-pixel direction",
+    "scale: optional per-pixel multiplier on Scale",
+    "mask: optional per-pixel mask scaled by the Mask parameter"
+  ],
+  "key_parameters": [
+    "Signature, Border, Filter: layer type, sampling outside bounds, sampling filter",
+    "Mask: mix of distorted and original value",
+    "Direction Type, Direction, Normalize Direction, Angle: fixed distortion direction",
+    "Scale: overall strength; negative values trace backward",
+    "Scale by Timestep: scales strength by timestep, usually 1 over FPS",
+    "Streak (Off, Blur, Min, Max): combines values along the path",
+    "Use Streak Weight Ramp, Streak Weight: fades samples along the trajectory",
+    "Pixels per Step, Maximum Steps: curved-path tracing accuracy and step cap"
+  ],
+  "caveats": [
+    "Direction Type and related parameters are ignored when a dir input is connected.",
+    "With only a UV source wired, Scale just shifts UVs left and right.",
+    "With Pixels per Step off, one step per pixel: fast but inaccurate when directions or scales vary; raise Maximum Steps if the distortion does not follow the directions."
+  ],
+  "resume_fr": "Déforme une couche selon une direction fixe ou les vecteurs d'une couche UV, avec des effets de traînée optionnels."
+}

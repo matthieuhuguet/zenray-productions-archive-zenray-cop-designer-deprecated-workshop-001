@@ -1,0 +1,41 @@
+{
+  "name": "histogram",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/histogram.html",
+  "status": "ok",
+  "summary_en": "Builds a histogram of how a layer's pixel values are distributed across a set number of buckets. The result is a visual graph or raw bucket counts.",
+  "inputs": [
+    "source: the layer or VDB to analyze",
+    "active: optional layer or VDB; only pixels where it is at least 0.5 contribute"
+  ],
+  "key_parameters": [
+    {
+      "name": "Mode",
+      "meaning": "Colored Bars, Separate Bars or Graph, which sets how the histogram is drawn"
+    },
+    {
+      "name": "Buckets",
+      "meaning": "number of intervals; more buckets give a more accurate graph"
+    },
+    {
+      "name": "Minimum / Maximum",
+      "meaning": "value range to histogram, typically 0 and 1"
+    },
+    {
+      "name": "Outside Values",
+      "meaning": "Discard ignores out-of-range values; Clamp counts them in the first or last bucket"
+    },
+    {
+      "name": "Scale",
+      "meaning": "boosts bar height or intensity for legibility"
+    },
+    {
+      "name": "Channel Scope",
+      "meaning": "toggles which of R, G, B and A are affected"
+    }
+  ],
+  "caveats": [
+    "If the source has alpha, bars take alpha coloring and may clip.",
+    "With Discard, channel totals can differ because clipping is applied per channel."
+  ],
+  "resume_fr": "Calcule l'histogramme de répartition des valeurs d'une couche, sous forme de graphe visuel ou de comptages bruts par intervalle."
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Cop fractalnoise",
+  "url": "https://www.sidefx.com/docs/houdini/nodes/cop/fractalnoise.html",
+  "status": "ok",
+  "summary_en": "Fractal Noise creates a fractal noise pattern by layering the same underlying noise at increasing frequencies. It suits cloudy, smoky, or TV-static looks.",
+  "inputs": [
+    "size_ref: sets the output image size and metadata",
+    "pos (optional): UV layer used in place of pixel image coordinates",
+    "time: supplies the time value for each pixel",
+    "octaves (optional): amount multiplied by Max Octaves",
+    "roughness (optional): amount multiplied by Roughness"
+  ],
+  "key_parameters": [
+    "Range: Amplitude scales the noise, Center offsets it, and Noise Contrast adjusts contrast before those two apply",
+    "Pattern, Noise Type: base function such as Torus, Perlin, Worley or Sparse Convolution",
+    "Pattern, Element Size: feature scale; Tile Size: repeat period",
+    "3D Noise, Animate: adds time as a third dimension; Time Scale, Time Offset and Loop Length control speed and looping",
+    "Fractal Type: None, Sharp, Dampened, Terrain or Hybrid Terrain",
+    "Max Octaves: layer count; Lacunarity: frequency scaling; Roughness: amplitude falloff per layer",
+    "Post Processing, applied in listed order: Fold, Complement, Bias, Gain, Gamma, Contrast, Clamp Minimum, Clamp Maximum"
+  ],
+  "caveats": [
+    "Layers can store negative values and values above 1, so the output can go out of bounds; the Clamp options fix this",
+    "Complement assumes values in the 0 to 1 range, so other ranges give unexpected results",
+    "For world-space coordinates instead of image coordinates, the page recommends the Fractal Noise 3D node",
+    "With Loop Length and periodic noise types, parameters such as Element Size and Lacunarity are rounded or clamped to keep the output tileable"
+  ],
+  "resume_fr": "Le nœud Fractal Noise superpose le même bruit à fréquences croissantes pour obtenir des motifs de nuage, de fumée ou de neige TV."
+}
